@@ -1,0 +1,477 @@
+<%
+const pageData = {
+title: 'オフィスソリューション',
+description: 'dynabook(ダイナブック)の公式法人向けオフィスソリューションページです。オフィス環境の最適化を目指した最新ソリューションを提供し、業務効率を向上させます。',
+path:'../../../',
+assetPath:'/sites/default/files/dynabook-b2b/assets_2025/',
+isTop:'true'
+}
+%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include( pageData.path+'common/_meta.ejs', { pageData: pageData } ); %>
+    <%- include( pageData.path+'common/_header_css.ejs', { pageData: pageData } ); %>
+    <%- include( pageData.path+'common/_header_js.ejs', { pageData: pageData } ); %>
+  </head>
+
+  <body>
+    <div>
+      <!--dynabook-2025-header-->
+      <%- include( pageData.path+'business/modules/_header.ejs', { pageData: pageData } ); %>
+      <!--./dynabook-2025-header-->
+      <!--dynabook-2025-main-->
+      <main>
+        <div class="dynabook-2025 l-container">
+          <%- include( pageData.path+'business/modules/_storebnr.ejs', { pageData: pageData } ); %>
+          <div class="l-2025-breadcrumb--wrapper">
+            <div class="l-2025-breadcrumb">
+              <ol class="l-2025-breadcrumb__list" itemscopeitemtype=https://schema.org/BreadcrumbList>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="l-2025-breadcrumb__list-item"> <a itemprop="item" href="/index.html"><span itemprop="name">dynabook.com</span></a>
+                  <meta itemprop="position" content="1">
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="l-2025-breadcrumb__list-item"> <a itemprop="item" href="/business/index.html"><span itemprop="name">法人のお客様（ビジネスPC・ソリューション）</span></a>
+                  <meta itemprop="position" content="2">
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="l-2025-breadcrumb__list-item"> <a itemprop="item" href="/business/solution/index.html"><span itemprop="name">サービス・ソリューション</span><meta itemprop="position" content="3"></a>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="l-2025-breadcrumb__list-item is-current"> <span itemprop="name">オフィスソリューション</span>
+                  <meta itemprop="position" content="4">
+                </li>
+              </ol>
+            </div>
+            <div class="l-2025-bnr-win11">
+              <div class="l-2025-bnr-win11--inner">
+                <span>
+                    <img src="<%= pageData.assetPath %>images/common/bnr_win11-2.png" alt="Elevate potential with Windows 11 Pro devices Windows 11">
+                <span>
+              </div>
+            </div>
+          </div>
+          <div class="p-dynabook-2025__solOffice__head l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__head--title">
+              <h1 class="p-dynabook-2025__solOffice__head--title-txt">オフィスソリューション</h1>
+              <div class="p-dynabook-2025__solOffice__head--title-ico"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/ico_ttl.svg" alt></div>
+            </div>
+            <ul class="p-dynabook-2025__solOffice__head--nav">
+              <li><a href="#section01"><span>PC運用管理</span></a></li>
+              <li><a href="#section05"><span>業務改善</span></a></li>
+              <li><a href="#section03"><span>セキュリティ</span></a></li>
+              <li><a href="#section02"><span>クラウド環境の導入・利活用サポート</span></a></li>
+              <li><a href="#section04"><span>サーバ関連</span></a></li>
+            </ul>
+          </div>
+
+          <section id="section01" class="p-dynabook-2025__solOffice__section l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__sechead">
+              <h2 class="p-dynabook-2025__solOffice__sechead--ttl">
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-ico"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/ico_ttl_s01.svg" alt></span>
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-txt">PC運用管理</span>
+              </h2>
+              <ul class="p-dynabook-2025__solOffice__sechead-tags">
+                <li>LCM</li>
+                <li>台帳管理システム</li>
+                <li>PC位置情報</li>
+                <li>Autopilot展開</li>
+                <li>Windows 11移行</li>
+                <li>キッティング</li>
+                <li>データ消去</li>
+                <li>PC買取り</li>
+              </ul>
+            </div>
+
+            <div class="js-accordion--wrapper">
+              <button type="button" class="js-accordion-title js-accordion-btn u-hover-img-bg-cover"><span class="is-open">詳しく見る</span><span class="is-close">閉じる</span></button>
+              <div class="c-accordion__content">
+                <div class="p-dynabook-2025__solOffice__services">
+                  <a href="/solution/outsourcing/lcm/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service01.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>LCM運用サービス</h3>
+                      <p>PCに関わる導入計画から調達・導入・運用・保守・撤去・更新までワンストップでサポート</p>
+                    </div>
+                  </a>
+                  <a href="/solution/outsourcing/lcm/pc-asset.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service02.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>PCアセットモニタリングサービス<br><span>(PC台帳管理システム)</span></h3>
+                      <p>dynabook PC以外もOK<br>PC位置情報を自動アップデート<br>故障前に気付けるPC健康情報モニタリング</p>
+                    </div>
+                  </a>
+                  <a href="/solution/outsourcing/autopilot/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service07.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>Windows Autopilot<br>導入支援サービス</h3>
+                      <p>キッティングの自動化で、情報システム部門の業務負荷を軽減</p>
+                    </div>
+                  </a>
+                  <a href="/solution/dynacloud/dynacloud_mdm.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service16.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>dynaCloud MDM<br><span>(モバイルデバイス管理サービス)</span></h3>
+                      <p>Windows PC、タブレット、スマートフォンを一元管理</p>
+                    </div>
+                  </a>
+                  <a href="/solution/outsourcing/master/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service08.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>マスター作成サービス</h3>
+                      <p>キッティングやリカバリーメディア用のWindowsマスターを作成</p>
+                    </div>
+                  </a>
+                  <a href="/solution/outsourcing/win11-migration/replace.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service03.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>PCリプレース支援サービス</h3>
+                      <p>Windows 10 搭載PC のユーザーデータをWindows 11 搭載PC へ移行</p>
+                    </div>
+                  </a>
+                  <a href="/solution/outsourcing/kitting/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service09.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>キッティングサービス</h3>
+                      <p>新しいPCのセットアップを代行。大規模・短納期にも対応。他社製PCもOK</p>
+                    </div>
+                  </a>
+                  <a href="/solution/outsourcing/windows-migration/upgrade.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service04.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>OSアップグレードサービス</h3>
+                      <p>Windows 11環境へのアップグレードにかかる作業負荷を軽減</p>
+                    </div>
+                  </a>
+                  <a href="/solution/outsourcing/support/purchase/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service06.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>PC買取りサービス</h3>
+                      <p>不要になったPCをDynabookが買い取ります。<br>PCの廃棄を減らし環境への配慮にも◎。</p>
+                    </div>
+                  </a>
+                  <a href="/solution/outsourcing/support/dataeraser/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service05.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>データ消去サービス</h3>
+                      <p>PC内蔵ストレージ内のデータを完全消去</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="section05" class="p-dynabook-2025__solOffice__section l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__sechead">
+              <h2 class="p-dynabook-2025__solOffice__sechead--ttl">
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-ico"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/ico_ttl_s05.svg" alt></span>
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-txt">業務改善</span>
+              </h2>
+              <ul class="p-dynabook-2025__solOffice__sechead-tags">
+                <li>透過型XRグラス</li>
+                <li>字幕表示</li>
+                <li>自動翻訳</li>
+                <li>要約機能</li>
+                <li>法人向けMVNOサービス</li>
+                <li>長時間労働是正</li>
+                <li>勤怠管理</li>
+                <li>生成AI</li>
+              </ul>
+            </div>
+            <div class="js-accordion--wrapper">
+              <button type="button" class="js-accordion-title js-accordion-btn u-hover-img-bg-cover"><span class="is-open">詳しく見る</span><span class="is-close">閉じる</span></button>
+              <div class="c-accordion__content">
+                <div class="p-dynabook-2025__solOffice__services">
+                  <a href="/solution/xr/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/img_service03.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>透過型XRグラス<br>dynaEdge XR1</h3>
+                      <p>透過型レンズに情報を表示することで、字幕表示や自動翻訳、要約機能など、さまざまなシーンでコンピューティングの支援が受けられます</p>
+                    </div>
+                  </a>
+                  <a href="/solution/aisolution/generative-ai/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service25.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>生成AI導入支援サービス</h3>
+                      <p>自社データを活用し生成AIで業務アプリを作成するところから、実際に業務へ活用し定着化させるところまでをDynabookがサポートします。</p>
+                    </div>
+                  </a>
+                  <a href="/solution/esim/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service24.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>Dynabook eSIM Startin’</h3>
+                      <p>dynabook モバイルPCに、4年間データ無制限のeSIMを組み合わせた法人向けMVNOサービスです</p>
+                    </div>
+                  </a>
+                  <a href="/solution/outsourcing/pc-shutdown-system/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service20.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>PC強制シャットダウンシステム</h3>
+                      <p>長時間労働の抑止に。設定した<br class="u-display__block--pc">時刻にPCを自動シャットダウン</p>
+                    </div>
+                  </a>
+                  <a href="/solution/mobile/dynabook-mobile/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service23.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>Dynabook モバイル</h3>
+                      <p>ワンストップ対応でビジネスを支える5G/LTEデータ通信専用SIM</p>
+                    </div>
+                  </a>
+                  <a href="/solution/dynacloud/dynacloud_kintai.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service21.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>勤怠管理ソリューション<br><span>(dynaCloud勤怠)</span></h3>
+                      <p>働き方に合わせた柔軟な勤怠管理</p>
+                    </div>
+                  </a>
+                  <a href="/solution/dynacloud/dynacloud_d-signage.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service22.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>デジタルサイネージ<br><span>(dynaCloud D-Signage)</span></h3>
+                      <p>クラウド型のデジタルサイネージ<br class="u-display__block--pc">システム</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="section03" class="p-dynabook-2025__solOffice__section l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__sechead">
+              <h2 class="p-dynabook-2025__solOffice__sechead--ttl">
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-ico"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/ico_ttl_s03.svg" alt></span>
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-txt">セキュリティ</span>
+              </h2>
+              <ul class="p-dynabook-2025__solOffice__sechead-tags">
+                <li>PC紛失防止</li>
+                <li>リモートワーク</li>
+                <li>暗号化</li>
+                <li>エンドポイントセキュリティ</li>
+                <li>MDM</li>
+                <li>シンクライアント</li>
+                <li>BCP対策</li>
+              </ul>
+            </div>
+            <div class="js-accordion--wrapper">
+              <button type="button" class="js-accordion-title js-accordion-btn u-hover-img-bg-cover"><span class="is-open">詳しく見る</span><span class="is-close">閉じる</span></button>
+              <div class="c-accordion__content">
+                <div class="p-dynabook-2025__solOffice__services">
+                  <a href="/solution/outsourcing/lcm/pc-asset.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service02.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>PCアセットモニタリングサービス<br><span>(IT資産 台帳管理システム)</span></h3>
+                      <p>dynabook PC以外もOK<br>PC位置情報を自動アップデート<br>故障前に気付けるPC健康情報モニタリング</p>
+                    </div>
+                  </a>
+                  <a href="/solution/dynacloud/dynacloud_mdm.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service16.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>dynaCloud MDM<br><span>(モバイルデバイス管理サービス)</span></h3>
+                      <p>Windows PC、タブレット、スマートフォンを一元管理</p>
+                    </div>
+                  </a>
+                  <a href="/solution/security/smartde/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service14.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>SmartDE Cloud<br><span>(PC情報漏えい対策ソリューション)</span></h3>
+                      <p>強力な暗号化でHDD・SSD・USBメモリからの情報漏えいを防止</p>
+                    </div>
+                  </a>
+                  <a href="/solution/security/virtual_connect/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service15.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>Virtual Connect<br><span>(USBブート型シンクライアント)</span></h3>
+                      <p>VPN経由で会社のPCにセキュアに接続</p>
+                    </div>
+                  </a>
+                  <a href="/solution/security/withsecure/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service13.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>エンドポイントセキュリティ<br>WithSecure&trade;</h3>
+                      <p>ビジネスへの脅威を未然に防ぐために「今からできる」企業の情報セキュリティ対策</p>
+                    </div>
+                  </a>
+                  <a href="/solution/outsourcing/server-network/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service17.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>サーバ・ネットワーク<br>構築支援サービス</span></h3>
+                      <p>サーバの新規導入やリプレイス支援から保守まで一気通貫でサポート</p>
+                    </div>
+                  </a>
+                  <a href="/solution/dynacloud/dynacloud_hosting.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service19.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>クラウド仮想サーバサービス<br><span>(dynaCloud Hosting)</span></h3>
+                      <p>国内データセンターにバックアップも含め最新のセキュリティでサーバ環境を構築</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="section02" class="p-dynabook-2025__solOffice__section l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__sechead">
+              <h2 class="p-dynabook-2025__solOffice__sechead--ttl">
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-ico"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/ico_ttl_s02.svg" alt></span>
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-txt">クラウド環境の導入・<br class="u-display__block--sp">利活用サポート</span>
+              </h2>
+              <ul class="p-dynabook-2025__solOffice__sechead-tags">
+                <li>Microsoft 365</li>
+                <li>Windows Autopilot</li>
+                <li>サーバ新規導入リプレース</li>
+                <li>クラウド仮想サーバ</li>
+              </ul>
+            </div>
+            <div class="js-accordion--wrapper">
+              <button type="button" class="js-accordion-title js-accordion-btn u-hover-img-bg-cover"><span class="is-open">詳しく見る</span><span class="is-close">閉じる</span></button>
+              <div class="c-accordion__content">
+                <div class="p-dynabook-2025__solOffice__services">
+                   <a href="/solution/outsourcing/server-network/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service17.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>サーバ・ネットワーク<br>構築支援サービス</span></h3>
+                      <p>サーバの新規導入やリプレイス支援から保守まで一気通貫でサポート</p>
+                    </div>
+                  </a>
+                  <a href="/solution/outsourcing/autopilot/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service07.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>Windows Autopilot<br>導入支援サービス</h3>
+                      <p>キッティングの自動化で、情報システム部門の業務負荷を軽減</p>
+                    </div>
+                  </a>
+                  <a href="/solution/dynacloud/dynacloud_hosting.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service19.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>クラウド仮想サーバサービス<br><span>(dynaCloud Hosting)</span></h3>
+                      <p>国内データセンターにバックアップも含め最新のセキュリティでサーバ環境を構築</p>
+                    </div>
+                  </a>
+                  <a href="/business/contents/csp/microsoft365.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service10.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>Microsoft 365</h3>
+                      <p>常に最新機能が利用可能なOfficeのサブスクリプション</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="section04" class="p-dynabook-2025__solOffice__section l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__sechead">
+              <h2 class="p-dynabook-2025__solOffice__sechead--ttl">
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-ico"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/ico_ttl_s04.svg" alt></span>
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-txt">サーバ関連</span>
+              </h2>
+              <ul class="p-dynabook-2025__solOffice__sechead-tags">
+                <li>ファイル保管</li>
+                <li>サーバ新規導入</li>
+                <li>サーバリプレイス</li>
+                <li>クラウド環境の構築</li>
+              </ul>
+            </div>
+            <div class="js-accordion--wrapper">
+              <button type="button" class="js-accordion-title js-accordion-btn u-hover-img-bg-cover"><span class="is-open">詳しく見る</span><span class="is-close">閉じる</span></button>
+              <div class="c-accordion__content">
+                <div class="p-dynabook-2025__solOffice__services">
+                  <a href="/solution/outsourcing/server-network/index.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service17.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>サーバ・ネットワーク<br>構築支援サービス</span></h3>
+                      <p>サーバの新規導入やリプレイス支援から保守まで一気通貫でサポート</p>
+                    </div>
+                  </a>
+                  <a href="/solution/dynacloud/dynacloud_hosting.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service19.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>クラウド仮想サーバサービス<br><span>(dynaCloud Hosting)</span></h3>
+                      <p>国内データセンターにバックアップも含め最新のセキュリティでサーバ環境を構築</p>
+                    </div>
+                  </a>
+                  <a href="/solution/dynacloud/sureserver.html" class="p-dynabook-2025__solOffice__services--item">
+                    <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/office/img_service14.png" alt></div>
+                    <div class="p-dynabook-2025__solOffice__services--item-txt">
+                      <h3>SureServer<br><span>(SSL証明書発行サービス)</span></h3>
+                      <p>信頼性の高いサーバ証明書を発行</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          
+
+          <section class="l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__btnav__btn">
+              <a class="c-btn__linkBase-black" href="/business/jirei/jirei_1.html#office"><span class="c-ico__arrow-white">
+                <span>オフィスソリューションの<br class="u-display__block--sp">導入事例</span>
+              </span></a>
+            </div>
+            <div class="p-dynabook-2025__solOffice__btnav">
+              <h3 class="p-dynabook-2025__solOffice__btnav__title">
+                <span class="p-dynabook-2025__solOffice__btnav__mainTitle">ソリューションカテゴリ一覧</span>
+              </h3>
+              <div class="p-dynabook-2025__solOffice__btnav__th--list c-col__flex--5-2">
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-blu-1 c-r-5 u-hover-img-bg-cover u-hover-color--white is-blu-1" href="/business/solution/office/index.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav01.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">オフィス</span>
+                </a>
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-vio-1 c-r-5 u-hover-img-bg-cover u-hover-color--white" href="/business/solution/genba-dx/index.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav02.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">現場DX</span>
+                </a>
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-grn-1 c-r-5 u-hover-img-bg-cover u-hover-color--white" href="/business/solution/gtelematics/index.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav03.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">テレマティクス</span>
+                </a>
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-org-1 c-r-5 u-hover-img-bg-cover u-hover-color--white" href="/solution/dynaschool/index.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav04.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">教育ICT</span>
+                </a>
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-gry-1 c-r-5 u-hover-img-bg-cover u-hover-color--white" href="/solution/pcsolution.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav05.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">PC製品</span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </main>
+      <!--./dynabook-2025-main-->
+      <!--dynabook-2025-fotter-->
+      <%- include( pageData.path+'personal/modules/_fotter.ejs', { pageData: pageData } ); %>
+      <!--./dynabook-2025-fotter-->
+      <!-- <script src="./assets/js/main.js"></script> -->
+      <!-- <script src="./assets/js/header_2025.js"></script> -->
+      <!-- <script src="./assets/js/footer_2025.js"></script> -->
+      <!-- %- include( pageData.path+'common/_fotter_js.ejs', { pageData: pageData } ); % -->
+
+
+<script src="/js/assets_2025/individual/slick.min.js"></script>
+<script src="/js/assets_2025/individual/jquery.matchHeight-min.js"></script>
+<script src="/js/assets_2025/individual/jquery.csv.min.js"></script>
+<script src="/js/assets_2025/individual/header_2025.js"></script>
+<script src="/js/assets_2025/individual/main_2025.js"></script>
+<script src="/js/assets_2025/individual/footer_2025.js"></script>
+<script>
+  $(function() {
+    $('.p-biztop-2025-case--texts').matchHeight();
+    $('.p-biztop-2025-case--service').matchHeight();
+  });
+</script>
+    </div>
+  </body>
+</html>

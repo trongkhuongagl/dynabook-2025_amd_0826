@@ -1,0 +1,513 @@
+<%
+const pageData = {
+title: '法人のお客様｜ビジネスPC・ソリューション | dynabook（ダイナブック公式）',
+description: 'dynabook(ダイナブック)の公式法人向けサイトです。ビジネスに最適なパソコンの最新モデルやカスタマイズが可能。企業の業務効率を最大化するソリューションと豊富な製品情報を提供します。',
+path:'../',
+assetPath:'/sites/default/files/dynabook-b2b/assets_2025/',
+isTop:'true'
+}
+%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include( pageData.path+'common/_meta.ejs', { pageData: pageData } ); %>
+    <%- include( pageData.path+'common/_header_css.ejs', { pageData: pageData } ); %>
+    <%- include( pageData.path+'common/_header_js.ejs', { pageData: pageData } ); %>
+  </head>
+
+  <body>
+    <div>
+      <!--dynabook-2025-header-->
+      <%- include( pageData.path+'business/modules/_header.ejs', { pageData: pageData } ); %>
+      <!--./dynabook-2025-header-->
+      <!--dynabook-2025-main-->
+      <main>
+        <div class="dynabook-2025 l-container">
+          <%- include( pageData.path+'business/modules/_storebnr.ejs', { pageData: pageData } ); %>
+          <div class="p-dynabook-2025__main--area p-dynabook-2025__main--area-b-top">
+            <!--p-dynabook-2025__kv-->
+            <div class="p-dynabook-2025__kv">
+              <ul class="p-dynabook-2025__kv--list is-time" data-taime="10">
+                <li class="p-dynabook-2025__kv--item">
+                  <div class="ripple_wrapper">
+                    <div class="ripple_inner">
+                       <video class="u-display__block--pc" width="250" autoplay loop muted playsinline  border="0">
+                        <source src="/sites/default/files/dynabook-b2b/assets_2025/video/business/top/kv/ripples/pc.mp4" type="video/mp4">
+                      </video>
+                      <video class="u-display__block--sp" width="250" autoplay loop muted playsinline  border="0">
+                        <source src="/sites/default/files/dynabook-b2b/assets_2025/video/business/top/kv/ripples/sp.mp4" type="video/mp4" media="(max-width:780px)">
+                      </video>
+                      <div class="logo">
+                        <picture>
+                          <source srcset="/sites/default/files/dynabook-b2b/assets_2025/images/business/top/kv/ripples/logo_sp.png" media="(max-width: 780px)">
+                          <img src="/sites/default/files/dynabook-b2b/assets_2025/images/business/top/kv/ripples/logo_pc.png" alt="ビジネスの未来を共に築く、dynabook">
+                        </picture>
+                      </div>
+                      <div class="copy">
+                        <picture>
+                          <source srcset="/sites/default/files/dynabook-b2b/assets_2025/images/business/top/kv/ripples/copy_sp.png" media="(max-width: 780px)">
+                          <img src="/sites/default/files/dynabook-b2b/assets_2025/images/business/top/kv/ripples/copy_pc.png" alt="あなたの挑戦に寄り添うテクノロジーとソリューションをご提供します" border="0">
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="p-dynabook-2025__kv--item">
+                  <a href="/event/dynabookday/index.html" id="b_topKV_pcNo1">
+                    <div class="u-hover-img-bg-cover">
+                      <picture>
+                        <source srcset="<%= pageData.assetPath %>images/business/top/kv_20250529_01_ph_sp.jpg" media="(max-width: 780px)">
+                        <img class="u-img" src="<%= pageData.assetPath %>images/business/top/kv_20250529_01_ph.jpg" alt="[展示会・セミナーイベント]新しいビジネスの可能性を拓く、最新PCとソリューションのご提案　未来が加速する。AIと共に。 開催日：6月19日(木)10：00～18：30（最終受付：18：00）会場：TODホール&カンファレンス東京" border="0">
+                      </picture>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-dynabook-2025__kv--item">
+                  <a class="u-hover-bg-black-child" id="KV_No1" href="/brand/no1/index.html">
+                    <div class="kv-20250228__kv-01 u-hover-img-bg-cover">
+                      <p><img class="u-img u-img__fit--cover" src="<%= pageData.assetPath %>images/business/top/kv_20250228_01_ph.jpg" alt="ノートPCブランド別 国内シェアNo.1" border="0"></p>
+                      <div class="p-dynabook-2025__kv--btn kv-20250228__btn-01">
+                          <span class="c-btn__linkBase-black u-hover-bg-black c-ico__arrow-white u-hover-bg-black-target"><span >詳しくはこちら</span></span>
+                      </div>
+                    </div>
+                    <div class="p-dynabook-2025__kv--sp">
+                      <img class="u-img" src="<%= pageData.assetPath %>images/business/top/kv_20250228_01_ph_sp.jpg" alt="ノートPCブランド別 国内シェアNo.1 詳しくはこちら">
+                    </div>
+                  </a>
+                </li>
+                <li class="p-dynabook-2025__kv--item">
+                  <a href="/press-release/20240829.html" id="b_topKV_pcNo1">
+                    <div class="u-hover-img-bg-cover">
+                      <picture>
+                        <source srcset="<%= pageData.assetPath %>images/business/top/business_top_20250516/kv_002_sp.png" media="(max-width: 780px)">
+                        <img class="u-img" src="<%= pageData.assetPath %>images/business/top/kv_002.png" alt="「日経コンピュータ」（2024年9月5日号）日経コンピュータ 顧客満足度調査 2024-2025 クライアントパソコン部門 1位">
+                      </picture>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="u-display__block--pc">
+                <div class="p-dynabook-2025__kv--th p-dynabook-2025__kv--th-center">
+                  <button class="p-dynabook-2025__kv--th-btn p-dynabook-2025__kv--th-btn-long ripple  is-active">
+                    <img class="u-img" src="/sites/default/files/dynabook-b2b/assets_2025/images/business/top/kv/ripples/btn.png" alt="ビジネスの未来を共に築く、dynabook">
+                  </button>
+                  <button class="p-dynabook-2025__kv--th-btn p-dynabook-2025__kv--th-btn-long">
+                    <div  class="p-dynabook-2025__kv--th-ph">
+                      <img class="u-img" src="<%= pageData.assetPath %>images/business/top/kv/business_kv-th_006.png" alt="">
+                    </div>
+                    <p class="p-dynabook-2025__kv--th-text">dynabook Day Advance</p>
+                  </button>
+                  <button class="p-dynabook-2025__kv--th-btn p-dynabook-2025__kv--th-btn-long">
+                    <div  class="p-dynabook-2025__kv--th-ph">
+                      <img class="u-img" src="<%= pageData.assetPath %>images/business/top/kv/kv-th_005.png" alt="">
+                    </div>
+                    <p class="p-dynabook-2025__kv--th-text">
+                      ノートPCブランド別<br>国内シェアNo.1<sup>*</sup>
+                      <span class="p-dynabook-2025__kv--th-text-s">＊IDC調査</span>
+                    </p>
+                  </button>
+                  <button class="p-dynabook-2025__kv--th-btn p-dynabook-2025__kv--th-btn-long">
+                    <div  class="p-dynabook-2025__kv--th-ph">
+                      <img class="u-img" src="<%= pageData.assetPath %>images/business/top/kv/business_kv-th_002.png" alt="">
+                    </div>
+                    <p class="p-dynabook-2025__kv--th-text">顧客満足度調査</p>
+                  </button>
+                </div>
+              </div>
+              <div class="u-display__block--sp">
+                <div class="p-dynabook-2025__kv--ui p-dynabook-2025__slider--ui">
+                  <button class="p-dynabook-2025__slider--ui--btn p-dynabook-2025__kv--ui-left p-dynabook-2025__slider--arrow-left is-s">
+                    <img class="u-img" src="<%= pageData.assetPath %>images/common/arrow_slider.svg" alt>
+                  </button>
+                  <ul class="p-dynabook-2025__slider--dot--list">
+                  </ul>
+                  <button class="p-dynabook-2025__slider--ui--btn p-dynabook-2025__kv--ui-right is-s">
+                    <img class="u-img" src="<%= pageData.assetPath %>images/common/arrow_slider.svg" alt>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--./p-dynabook-2025__kv-->
+            <div class="l-2025-page__section p-dynabook-2025__important--wrapper">
+
+              <div class="p-dynabook-2025__important c-btn__linkBase-r--5">
+                <p class="p-dynabook-2025__important--title">
+                    重要なお知らせ
+                </p>
+                <ul class="p-dynabook-2025__important--list">
+                  <li class="p-dynabook-2025__important--item">
+                    <p class="p-dynabook-2025__important--day">2024年02月21日</p>
+                    <a href="https://batterycheck.dynabook.com/" class="p-dynabook-2025__important--text c-ico__link" target="_blank">東芝製パソコン用ACアダプターの交換・回収について（発煙・発火の恐れ）&lt;対象範囲の拡大&gt;</a>
+                  </li>
+                  <li class="p-dynabook-2025__important--item">
+                    <p class="p-dynabook-2025__important--day">2016年11月10日</p>
+                    <a href="https://batterycheck.dynabook.com/" class="p-dynabook-2025__important--text c-ico__link" target="_blank">【新たなお願い】東芝製ノートパソコンに搭載のバッテリーパックの交換・回収について(発火の恐れ)</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <section class="p-dynabook-2025__link">
+            <div class="l-2025-page__section">
+              <div class="p-biztop-2025-link__col2">
+                <div class="p-biztop-2025-link__col2--left">
+                  <a class="u-hover-color--white" href="/business/product/index.html"id="b_lineup">
+                    <h2 class="c-title__levelPage-1">ビジネスPCラインアップ</h2>
+                    <div class="p-biztop-2025-link--ph c-r-10 u-hover-img-bg-cover">
+                      <img class="u-img" src="<%= pageData.assetPath %>images/business/top/link_th_001.png" alt>
+                    </div>
+                    <p class="p-biztop-2025-link--text">
+                      dynabookシリーズの機能やスペックなどをご紹介します。
+                    </p>
+                  </a>
+                </div>
+                <div class="p-biztop-2025-link__col2--right">
+                  <a class="u-hover-color--white" href="/business/solution/index.html" id="b_solution">
+                    <h2 class="c-title__levelPage-1">サービス・ソリューション</h2>
+                    <div class="p-biztop-2025-link--ph c-r-10 u-hover-img-bg-cover">
+                      <img class="u-img" src="<%= pageData.assetPath %>images/business/top/link_th_002.png" alt>
+                    </div>
+                    <p class="p-biztop-2025-link--text">
+                      dynabookで実現できるソリューションについてご紹介します。
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="p-dynabook-2025__main--area">
+            <!--./p-dynabook-2025__kv-->
+            <div class="l-2025-page__section sp-padding-bottom-0">
+
+              <div class="p-dynabook-2025__pickup">
+                <h2 class="c-title__levelPage-1">Pick Up情報</h2>
+                <div class="u-posiotn-relative">
+                  <ul class="p-dynabook-2025__pickup--list">
+                    <li class="p-dynabook-2025__pickup--item">
+                      <a class="u-hover-img-scale" href="/event/dynabookday/index.html" id="b_pick01">
+                        <div class="p-dynabook-2025__helpful--th c-r-10 u-hover-img-bg-cover">
+                          <img class="u-img" src="<%= pageData.assetPath %>images/business/top/bnr_cam_01_20250515.png" alt>
+                        </div>
+                        <p class="p-dynabook-2025__pickup--tags">
+                          <span class="p-dynabook-2025__pickup--tag is-blu-2">特集</span>
+                        </p>
+                        <h3 class="p-dynabook-2025__pickup--title">
+                          dynabook Day Advance
+                        </h3>
+                        <p class="p-dynabook-2025__pickup--text">
+                          [来場無料][展示会・セミナー・イベント]<br>未来が加速する。AIと共に。新しいビジネスの可能性を拓く、最新PCとソリューションのご提案
+                        </p>
+                      </a>
+                    </li>
+                    <li class="p-dynabook-2025__pickup--item">
+                      <a class="u-hover-img-scale" href="/business/contents/win11-migration/index.html" id="b_pick02">
+                        <div class="p-dynabook-2025__helpful--th c-r-10 u-hover-img-bg-cover">
+                          <img class="u-img" src="<%= pageData.assetPath %>images/business/top/bnr_cam_02.png" alt>
+                        </div>
+                        <p class="p-dynabook-2025__pickup--tags">
+                          <span class="p-dynabook-2025__pickup--tag is-grn-2">ソリューション</span><span class="p-dynabook-2025__pickup--tag is-blu-2">特集</span>
+                        </p>
+                        <h3 class="p-dynabook-2025__pickup--title">
+                          Windows 11 移行なら安心のDynabook
+                        </h3>
+                        <p class="p-dynabook-2025__pickup--text">
+                          Windows 11 への移行をご検討でしょうか？一度、お気軽にDynabookにご相談ください。
+                        </p>
+                      </a>
+                    </li>
+                    <li class="p-dynabook-2025__pickup--item">
+                      <a class="u-hover-img-scale" href="/solution/xr/index.html" id="b_pick03">
+                        <div class="p-dynabook-2025__helpful--th c-r-10 u-hover-img-bg-cover">
+                         <img class="u-img" src="<%= pageData.assetPath %>images/business/top/business_top_20250516/bnr_cam_03.png" alt>
+                        </div>
+                        <p class="p-dynabook-2025__pickup--tags">
+                          <span class="p-dynabook-2025__pickup--tag is-blu-2">特集</span>
+                        </p>
+                        <h3 class="p-dynabook-2025__pickup--title">
+                          透過型XRグラス「dynaEdge XR1
+                        </h3>
+                        <p class="p-dynabook-2025__pickup--text">
+                          現場DXよりスタートしたdynaEdgeのXR技術が、人とコンピューティングの新しい関係へさらに進化。
+                        </p>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="p-dynabook-2025__slider--ui p-dynabook-2025__slider--ui--pc">
+                    <button class="p-dynabook-2025__slider--ui--btn p-dynabook-2025__slider--arrow-left">
+                      <img class="u-img" src="<%= pageData.assetPath %>images/common/arrow_slider.svg" alt>
+                    </button>
+                    <ul class="p-dynabook-2025__slider--dot--list">
+                      <li class="p-dynabook-2025__slider--dot--item is-active"></li>
+                      <li class="p-dynabook-2025__slider--dot--item"></li>
+                      <li class="p-dynabook-2025__slider--dot--item"></li>
+                    </ul>
+                    <button class="p-dynabook-2025__slider--ui--btn p-dynabook-2025__slider--arrow-right">
+                      <img class="u-img" src="<%= pageData.assetPath %>images/common/arrow_slider.svg" alt>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <section class="p-dynabook-2025__edu l-2025-page__section sp-wide">
+
+            <div class="p-biztop-2025-case">
+              <h2 class="c-title__levelPage-1">お客様導入事例</h2>
+              <div class="p-biztop-2025-case__block">
+                <div class="p-biztop-2025-case__contents p-biztop-2025-case__contents--university">
+                  <div class="p-biztop-2025-case--item">
+                    <a class="p-biztop-2025-case--link u-hover-img-bg-cover-child u-hover-svg u-hover-color-p u-hover-color-text-child" href="/business/jirei/jirei18/index.html" id="b_jirei01">
+                      <div class="p-biztop-2025-case--item--ph c-r-10 u-hover-img-bg-cover-child-target">
+                        <img class="u-img" src="<%= pageData.assetPath %>images/business/top/case_th_001.png" alt>
+                      </div>
+                      <div class="p-biztop-2025-case--texts">
+                        <p class="p-biztop-2025-case--tags">
+                          <span class="p-biztop-2025-case--tag is-vio-1">現場DX</span>
+                        </p>
+                        <h3 class="p-biztop-2025-case--title">
+                          <span class="c-ico__arrow u-hover-svg-target">豊田合成東日本株式会社 様</span>
+                        </h3>
+                        <p class="p-biztop-2025-case--text">
+                          2013年設立。東海地方、九州地方に続くトヨタ自動車グループ第3の自動車生産地域となる東北地方の宮城工場に本社を置き、トヨタ自動車の工場に隣接して主に射出成形によりバンパーや内装部品などの大型樹脂成形パーツを生産。 2022年7月には同社国内初となるスマートファクトリー大衡工場が稼働しています。
+                        </p>
+                      </div>
+                      <div class="p-biztop-2025-case--service">
+                        <h4 class="p-biztop-2025-case--servicetitle u-hover-color-text-child-target">導入製品・サービス</h4>
+                        <p class="p-biztop-2025-case--servicetext">モバイルエッジコンピューティングデバイス dynaEdge DE200、インテリジェントビューア AR100、ピッキング支援システムEQSURV Picking™</p>
+                      </div>
+                    </a>
+                    <a class="p-biztop-2025-case--link u-hover-img-bg-cover-child u-hover-svg u-hover-color-p u-hover-color-text-child" href="/business/jirei/jirei21/index.html" id="b_jirei02">
+                      <div class="p-biztop-2025-case--item--ph c-r-10 u-hover-img-bg-cover-child-target">
+                        <img class="u-img" src="<%= pageData.assetPath %>images/business/top/case_th_002.png" alt>
+                      </div>
+                      <div class="p-biztop-2025-case--texts">
+                        <p class="p-biztop-2025-case--tags">
+                          <span class="p-biztop-2025-case--tag is-gry-1">PC製品</span>
+                        </p>
+                        <h3 class="p-biztop-2025-case--title">
+                          <span class="c-ico__arrow u-hover-svg-target">大塚ビジネスサポート株式会社 様</span>
+                        </h3>
+                        <p class="p-biztop-2025-case--text">
+                          大塚ビジネスサポート株式会社は、2009年に大塚ホールディングスの一部門としてスタートし、2010年からはPCサポートセンター…
+                        </p>
+                      </div>
+                      <div class="p-biztop-2025-case--service">
+                        <h4 class="p-biztop-2025-case--servicetitle u-hover-color-text-child-target">導入製品・サービス</h4>
+                        <p class="p-biztop-2025-case--servicetext">dynabook X83 CHANGER</p>
+                      </div>
+                    </a>
+                    <a class="p-biztop-2025-case--link u-hover-img-bg-cover-child u-hover-svg u-hover-color-p u-hover-color-text-child" href="/business/jirei/jirei20/index.html" id="b_jirei03">
+                      <div class="p-biztop-2025-case--item--ph c-r-10 u-hover-img-bg-cover-child-target">
+                        <img class="u-img" src="<%= pageData.assetPath %>images/business/top/case_th_003.png" alt>
+                      </div>
+                      <div class="p-biztop-2025-case--texts">
+                        <p class="p-biztop-2025-case--tags">
+                          <span class="p-biztop-2025-case--tag is-gry-1">PC製品</span>
+                        </p>
+                        <h3 class="p-biztop-2025-case--title">
+                          <span class="c-ico__arrow u-hover-svg-target">株式会社ディー・エヌ・エー 様</span>
+                        </h3>
+                        <p class="p-biztop-2025-case--text">
+                          株式会社ディー・エヌ・エーは組織変更により1999年誕生。一世を風靡した「モバゲー」などのゲーム事業を中心とし、インターネットサービ…
+                        </p>
+                      </div>
+                      <div class="p-biztop-2025-case--service">
+                        <h4 class="p-biztop-2025-case--servicetitle u-hover-color-text-child-target">導入製品・サービス</h4>
+                        <p class="p-biztop-2025-case--servicetext">dynabook GA83</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="p-biztop-2025-solution__btn">
+              <a class="c-btn__linkBase-black u-hover-bg-black c-ico__arrow-white" href="/business/jirei/jirei_1.html" id="b_solution_menu06">お客様導入事例一覧</a>
+            </div>
+          </section>
+
+          <section class="p-dynabook-2025__bizsupport">
+            <div class="l-2025-page__section">
+              <h2 class="c-title__levelPage-1">各種サポート / サービス</h2>
+              <div class="p-biztop-2025-bizsupport__col2">
+                <div class="p-biztop-2025-bizsupport__col2--left">
+                  <div class="p-biztop-2025-bizsupport--ph">
+                    <picture>
+                      <source srcset="<%= pageData.assetPath %>images/business/top/bizsupport_th_001_sp.png" media="(max-width: 780px)">
+                      <img class="u-img" src="<%= pageData.assetPath %>images/business/top/bizsupport_th_001.png" alt>
+                    </picture>
+                  </div>
+                </div>
+                <div class="p-biztop-2025-bizsupport__col2--right">
+                  <a class="p-biztop-2025-bizsupport--item u-hover-color--white" href="/assistpc/enchob2b/index_j.htm" id="b_support01">
+                    <h3 class="p-biztop-2025-bizsupport--title">
+                      <span class="p-biztop-2025-bizsupport--icon">
+                        <img class="u-img" src="<%= pageData.assetPath %>images/business/top/bizsupport_ico_001.svg" alt>
+                      </span>
+                      保守パックサービス
+                    </h3>
+                    <p class="p-biztop-2025-bizsupport--text">
+                      安心で心強いサービスをワンパック。法人向けモデルのメーカー保証を延長するサービスです。
+                    </p>
+                    <span class="c-ico__arrow-c"><span></span></span>
+                    <div class="p-biztop-2025-bizsupport--item--bg"></div>
+                  </a>
+                  <a class="p-biztop-2025-bizsupport--item u-hover-color--white" href="/assistpc/faq_search/index_j.htm" id="b_support02">
+                    <h3 class="p-biztop-2025-bizsupport--title">
+                      <span class="p-biztop-2025-bizsupport--icon">
+                        <img class="u-img" src="<%= pageData.assetPath %>images/business/top/bizsupport_ico_002.svg" alt>
+                      </span>
+                      よくあるご質問
+                    </h3>
+                    <p class="p-biztop-2025-bizsupport--text">
+                      パソコン操作やトラブルでお困りの際、こちらのFAQ検索をご活用ください。
+                    </p>
+                    <span class="c-ico__arrow-c"><span></span></span>
+                    <div class="p-biztop-2025-bizsupport--item--bg"></div>
+                  </a>
+                  <a class="p-biztop-2025-bizsupport--item u-hover-color--white" href="/assistpc/index_j.htm" id="b_support03">
+                    <h3 class="p-biztop-2025-bizsupport--title">
+                      <span class="p-biztop-2025-bizsupport--icon">
+                        <img class="u-img" src="<%= pageData.assetPath %>images/business/top/bizsupport_ico_003.svg" alt>
+                      </span>
+                      サポート対応
+                    </h3>
+                    <p class="p-biztop-2025-bizsupport--text">
+                      各種サポート/サービスを「カテゴリ別」と「目的別」でご紹介しています。
+                    </p>
+                    <span class="c-ico__arrow-c"><span></span></span>
+                    <div class="p-biztop-2025-bizsupport--item--bg"></div>
+                  </a>
+                  <a class="p-biztop-2025-bizsupport--item u-hover-color--white" href="/business/contact.html" id="b_support04">
+                    <h3 class="p-biztop-2025-bizsupport--title">
+                      <span class="p-biztop-2025-bizsupport--icon">
+                        <img class="u-img" src="<%= pageData.assetPath %>images/business/top/bizsupport_ico_004.svg" alt>
+                      </span>
+                      お問い合わせ
+                    </h3>
+                    <p class="p-biztop-2025-bizsupport--text">
+                      法人向け製品の導入検討・購入に関するご相談については、Webフォームよりお問い合わせください。
+                    </p>
+                    <span class="c-ico__arrow-c"><span></span></span>
+                    <div class="p-biztop-2025-bizsupport--item--bg"></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+           <%- include( pageData.path+'business/modules/_dynabookmovie.ejs', { pageData: pageData } ); %>
+
+          <section class="p-dynabook-2025__info u-bg-gray--light">
+            <div class="l-2025-page__section">
+              <h2 class="c-title__levelPage-1">お知らせ</h2>
+              <div class="p-biztop-2025-info js-news-csv" data-dir="dynabook-b2b" data-file="business_news_20250520" data-max="5" data-navi="false">
+                <ul class="p-biztop-2025-info__list">
+                </ul>
+              </div>
+              <div class="p-biztop-2025-info__btn">
+                <a class="c-btn__linkBase-black u-hover-bg-black c-ico__arrow-white" href="/business/news/index.html" id="b_oshirase">お知らせ一覧</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="p-dynabook-2025__reason">
+            <div class="p-dynabook-2025__reason--bg">
+              <div class="l-2025-page__section">
+                <h2 class="c-title__levelPage-1">dynabookが選ばれる理由</h2>
+                <div class="p-biztop-2025-reason__col2">
+                  <div class="p-biztop-2025-reason__col2--left">
+                    <p class="p-biztop-2025-reason--text">
+                      dynabookは誕生から35年。企画・開発・製造・販売・サポートを一貫して行い、ハードウェアとソフトウェアの両面からお客様のニーズに応える製品やサービスを追求し、そのノウハウを新しい製品・サービスに活かしてきました。私たちDynabookは積み重ねた挑戦の歴史を礎に、常にお客様のニーズに寄り添い、サポートすることで、これからも多様なビジネスシーンに最適解を提供し続けます。
+                    </p>
+                  </div>
+                  <div class="p-biztop-2025-reason__col2--right">
+                    <div class="p-biztop-2025-reasonAward">
+                    <div class="p-biztop-2025-reasonAward--left">
+                      <img class="u-img" src="<%= pageData.assetPath %>images/business/top/reasonAward_th_001.png" alt>
+                    </div>
+                    <div class="p-biztop-2025-reasonAward--right">
+                      <p class="p-biztop-2025-reasonAward--text">「日経コンピュータ」（2024年9月5日号）<br class="u-display__block--sp">日経コンピュータ 顧客満足度調査 <br class="u-display__block--pc">2024-2025</p>
+                      <h3 class="p-biztop-2025-reasonAward--title">クライアントパソコン部門 <br>1位</h3>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="p-dynabook-2025__environment l-2025-page__section p-dynabook-2025__mb-none">
+            <h2 class="c-title__levelPage-1">環境への取り組み</h2>
+            <div class="p-biztop-2025-environment__block">
+              <div class="p-biztop-2025-environment__contents">
+                <div class="p-biztop-2025-environment__col">
+                  <p class="p-biztop-2025-environment__text">事業経営と環境経営の一体化を目指し、環境設計アセスメントを取り入れた製品開発、省エネ設備や再生可能エネルギーの導入、環境負荷を考慮した調達に取り組んでいます。</p>
+                  <a class="c-btn__linkBase-white c-btn__linkBase-r--10 c-ico__arrow-white--btn c-ico__arrow u-hover-bg-gray" href="/pc/env/index.html" id="b_torikumi01">
+                    <span class="">環境活動</span>
+                  </a>
+                  <a class="c-btn__linkBase-white c-btn__linkBase-r--10 c-ico__arrow-white--btn c-ico__arrow u-hover-bg-gray" href="/assistpc/purchase/index_j.htm" id="b_torikumi02">
+                    <span class="">パソコンリサイクル</span>
+                  </a>
+                </div>
+                <div class="p-biztop-2025-environment__ph">
+                  <img class="u-img" src="<%= pageData.assetPath %>images/business/top/environment_ph.png" alt>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <div class="modal-youtube">
+          <div class="modal-youtube-bg"></div>
+          <div class="modal-youtube-contents">
+            <button class="btn-modal btn-modal__close js-modal-close">
+              <img class="u-img" src="<%= pageData.assetPath %>images/common/btn_modal_youtube_close.svg" alt="">
+            </button>
+            <div class="modal-youtube-wrap">
+              <div class="modal-movie ">
+                <div id="movie-player"></div>
+              </div>
+              <div class="modal-youtube-col">
+                <p class="modal-youtube-text">※再生ボタンをクリックすると、YouTubeに掲載している動画が再生されます。</p>
+                <p class="modal-youtube-text">※YouTubeは弊社とは別企業のサービスであり、各サービスの利用規約に則りご利用ください。</p>
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </main>
+      <!--./dynabook-2025-main-->
+      <!--dynabook-2025-fotter-->
+      <%- include( pageData.path+'personal/modules/_fotter.ejs', { pageData: pageData } ); %>
+      <!--./dynabook-2025-fotter-->
+      <!-- <script src="./assets/js/main.js"></script> -->
+      <!-- <script src="./assets/js/header_2025.js"></script> -->
+      <!-- <script src="./assets/js/footer_2025.js"></script> -->
+      <!-- %- include( pageData.path+'common/_fotter_js.ejs', { pageData: pageData } ); % -->
+
+
+<script src="/js/assets_2025/individual/slick.min.js"></script>
+<script src="/js/assets_2025/individual/jquery.matchHeight-min.js"></script>
+<script src="/js/assets_2025/individual/jquery.csv.min.js"></script>
+<script src="/js/assets_2025/individual/header_2025.js"></script>
+<script src="/js/assets_2025/individual/main_2025.js"></script>
+<script src="/js/assets_2025/individual/footer_2025.js"></script>
+<script>
+  $(function() {
+    $('.p-biztop-2025-case--texts').matchHeight();
+    $('.p-biztop-2025-case--service').matchHeight();
+  });
+</script>
+    </div>
+  </body>
+</html>

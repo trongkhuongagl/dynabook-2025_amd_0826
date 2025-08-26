@@ -1,0 +1,28 @@
+<%
+const pageData = {
+title: 'footer',
+description: 'fotter',
+path:'../',
+assetPath:'/sites/default/files/dynabook-b2c/assets_2025/',
+isTop:'true'
+}
+%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include( pageData.path+'common/_meta.ejs', { pageData: pageData } ); %>
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<%= pageData.assetPath %>css/footer_2025.css" />
+    <link rel="stylesheet" href="<%= pageData.assetPath %>css/style_2025.css" />
+    <!-- /CSS -->
+    <%- include( pageData.path+'common/_header_js.ejs', { pageData: pageData } ); %>
+  </head>
+
+  <body>
+    <%- include( pageData.path+'personal/modules/_fotter.ejs', { pageData: pageData } ); %>
+    <script src="<%= pageData.assetPath %>js/footer_2025.js"></script>
+  </body>
+</html>

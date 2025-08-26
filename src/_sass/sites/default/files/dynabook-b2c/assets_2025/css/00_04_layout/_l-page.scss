@@ -1,0 +1,57 @@
+@use 'sass:math';
+@use '00_02_setting/setting' as *;
+@use '00_01_common/utility' as *;
+.l-2025-page__section {
+  box-sizing: border-box;
+  margin: 0 auto;
+  @include setSizePC(width, 1120);
+  @include setSizePC4(padding, 50, 0, 50, 0);
+  // @include setSizePC4(padding,80,160,80,160);
+  // width: 100%;
+  // max-width: 1440px;
+  @include mediaQuery(sp) {
+    // padding:pxToVw(80) pxToVw(20) pxToVw(50);
+    width: pxToVw(352);
+    padding: pxToVw(50) 0 pxToVw(50);
+  }
+  &.sp-wide {
+    @include mediaQuery(sp) {
+      padding: 0;
+      width: 100%;
+    }
+  }
+  &.sp-wide-100 {
+    @include mediaQuery(sp) {
+      width: 100%;
+    }
+  }
+  &.padding-top--0{
+    padding-top: 0;
+  
+  }
+  &.padding-bottom--0{
+    padding-bottom: 0;
+  }
+}
+
+.l-2025-page__sp--side{
+  @include mediaQuery(sp){
+    width: 100%;
+    padding: 0 pxToVw(20);
+  };
+}
+
+.l-2025-page__block--gray {
+  background-color: #f6f6f6;
+  box-sizing: border-box;
+  @include setSizePC4(padding, 45, 64, 45, 64);
+  @include setSizePC(border-radius, 5);
+  // border-bottom: solid 1px #e5e3e3;
+  @include mediaQuery(sp) {
+    padding: pxToVw(33) pxToVw(20);
+    border-radius: pxToVw(5);
+  }
+  &.sp-wide {
+    padding: pxToVw(33) 0;
+  }
+}

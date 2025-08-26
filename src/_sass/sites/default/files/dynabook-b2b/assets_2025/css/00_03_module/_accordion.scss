@@ -1,0 +1,106 @@
+/* CSS for CodePen */
+@use '00_02_setting/setting' as *;
+@use '00_01_common/utility' as *;
+
+.c-accordion__content {
+  width: 100%;
+  line-height: 1;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+
+.c-accordion__content.is-open {
+  height: auto;
+  opacity: 1;
+}
+
+.js-accordion-title.ico-arro-only {
+  position: relative;
+  &::after {
+    display: inline-block;
+    vertical-align: baseline;
+    content: '';
+    @include setSizePC(width, 14);
+    aspect-ratio: 1/1;
+    background-image: url(#{$imagePath}common/arrow-black-bold.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%) rotate(90deg);
+    @include mediaQuery(sp) {
+      width: pxToVw(24);
+    }
+  }
+  &.is-active {
+    &::after {
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+  }
+}
+
+
+.js-accordion--wrapper{
+  position:relative;
+  margin-bottom:80px;
+
+  .js-accordion-btn{
+    position:absolute !important;
+    bottom:-80px;
+    left:50%;
+    transform:translateX(-50%);
+    width:300px;
+    text-align:center;
+    background:#fff;
+    border:1px solid #ccc;
+    overflow:hidden;
+    @include setSizePC(border-radius, 10);
+    @include setSizePC(padding, 12);
+    @include setSizePC(padding-right, 60);
+    @include setSizePC(padding-left, 60);
+    font-weight:700;
+    @include sizePC(16);
+    @include mediaQuery(sp) {
+      font-size: pxToVw(14);
+      padding: pxToVw(12) pxToVw(30);
+    }
+    &::before {
+      display: inline-block;
+      vertical-align: baseline;
+      content: '';
+      @include setSizePC(width, 14);
+      aspect-ratio: 1/1;
+      background-image: url(#{$imagePath}common/arrow-black-bold.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(-50%, -50%) rotate(90deg);
+      @include mediaQuery(sp) {
+        width: pxToVw(24);
+      }
+    }
+    &.is-active {
+      .is-open{
+        display:none;
+      }
+      .is-close{
+        display:block;
+      }
+      &::before {
+        transform: translate(-50%, -50%) rotate(-90deg);
+      }
+    }
+    .is-open{
+    }
+    .is-close{
+      display:none;
+    }
+  }
+}

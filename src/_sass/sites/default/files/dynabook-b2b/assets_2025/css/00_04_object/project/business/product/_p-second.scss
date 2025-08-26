@@ -1,0 +1,1995 @@
+@use 'sass:math';
+@use '../../../../00_02_setting/setting' as *;
+@use '../../../../00_01_common/utility' as *;
+.dynabook-2025,
+ .js-modal{
+  &.p-dynabook-2025__busProduct__main{
+    sup{
+      font-size: .6em;
+      vertical-align: top;
+      position: relative;
+      top: -0.1em;
+      letter-spacing: 0;
+    }
+  }
+  .p-dynabook-2025__busProduct{
+  .dbk-2025-product-guide-max {
+    @include setSizePC(padding, 0);
+    @include setSizePC(width, 1120);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //  @include setSizePC4(padding,54,0,54,0);
+    //  margin: 0 0 0 auto;
+    @include mediaQuery(sp) {
+      width: 100%;
+      padding: 0 pxToVw(35);
+      display: block;
+    }
+  }
+
+  .dbk-2025-product-main {
+    box-sizing: border-box;
+    @include setSizePC4(padding, 65, 0, 65, 0);
+    @include setSizePC(margin-bottom, 65);
+    background: linear-gradient(180deg, #0a1e5d 0%, #13398c 100%);
+    color: #fff;
+    @include mediaQuery(sp) {
+      margin-bottom: pxToVw(70/2);
+      padding: pxToVw(47) 0;
+      background: linear-gradient(180deg, #0a1e5d 0%, #13398c 100%);
+    }
+
+    &--mb0{
+      @include setSizePC(margin-bottom, 0);
+      @include mediaQuery(sp) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .dbk-2025-product-main__warap {
+    display: flex;
+    // justify-content: space-between;
+    width: 100%;
+    @include mediaQuery(sp) {
+      display: block;
+    }
+  }
+
+  .dbk-2025-product-main__contents {
+    width: percent(479, 1120);
+    @include mediaQuery(sp) {
+      width: 100%;
+    }
+  }
+
+  .dbk-2025-product-overview__image {
+    width: percent(641, 1120);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    @include mediaQuery(sp) {
+      width: 100%;
+      display: block;
+      margin-top: pxToVw(50);
+    }
+  }
+
+  .c-title__levelPage-1 {
+    @include setSizePC(margin-bottom, 25);
+    @include mediaQuery(sp) {
+      margin-bottom: pxToVw(30/2);
+    }
+    &::before{
+      background-color:#06abe2;
+    }
+  }
+
+  .dbk-2025-product-overview__title--logo {
+    @include setSizePC(width, 170);
+    @include setSizePC(margin-right, 10);
+    @include mediaQuery(sp) {
+      width: pxToVw(170);
+      margin-right: pxToVw(10);
+    }
+  }
+
+  .dbk-2025-product-overview__title--text {
+    @include sizePC_d(40);
+    font-weight: 700;
+    line-height: 1;
+    @include mediaQuery(sp) {
+      font-size: pxToVw(40);
+    }
+  }
+
+  .dbk-2025-product-overview__ph {
+    @include setSizePC(width, 480);
+    @include mediaQuery(sp) {
+      width: 100%;
+    }
+  }
+
+  .dbk-2025-product-main__size {
+    @include sizePC(24);
+    font-weight: 700;
+    @include setSizePC(margin-bottom, 26);
+    @include mediaQuery(sp) {
+      font-size: pxToVw(20);
+      margin-bottom: 0;
+    }
+  }
+
+  .dbk-2025-product-main__tag--wrap {
+    @include mediaQuery(sp) {
+      margin-top: pxToVw(20);
+      margin-bottom: 0;
+    }
+  }
+
+  .dbk-2025-product-main__tag {
+    display: inline-block;
+    @include sizePC(12);
+    font-weight: 500;
+    color: #b2c7ff;
+    line-height: 1;
+    @include setSizePC(border-radius, 5);
+    box-sizing: border-box;
+    @include setSizePC(padding, 5);
+    @include setSizePC(margin-right, 5);
+    border: 1px solid #6d7ccf;
+    @include mediaQuery(sp) {
+      font-size: pxToVw(12);
+      border-radius: pxToVw(5);
+      padding: pxToVw(5);
+      margin-right: pxToVw(5);
+    }
+  }
+
+  .dbk-2025-product-head__wrap {
+    @include setSizePC(padding-bottom, 30);
+    @include setSizePC(margin-bottom, 25);
+    border-bottom: solid 1px #1e44a5;
+    @include mediaQuery(sp) {
+      padding-bottom: pxToVw(30);
+      margin-bottom: pxToVw(30);
+    }
+  }
+
+  .dbk-2025-product-main__sub {
+    @include sizePC(18);
+    line-height: 1.75;
+    font-weight:700;
+    @include setSizePC(margin-bottom, 15);
+    @include mediaQuery(sp) {
+      margin-bottom: pxToVw(15);
+      font-size: pxToVw(16);
+    }
+  }
+
+  .dbk-2025-product-main__text {
+    color:#B2C7FF;
+    @include sizePC(16);
+    font-weight: 400;
+    line-height: 1.75;
+    @include mediaQuery(sp) {
+      font-size: pxToVw(16);
+    }
+  }
+
+
+
+
+    &__head{
+      @include setSizePC(padding-top, 44);
+      @include setSizePC(padding-bottom, 0);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      @include mediaQuery(sp) {
+        display:block;
+//        padding-top: pxToVw(40);
+        padding-top: pxToVw(40);
+        padding-bottom: pxToVw(30);
+      }
+      &>.p-dynabook-2025__busProduct__head--category{
+        @include sizePC(16);
+        @include mediaQuery(sp) {
+          display: none;
+        }
+      }
+      &--category{
+        font-weight: 700;
+        @include setSizePC(margin-bottom, 16);
+        width: 100%;
+      }
+      &--title{
+        .p-dynabook-2025__busProduct__head--category{
+          display: none;
+          @include mediaQuery(sp) {
+            display: block;
+            font-size: pxToVw(16);
+          }
+        }
+      }
+      &--mainTitle{
+        @include sizePC_d(40);
+        line-height: 1;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        @include setSizePC(margin-right, 34);
+        &::before {
+          content: '';
+          display: inline-block;
+          @include setSizePC(width, 10);
+          aspect-ratio: 1/1;
+          background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none"> <circle cx="5" cy="5" r="5" fill="%23999999"/></svg>');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
+          margin-right: 0.5em;
+        }
+        @include mediaQuery(sp) {
+          font-size: pxToVw(36);
+          line-height: 1;
+          &::before {
+            width: pxToVw(6);
+            margin-right: pxToVw(6);
+          }
+        }
+      }
+      &--subTitle{
+        flex: 1;
+        color: #000;
+        font-weight: 700;
+        line-height: 1.5;
+        position: relative;
+        text-align: left;
+        @include setSizePC(padding-left, 34);
+        &:before{
+          content: "";
+          display: block;
+          background: #CCCCCC;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 24px;
+        }
+        &--sp{
+          display: none;
+        }
+        @include mediaQuery(sp) {
+          width: 100%;
+          font-size: pxToVw(14);
+          margin-top: pxToVw(20);
+          padding-top: pxToVw(15);
+          padding-left:0;
+          border-top: 1px solid #cccccc;
+          flex: 1;
+          &:before{
+            display: none;
+          }
+          &--sp{
+            display: inherit;
+          }
+        }
+      }
+      &--meta{
+        @include mediaQuery(sp) {
+          width: 100%;
+          margin-top: pxToVw(20);
+        }
+      }
+      &--type{
+        display: inline-block;
+        border-radius: 5px;
+        border: 1px solid #CCC;
+        @include sizePC(18);
+        font-weight: 700;
+        line-height: 1;
+        @include setSizePC(padding-top, 12);
+        @include setSizePC(padding-bottom, 12);
+        @include setSizePC(padding-left, 24);
+        @include setSizePC(padding-right, 24);
+        @include mediaQuery(sp) {
+          font-size: pxToVw(16);
+          padding: pxToVw(10) pxToVw(24);
+        }
+      }
+    }
+    &__kv{
+      @include setSizePC(padding-top,42);
+      @include setSizePC(padding-bottom,40);
+      @include mediaQuery(sp) {
+        padding-top: 0;
+        padding-bottom: pxToVw(47);
+      }
+
+      .p-dynabook-2025__busProduct__product--series{
+        align-items:start;
+      }
+
+
+      &--image{
+        position:relative;
+        z-index:1;
+        @include setSizePC(margin-bottom,32);
+        @include mediaQuery(sp) {
+          margin-bottom: pxToVw(20);
+        }
+      }
+
+      .is-cap{
+        position:absolute;
+        line-height:1.4;
+        @include sizePC(12);
+        top:0;
+        left:0;
+        @include setSizePC(margin,10);
+        @include mediaQuery(sp) {
+          font-size: pxToVw(10);
+          margin: pxToVw(5);
+        }
+        &.is-l50per{
+          left:50%;
+        }
+        &.is-b{
+          top:auto;
+          bottom:0;
+        }
+      }
+
+      &--tag{
+        &--list{
+          display: flex;
+          flex-wrap: wrap;
+          @include setSizePC(gap,8);
+          @include setSizePC(margin-bottom,32);
+          @include mediaQuery(sp) {
+            gap: pxToVw(8);
+            margin-bottom: pxToVw(20);
+          }
+        }
+        &--item{
+          background: #232CA7;
+          @include setSizePC(border-radius,5);
+          @include setSizePC(padding-top,2);
+          @include setSizePC(padding-bottom,2);
+          @include setSizePC(padding-left,12);
+          @include setSizePC(padding-right,12);
+          color: #ffffff;
+          @include sizePC(14);
+          @include mediaQuery(sp) {
+            border-radius: pxToVw(5);
+            padding: pxToVw(8) pxToVw(12);
+            font-size: pxToVw(14);
+            line-height: 1;
+          }
+        }
+      }
+      &--text{
+        line-height: 1.75;
+      }
+      &--mention{
+        @include setSizePC(margin-top,10);
+        @include sizePC(14);
+        @include mediaQuery(sp) {
+          margin-top: pxToVw(10);
+          font-size: pxToVw(12);
+        }
+      }
+    }
+    &__product{
+      @include setSizePC(padding-top, 0);
+      @include mediaQuery(sp) {
+        padding-bottom: 0;
+      }
+
+
+
+
+
+      .l-2025-page__section--head{
+        @include setSizePC(padding-bottom, 35);
+        @include mediaQuery(sp) {
+          padding-left: pxToVw(20);
+          padding-right: pxToVw(20);
+          padding-bottom: pxToVw(50/2);
+          &+.l-2025-page__section--main{
+            .p-dynabook-2025__busProduct__product--main{
+              padding-top: pxToVw(24);
+              padding-bottom: pxToVw(10);
+            }
+          }
+        }
+      }
+      .l-2025-page__section--title{
+        @include sizePC(32);
+        line-height: 1;
+        @include mediaQuery(sp) {
+          font-size: pxToVw(32);
+        }
+      }
+      &--series{
+        display: flex;
+        align-items: center;
+        @include mediaQuery(sp) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        &--title{
+          width: 58%;
+          @include sizePC(16);
+          h2{
+            &+p{
+              @include setSizePC(margin-top, 42);
+            }
+          }
+          @include mediaQuery(sp) {
+            font-size: pxToVw(16);
+            width: auto;
+            h2{
+              &+p{
+                margin-top: pxToVw(32);
+              }
+            }
+          }
+        }
+        &--image{
+          width: 42%;
+          @include mediaQuery(sp) {
+            width: auto;
+          }
+          &s{
+            display:flex;
+            align-items: center;
+            justify-content:center;
+            @include mediaQuery(sp) {
+              display:block;
+            }
+          }
+        }
+        &--cap{
+          text-align:center;
+          @include sizePC(12);
+          @include setSizePC(margin-top, 8);
+          @include mediaQuery(sp) {
+            font-size: pxToVw(10);
+            margin-top: pxToVw(5);
+          }
+        }
+        &--name{
+          @include sizePC(58);
+          @include mediaQuery(sp) {
+            font-size: pxToVw(58);
+          }
+        }
+      }
+      &--main{
+        border-radius: 5px 5px 0px 0px;
+        background: #F6F6F6;
+        @include setSizePC(padding-top, 40);
+        @include setSizePC(padding-bottom, 40);
+        @include setSizePC(padding-left, 70);
+        @include setSizePC(padding-right, 70);
+        @include mediaQuery(sp) {
+          margin-right: pxToVw(20);
+          margin-left: pxToVw(20);
+          padding: pxToVw(50) 0 pxToVw(30);
+        }
+      }
+      &--scrollX{
+        @include mediaQuery(sp) {
+          // width: pxToVw(330);
+          width: calc(100% + #{pxToVw(40)});
+          margin-left: pxToVw(-20);
+          overflow-x: scroll;
+        }
+        &Inner{
+          @include mediaQuery(sp) {
+            width: pxToVw(1035);
+          }
+        }
+        &.is-set-1{
+          @include mediaQuery(sp) {
+            width: calc(100% + #{pxToVw(40)});
+          }
+          &Inner{
+            @include mediaQuery(sp) {
+              width: 100%;
+            }
+          }
+          .p-dynabook-2025__busProduct__product--scrollXInner{
+            @include mediaQuery(sp){
+              width: 100%;
+            };
+          }
+        }
+
+        &.is-set-2{
+          .p-dynabook-2025__busProduct__product--scrollXInner{
+            @include mediaQuery(sp){
+              width: 145vw;
+            };
+          }
+        }
+      }
+      &--tab{
+        &--list{
+          display: flex;
+          @include setSizePC(column-gap, 16);
+          @include setSizePC(margin-bottom, 26);
+          @include mediaQuery(sp) {
+            display: block;
+            column-gap: pxToVw(16);
+            margin-bottom: pxToVw(40);
+          }
+        }
+        &--item{
+          flex: 1;
+          @include mediaQuery(sp) {
+            & + .p-dynabook-2025__busProduct__product--tab--item{
+              margin-top:pxToVw(30/2);
+            }
+            display: block;
+            column-gap: pxToVw(16);
+          }
+        }
+        &--btn{
+          background: #DEF0FF;
+          @include setSizePC(border-radius, 5);
+          display: flex;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          @include setSizePC(column-gap, 20);
+          @include setSizePC(padding-top, 20);
+          @include setSizePC(padding-bottom, 20);
+          @include setSizePC(padding-left, 32);
+          @include setSizePC(padding-right, 32);
+          @include mediaQuery(sp) {
+            border-radius: pxToVw(5);
+            column-gap: pxToVw(20);
+            padding: pxToVw(20) pxToVw(26);
+          }
+          &--texts{
+            .p-dynabook-2025__busProduct__product--tab--name{
+              @include sizePC(20);
+              @include mediaQuery(sp) {
+                font-size: pxToVw(20);
+              }
+
+            }
+          }
+        }
+        &--name{
+          @include sizePC(36);
+          font-weight: 500;
+          line-height: 1.5;
+          @include mediaQuery(sp) {
+            font-size: pxToVw(36);
+          }
+        }
+        &--text{
+          @include sizePC(14);
+          font-weight: 500;
+          line-height: 1.4;
+          border-left: 1px solid #B5D4ED;
+          @include setSizePC(padding-left, 20);
+          position: relative;
+          &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 1px;
+            width: 1px;
+            height: 100%;
+            background-color: #FFFFFF;
+          }
+          @include mediaQuery(sp) {
+            font-size: pxToVw(14);
+            padding-left: pxToVw(20);
+          }
+          .is-s{
+            display:inline-block;
+            line-height:1.4;
+            @include sizePC(12);
+            @include mediaQuery(sp) {
+              font-size: pxToVw(10);
+            }
+          }
+        }
+      }
+      &--class{
+        color: #FFFFFF;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include setSizePC(margin-bottom, 40);
+        margin-left: 95px;
+        max-width: calc(100% - 95px);
+        background: rgb(9,22,94);
+        background: -moz-linear-gradient(160deg, rgba(9,22,94,1) 0%, rgba(22,51,221,1) 100%);
+        background: -webkit-linear-gradient(160deg, rgba(9,22,94,1) 0%, rgba(22,51,221,1) 100%);
+        background: linear-gradient(160deg, rgba(9,22,94,1) 0%, rgba(22,51,221,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#09165e",endColorstr="#1633dd",GradientType=1);
+        position: relative;
+        overflow: hidden;
+        &:before, &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100px;
+          background: url(#{$imagePath}common/class_line_01.png) no-repeat left center;
+          background-size: auto 100%;
+        }
+        &:after{
+          left: auto;
+          right: 0;
+          background-image: url(#{$imagePath}common/class_line_02.png);
+          background-position-x: right;
+        }
+        @include setSizePC(padding-top, 8);
+        @include setSizePC(padding-bottom, 8);
+        @include setSizePC(padding-left, 30);
+        @include setSizePC(padding-right, 30);
+        @include sizePC(16);
+        font-weight: 700;
+        @include mediaQuery(sp) {
+          margin-bottom: pxToVw(40);
+          padding: pxToVw(10) pxToVw(30);
+          font-size: pxToVw(14);
+        }
+      }
+      &--table{
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+      }
+      &--row{
+        display: table-row;
+      }
+      &--th, &--td{
+        display: table-cell;
+        @include setSizePC(padding-top, 12);
+        @include setSizePC(padding-bottom, 12);
+        @include setSizePC(padding-left, 18);
+        @include setSizePC(padding-right, 18);
+        @include mediaQuery(sp) {
+          padding: pxToVw(12) pxToVw(18);
+        }
+      }
+      &--th{
+        width: 105px;
+        @include sizePC(12);
+        font-weight: 700;
+        text-align: right;
+        padding-left: 0;
+        @include mediaQuery(sp) {
+          font-size: pxToVw(12);
+          padding-left: 0;
+        }
+      }
+      &--td{
+        width: calc( (100% - 95px) / 5 );
+        border-left: 1px solid #d9d9d9;
+      }
+      &--model{
+        background: #000000;
+        text-align: center;
+        &--button{
+          display:block;
+          background: #FFFFFF;
+          @include setSizePC(border-radius, 10);
+          overflow:hidden;
+          &:hover{
+            color:#333;
+          }
+          > span{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include setSizePC(column-gap, 8);
+            @include setSizePC(padding, 12);
+            width: 100%;
+            @include sizePC(16);
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.25;
+            &:before{
+              content: "";
+              display: block;
+              background-image: url(#{$imagePath}common/ico_pc.svg);
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center center;
+              @include setSizePC(width, 24);
+              aspect-ratio: 1/1;
+            }
+            &:after{
+              content: "";
+              display: block;
+              background-image: url(#{$imagePath}common/ico_arrow.svg);
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center center;
+              @include setSizePC(width, 16);
+              aspect-ratio: 1/1;
+            }
+          }
+        }
+        .p-dynabook-2025__busProduct__product--th{
+          color: #FFFFFF;
+          vertical-align: middle;
+        }
+        @include mediaQuery(sp) {
+          &--button{
+            border-radius: pxToVw(10);
+            > span{
+              padding-top: pxToVw(10);
+              padding-bottom: pxToVw(10);
+              font-size: pxToVw(16);
+              column-gap: pxToVw(8);
+              &:before{
+                width: pxToVw(24);
+              }
+              &:after{
+                width: pxToVw(30);
+              }
+            }
+          }
+        }
+        &+.p-dynabook-2025__busProduct__product--CPULineup{
+          .p-dynabook-2025__busProduct__product--th,
+          .p-dynabook-2025__busProduct__product--td{
+            @include setSizePC(padding-top, 21);
+          }
+          @include mediaQuery(sp) {
+            .p-dynabook-2025__busProduct__product--th,
+            .p-dynabook-2025__busProduct__product--td{
+              padding-top: pxToVw(21);
+            }
+          }
+        }
+      }
+      &--CPUInfo{
+        .p-dynabook-2025__busProduct__product--th,
+        .p-dynabook-2025__busProduct__product--td{
+          @include setSizePC(padding-top, 21);
+        }
+        &--item{
+          display: inline-block;
+          color: #2955E5;
+          @include sizePC(10);
+          line-height: 1;
+          font-weight: 500;
+          @include setSizePC(border-radius, 5);
+          @include setSizePC(padding-top, 6);
+          @include setSizePC(padding-bottom, 6);
+          @include setSizePC(padding-left, 8);
+          @include setSizePC(padding-right, 8);
+          @include setSizePC(margin-right, 2);
+          @include setSizePC(margin-bottom, 4);
+          border: 1px solid #6D7CCF;
+        }
+        @include mediaQuery(sp) {
+          .p-dynabook-2025__busProduct__product--th,
+          .p-dynabook-2025__busProduct__product--td{
+            padding-top: pxToVw(21);
+          }
+          &--item{
+            border-radius: pxToVw(5);
+            padding: pxToVw(6) pxToVw(8);
+            font-size: pxToVw(10);
+            margin-right: pxToVw(4);
+            margin-bottom: pxToVw(4);
+          }
+        }
+      }
+      &--CPULineup{
+        .p-dynabook-2025__busProduct__product--th,
+        .p-dynabook-2025__busProduct__product--td{
+          @include setSizePC(padding-top, 0);
+          letter-spacing:-0.03em;
+        }
+        &--item{
+          display: inline-block;
+          @include sizePC(10);
+          font-weight: 500;
+          @include setSizePC(border-radius, 5);
+          @include setSizePC(padding-top, 4);
+          @include setSizePC(padding-bottom, 4);
+          @include setSizePC(padding-left, 8);
+          @include setSizePC(padding-right, 8);
+          @include setSizePC(margin-right, 2);
+          @include setSizePC(margin-bottom, 4);
+          border: 1px solid #cccccc;
+        }
+        @include mediaQuery(sp) {
+          &--item{
+            border-radius: pxToVw(5);
+            padding: pxToVw(6) pxToVw(8);
+            font-size: pxToVw(10);
+            margin-right: pxToVw(4);
+            margin-bottom: pxToVw(4);
+          }
+        }
+      }
+      &--search{
+        .p-dynabook-2025__busProduct__product--th,
+        .p-dynabook-2025__busProduct__product--td{
+          @include setSizePC(padding-bottom, 0);
+        }
+        &--button{
+          background: #FFFFFF;
+          @include setSizePC(border-radius, 10);
+          display: block;
+          overflow:hidden;
+          @include mediaQuery(sp) {
+            border-radius: pxToVw(10);
+          }
+          &:hover{
+            color:#333;
+          }
+          > span{
+            display: block;
+            position: relative;
+            @include setSizePC(padding-top, 12);
+            @include setSizePC(padding-bottom, 12);
+            width: 100%;
+            @include sizePC(12);
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.25;
+            border: 1px solid #EFEFEF;
+            &:after{
+              content: "";
+              display: block;
+              position: absolute;
+              background-image: url(#{$imagePath}common/ico_arrow.svg);
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center center;
+              @include setSizePC(width, 16);
+              aspect-ratio: 1/1;
+              @include setSizePC(right, 8);
+              top: 50%;
+              transform: translateY(-50%);
+            }
+            @include mediaQuery(sp) {
+              padding-top: pxToVw(12);
+              padding-bottom: pxToVw(12);
+              font-size: pxToVw(14);
+              &:after{
+                width: pxToVw(30);
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+      &--foot{
+        border-radius: 0px 0px 5px 5px;
+        border-top: 1px solid #E5E3E3;
+        background: #F6F6F6;
+        @include setSizePC(padding-top,40);
+        @include setSizePC(padding-bottom,72);
+        text-align: center;
+        @include mediaQuery(sp) {
+          border-radius: 0;
+          padding-top: pxToVw(30);
+          padding-bottom: pxToVw(50);
+          margin-right: pxToVw(20);
+          margin-left: pxToVw(20);
+          margin-bottom: pxToVw(70);
+        }
+      }
+      &--btn{
+        display:block;
+        @include setSizePC(width,480);
+        @include setSizePC(border-radius,10);
+        margin-right:auto;
+        margin-left:auto;
+        overflow:hidden;
+        background: #FFF;
+        @include mediaQuery(sp) {
+          width: pxToVw(320);
+          border-radius: pxToVw(10);
+        }
+        &:hover{
+          color:#333;
+        }
+        > span{
+          @include setSizePC(padding-top,20);
+          @include setSizePC(padding-bottom,20);
+          @include setSizePC(padding-left,50);
+          @include setSizePC(padding-right,10);
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          @include setSizePC(column-gap,40);
+          border: 1px solid #EFEFEF;
+          > span{
+            display: block;
+            flex-grow: 1;
+            border-left: 1px solid #E5E3E3;
+            @include setSizePC(padding-top,16);
+            @include setSizePC(padding-bottom,16);
+            text-align: center;
+            @include sizePC(18);
+            font-weight: 500;
+            line-height: 1;
+          }
+          @include mediaQuery(sp) {
+            padding: pxToVw(16) pxToVw(20);
+            column-gap: pxToVw(20);
+            img{
+              width: pxToVw(20);
+            }
+            > span{
+              padding-top: pxToVw(10);
+              padding-bottom: pxToVw(10);
+              font-size: pxToVw(14);
+            }
+          }
+        }
+      }
+      &--bottom{
+        border-radius: 0px 0px 5px 5px;
+        background: #F6F6F6;
+        @include setSizePC(padding-top, 24);
+        @include setSizePC(padding-bottom, 64);
+        @include mediaQuery(sp) {
+          padding-top: pxToVw(20);
+          padding-bottom: pxToVw(50);
+          margin-right: pxToVw(20);
+          margin-left: pxToVw(20);
+          margin-bottom: pxToVw(70);
+        }
+        // .c-btn__linkBase-black{
+        //   @include sizePC(16);
+        //   margin: 0 auto;
+        //   @include setSizePC(padding-top, 15);
+        //   @include setSizePC(padding-bottom, 15);
+        //   @include setSizePC(padding-left, 32);
+        //   @include setSizePC(padding-right, 32);
+        //   &:before{
+        //     content: "";
+        //     display: inline-block;
+        //     @include setSizePC(width, 30);
+        //   }
+        //   &:after{
+        //     content: "";
+        //     display: inline-block;
+        //     @include setSizePC(width, 30);
+        //     aspect-ratio: 1/1;
+        //     vertical-align: middle;
+        //     background: url(#{$imagePath}common/ico_arrow_white.svg) no-repeat center center;
+        //     background-size: contain;
+        //   }
+        //   @include mediaQuery(sp) {
+        //     width: pxToVw(300);
+        //     text-align: center;
+        //     font-size: pxToVw(16);
+        //     padding: pxToVw(14) pxToVw(30);
+        //     &:before,&:after{
+        //       width: pxToVw(30);
+        //     }
+        //   }
+        // }
+      }
+
+      &--bottom{
+        border-radius: 0px 0px 5px 5px;
+        background: #F6F6F6;
+        @include setSizePC(padding-top, 24);
+        @include setSizePC(padding-bottom, 64);
+        @include mediaQuery(sp) {
+          padding-top: pxToVw(20);
+          padding-bottom: pxToVw(50);
+          padding-left: pxToVw(50);
+          padding-right: pxToVw(50);
+          margin-right: pxToVw(20);
+          margin-left: pxToVw(20);
+          margin-bottom: pxToVw(70);
+        }
+        // .c-btn__linkBase-black{
+        //   @include sizePC(16);
+        //   margin: 0 auto;
+        //   @include setSizePC(padding-top, 15);
+        //   @include setSizePC(padding-bottom, 15);
+        //   @include setSizePC(padding-left, 32);
+        //   @include setSizePC(padding-right, 32);
+        //   &:before{
+        //     content: "";
+        //     display: inline-block;
+        //     @include setSizePC(width, 30);
+        //   }
+        //   &:after{
+        //     content: "";
+        //     display: inline-block;
+        //     @include setSizePC(width, 30);
+        //     aspect-ratio: 1/1;
+        //     vertical-align: middle;
+        //     background: url(#{$imagePath}common/ico_arrow_white.svg) no-repeat center center;
+        //     background-size: contain;
+        //   }
+        //   @include mediaQuery(sp) {
+        //     width: pxToVw(300);
+        //     text-align: center;
+        //     font-size: pxToVw(16);
+        //     padding: pxToVw(14) pxToVw(30);
+        //     // &:before,&:after{
+        //     //   width: pxToVw(30);
+        //     // }
+        //   }
+        // }
+      }
+    }
+    &__gallery{
+      background: #222;
+      color: #FFFFFF;
+      .l-2025-page__section--title{
+        @include sizePC(32);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        @include setSizePC(margin-bottom, 40);
+        &::before {
+          content: '';
+          display: inline-block;
+          @include setSizePC(width, 10);
+          aspect-ratio: 1/1;
+          background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none"> <circle cx="5" cy="5" r="5" fill="%23999999"/></svg>');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
+          margin-right: 0.5em;
+        }
+        @include mediaQuery(sp) {
+          font-size: pxToVw(22);
+          margin-bottom: pxToVw(30);
+          &::before {
+            width: pxToVw(6);
+          }
+        }
+      }
+      &--item{
+        background-color: #fff;
+        cursor: pointer;
+        @include mediaQuery(sp) {
+          background: none;
+        }
+      }
+      &--search{
+        @include setSizePC(column-gap,30);
+        @include mediaQuery(sp) {
+          column-gap: pxToVw(30);
+        }
+        &--type{
+          &--wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include setSizePC(gap,15);
+            @include setSizePC(margin-bottom,20);
+            @include mediaQuery(sp) {
+              gap: pxToVw(15);
+              margin-top: pxToVw(20);
+              margin-bottom: pxToVw(20);
+            }
+          }
+          @include setSizePC(border-radius,10);
+          background: #ffffff;
+          text-align: center;
+          @include setSizePC(width,240);
+          @include setSizePC(padding-top,8);
+          @include setSizePC(padding-bottom,8);
+          @include setSizePC(padding-left,10);
+          @include setSizePC(padding-right,10);
+          color: #333333;
+          @include sizePC(12);
+          font-weight: 500;
+          @include mediaQuery(sp) {
+            border-radius: pxToVw(10);
+            width: auto;
+            padding: pxToVw(8) pxToVw(10);
+            font-size: pxToVw(12);
+            flex: 1;
+          }
+          &.is-active{
+            background: #BF2123;
+            color: #FFFFFF;
+            &.u-hover-img-bg-cover{
+              &::after{
+                display:none;
+              }
+            }
+            .p-dynabook-2025__busProduct__gallery--search--type--icon{
+              border-color: #ffffff;
+              &:after{
+                content: "";
+                display: block;
+                position: absolute;
+                @include setSizePC(width,6);
+                aspect-ratio: 1/1;
+                background: #FFFFFF;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include mediaQuery(sp) {
+                  width: pxToVw(6);
+                }
+              }
+            }
+          }
+          &--icon{
+            display: inline-block;
+            vertical-align: middle;
+            @include setSizePC(width,14);
+            @include setSizePC(margin-right,7);
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            border: 2px solid #333333;
+            position: relative;
+            @include mediaQuery(sp) {
+              width: pxToVw(14);
+              margin-right: pxToVw(7);
+            }
+          }
+        }
+      }
+      &--list{
+        position:fixed;
+        opacity:0;
+        left:-101vw;
+        @include mediaQuery(sp) {
+          width:90.2564102564vw;
+        }
+        transition:opacity 0.2s ease-out 0s, left 0s ease-out 0.2s;
+        &.is-active{
+          width:100%;
+          position:relative;
+          opacity:1;
+          left:0;
+          transition:opacity 0.2s ease-out 0s, left 0s ease-out 0s;
+          .p-dynabook-2025__busProduct__gallery--pc .slick-dots{
+            @include mediaQuery(sp){
+              display: none;
+            };
+          }
+        }
+      }
+      &--pc{
+        display: flex;
+        @include setSizePC(column-gap,32);
+        @include mediaQuery(sp) {
+          display: block;
+          width:100%;
+        }
+        .slick-dots{
+          @include mediaQuery(sp) {
+            margin-top: pxToVw(30);
+            display: flex;
+            column-gap: pxToVw(8);
+          }
+        }
+        .slick-list{
+          @include mediaQuery(sp) {
+            width:95%;
+            margin:0 auto;
+            overflow:visible;
+          }
+        }
+        .slick-slide{
+          opacity: .6;
+          transition:opacity 0.2s ease-out 0s;
+          &.slick-current{
+            opacity: 1;
+          }
+          img {
+            @include mediaQuery(sp) {
+              width:98%;
+              margin:0 auto;
+              border-radius: 2.5641025641vw;
+            }
+          }
+        }
+      }
+      &--sp{
+        display: none;
+        @include mediaQuery(sp) {
+          display: block;
+          overflow: hidden;
+        }
+      }
+      &--slider--for{
+        display: flex;
+        justify-content: center;
+        column-gap: pxToVw(16);
+        margin-bottom: pxToVw(30);
+      }
+      &--slider--nav{
+        display: flex;
+        column-gap: pxToVw(8);
+      }
+    }
+    &__contact{
+      .l-2025-page__section--title{
+        @include sizePC(32);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        @include setSizePC(margin-bottom, 40);
+        &::before {
+          content: '';
+          display: inline-block;
+          @include setSizePC(width, 10);
+          aspect-ratio: 1/1;
+          background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none"> <circle cx="5" cy="5" r="5" fill="%23999999"/></svg>');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
+          margin-right: 0.5em;
+          @include mediaQuery(sp){
+            width: pxToVw(10);
+          };
+        }
+        @include mediaQuery(sp) {
+          font-size: pxToVw(26);
+          margin-bottom: pxToVw(25);
+          &::before {
+            width: pxToVw(6);
+          }
+        }
+      }
+      &--bottom{
+        background: #F6F6F6;
+        text-align: center;
+        @include setSizePC(margin-top,30);
+        @include setSizePC(padding-top,40);
+        @include setSizePC(padding-bottom,40);
+        @include setSizePC(padding-left,10);
+        @include setSizePC(padding-right,10);
+        @include setSizePC(border-radius,5);
+        @include mediaQuery(sp) {
+          margin-top: pxToVw(20);
+          padding: pxToVw(30) pxToVw(20);
+          border-radius: pxToVw(5);
+        }
+      }
+      &--button{
+        border-radius: 100px;
+        background: #CC4B30;
+        color: #FFFFFF;
+        @include setSizePC(padding-top,34);
+        @include setSizePC(padding-bottom,34);
+        @include setSizePC(padding-left,10);
+        @include setSizePC(padding-right,10);
+        @include setSizePC(width,544);
+        margin: 0 auto;
+        @include sizePC(20);
+        font-weight: 500;
+        display: inline-block;
+        &:before{
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          @include setSizePC(width,36);
+          aspect-ratio: 1/1;
+          background-image: url(#{$imagePath}common/ico_contact_white.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
+          @include setSizePC(margin-right,28);
+        }
+        @include mediaQuery(sp) {
+          padding: pxToVw(30) pxToVw(30);
+          font-size: pxToVw(20);
+          width: pxToVw(314);
+          &:before{
+            width: pxToVw(36);
+          }
+        }
+      }
+    }
+    &__lineup{
+      padding-top: 0;
+      padding-bottom: 0;
+      .l-2025-page__section--head{
+        border-radius: 10px 10px 0px 0px;
+        background: #F6F6F6;
+        @include setSizePC(padding-top, 40);
+        @include setSizePC(padding-bottom, 40);
+        @include setSizePC(padding-left, 48);
+        @include setSizePC(padding-right, 48);
+
+        @include mediaQuery(sp) {
+          border-radius: 0;
+          padding-top: pxToVw(40);
+          padding-bottom: pxToVw(40);
+        }
+      }
+      .l-2025-page__section--title{
+        @include sizePC(24);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        @include setSizePC(margin-right, 34);
+        &::before {
+          content: '';
+          display: inline-block;
+          @include setSizePC(width, 10);
+          aspect-ratio: 1/1;
+          background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none"> <circle cx="5" cy="5" r="5" fill="%23999999"/></svg>');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
+          margin-right: 0.5em;
+          @include mediaQuery(sp){
+            width: pxToVw(10);
+          };
+        }
+        @include mediaQuery(sp) {
+          font-size: pxToVw(22);
+          &::before {
+            width: pxToVw(6);
+          }
+        }
+      }
+      .l-2025-page__section--main{
+        border-radius: 0px 0px 10px 10px;
+        background: #F6F6F6;
+        @include mediaQuery(sp) {
+          border-radius: 0;
+        }
+      }
+      &--group{
+        border-top: 1px solid #E5E3E3;
+        @include setSizePC(padding-top, 26);
+        @include setSizePC(padding-bottom, 26);
+        @include setSizePC(padding-left, 64);
+        @include setSizePC(padding-right, 64);
+        @include mediaQuery(sp) {
+          padding: pxToVw(26) pxToVw(20);
+        }
+      }
+      &--title{
+        a{
+          display: inline-block;
+          @include sizePC(16);
+          font-weight: 700;
+          @include setSizePC(margin-bottom, 20);
+          &:after{
+            content: "";
+            display: inline-block;
+            background-image: url(#{$imagePath}common/ico_arrow.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            @include setSizePC(width, 24);
+            aspect-ratio: 1/1;
+            vertical-align: middle;
+            @include setSizePC(margin-left, 8);
+          }
+          @include mediaQuery(sp) {
+            font-size: pxToVw(16);
+            margin-bottom: pxToVw(20);
+            &:after{
+              width: pxToVw(24);
+              margin-left: pxToVw(8);
+            }
+          }
+        }
+      }
+      &--list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        column-gap: 16px;
+        @include setSizePC(row-gap, 8);
+        @include mediaQuery(sp) {
+          row-gap: pxToVw(10);
+        }
+      }
+      &--item{
+        width: calc( (100% - 16px * 2) / 3 );
+        @include setSizePC(border-radius, 10);
+        background: #FFFFFF;
+        overflow:hidden;
+        &:hover{
+          color:#333;
+        }
+        @include mediaQuery(sp){
+          width: 100%;
+        };
+        > span{
+          display:block;
+          @include setSizePC(padding, 12);
+          text-align: center;
+          @include sizePC(16);
+          font-weight: 500;
+          position: relative;
+          &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            background-image: url(#{$imagePath}common/ico_arrow.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            @include setSizePC(width, 24);
+            aspect-ratio: 1/1;
+            top: 50%;
+            transform: translateY(-50%);
+            @include setSizePC(right, 10);
+          }
+          @include mediaQuery(sp) {
+            width: 100%;
+            border-radius: pxToVw(10);
+            padding: pxToVw(16) pxToVw(20);
+            font-size: pxToVw(14);
+            &:after{
+              width: pxToVw(30);
+              right: pxToVw(10);
+            }
+          }
+        }
+      }
+      &--type{
+        @include sizePC(14);
+        @include setSizePC(margin-right, 6);
+        @include mediaQuery(sp) {
+          font-size: pxToVw(14);
+          margin-right: pxToVw(6);
+        }
+      }
+      &--bottom{
+        @include setSizePC(padding-top, 46);
+        @include setSizePC(padding-bottom, 50);
+        @include mediaQuery(sp) {
+          padding-top: pxToVw(50);
+          padding-bottom: pxToVw(50);
+        }
+        // .c-btn__linkBase-black{
+        //   width: 400px;
+        //   @include sizePC(18);
+        //   @include setSizePC(padding-top, 28);
+        //   @include setSizePC(padding-bottom, 28);
+        //   margin-top: 0;
+        //   background-image: url(#{$imagePath}common/ico_arrow_white.svg);
+        //   background-repeat: no-repeat;
+        //   background-size: 16px auto;
+        //   background-position: center right 30px;
+        //   text-align: center;
+        //   @include mediaQuery(sp) {
+        //     margin: 0 auto;
+        //     padding-top: pxToVw(23);
+        //     padding-bottom: pxToVw(23);
+        //     width: pxToVw(340);
+        //     background-size: pxToVw(30) auto;
+        //     background-position: center right pxToVw(20);
+        //     font-size: pxToVw(16);
+        //   }
+        // }
+      }
+    }
+    &__bottom{
+      border-top: 1px solid #E5E3E3;
+      @include setSizePC(padding-top, 32);
+      @include setSizePC(padding-bottom, 32);
+      &--button{
+        display: inline-block;
+        @include sizePC(14);
+        font-weight: 500;
+        &:before{
+          content: "";
+          display: inline-block;
+          width: 40px;
+          aspect-ratio: 1/1;
+          @include setSizePC(margin-right, 16);
+          background-image: url(#{$imagePath}common/btn_arw.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
+          vertical-align: middle;
+        }
+      }
+      @include mediaQuery(sp) {
+        padding-top: pxToVw(20);
+        padding-bottom: pxToVw(20);
+        &--button{
+          font-size: pxToVw(14);
+          &:before{
+            margin-right: pxToVw(15);
+          }
+        }
+      }
+    }
+  }
+  .p-dynabook-2025__busProductLatest{
+    &__lineup{
+      background: #F6F6F6;
+      .l-2025-page__section{
+        @include setSizePC(padding-bottom, 70);
+      }
+      .l-2025-page__section--title{
+        @include sizePC_d(40);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        @include setSizePC(margin-bottom, 50);
+        &::before {
+          content: '';
+          display: inline-block;
+          @include setSizePC(width, 10);
+          aspect-ratio: 1/1;
+          background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none"> <circle cx="5" cy="5" r="5" fill="%23999999"/></svg>');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
+          margin-right: 0.5em;
+          @include mediaQuery(sp){
+            width: pxToVw(10);
+          };
+        }
+        @include mediaQuery(sp) {
+          font-size: pxToVw(26);
+          margin-bottom: pxToVw(25);
+          &::before {
+            width: pxToVw(6);
+          }
+        }
+      }
+      &--list{
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        @include setSizePC(column-gap,36);
+        &+.p-dynabook-2025__busProductLatest__lineup--list{
+          @include setSizePC(margin-top,26);
+        }
+        @include mediaQuery(sp) {
+          flex-direction: column;
+          row-gap: pxToVw(10);
+          &+.p-dynabook-2025__busProductLatest__lineup--list{
+            margin-top: pxToVw(24);
+          }
+        }
+      }
+      &--block{
+        flex: 1;
+        background: #FFFFFF;
+        @include setSizePC(border-radius,10);
+        @include setSizePC(padding-top,22);
+        @include setSizePC(padding-bottom,22);
+        @include setSizePC(padding-left,25);
+        @include setSizePC(padding-right,25);
+        text-align: center;
+        overflow:hidden;
+        cursor:pointer;
+        &--2col{
+          flex: auto;
+        }
+        &:hover{
+          a{
+            color:#333;
+          }
+        }
+        a{
+          display: block;
+          position: relative;
+          @include sizePC(14);
+          font-weight: 500;
+        }
+        &--noimage{
+          @include setSizePC(padding-top,17);
+          @include setSizePC(padding-bottom,17);
+          display: flex;
+          align-items: center;
+          a{
+            background: url(#{$imagePath}common/ico_arrow.svg) no-repeat right center;
+            width: 100%;
+          }
+        }
+        @include mediaQuery(sp) {
+          border-radius: pxToVw(10);
+          padding: 0;
+          a{
+            font-size: pxToVw(14);
+            background: url(#{$imagePath}common/ico_arrow_down.svg) no-repeat center bottom;
+            display: flex;
+            text-align: left;
+            padding: pxToVw(28);
+            &>*{
+              flex: 1;
+            }
+          }
+          &--noimage{
+            a{
+              padding: pxToVw(16) pxToVw(8);
+              background: url(#{$imagePath}common/ico_arrow.svg) no-repeat right pxToVw(8) center;
+              text-align: center;
+              display: block;
+            }
+          }
+        }
+      }
+      &--name{
+        @include sizePC(16);
+        font-weight: 700;
+        @include mediaQuery(sp) {
+          font-size: pxToVw(16);
+        }
+      }
+      &--text{
+        background: url(#{$imagePath}common/ico_arrow_down.svg) no-repeat right center;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        @include setSizePC(bottom,8);
+        @include mediaQuery(sp) {
+          position: relative;
+          background: transparent;
+          margin-top: pxToVw(14);
+          font-size: pxToVw(14);
+          font-weight: 500;
+        }
+      }
+    }
+    &__search{
+      .l-2025-page__section--main{
+        background: #F6F6F6;
+        @include setSizePC(border-radius,5);
+        @include setSizePC(padding-top,40);
+        @include setSizePC(padding-bottom,40);
+        @include setSizePC(padding-left,64);
+        @include setSizePC(padding-right,64);
+      }
+      &--list{
+        display: flex;
+        @include setSizePC(column-gap,34);
+        @include mediaQuery(sp) {
+          flex-direction: column;
+          row-gap: pxToVw(14);
+        }
+      }
+      &--block{
+        flex: 1;
+        @include setSizePC(border-radius,10);
+        cursor:pointer;
+        overflow:hidden;
+      }
+      &--btn{
+        @include setSizePC(border-radius,10);
+        @include setSizePC(padding-top,20);
+        @include setSizePC(padding-bottom,20);
+        @include setSizePC(padding-left,50);
+        @include setSizePC(padding-right,10);
+        background: #FFF;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        @include setSizePC(column-gap,40);
+        border: 1px solid #EFEFEF;
+        &:hover{
+          color:#333;
+        }
+        span{
+          display: block;
+          flex-grow: 1;
+          border-left: 1px solid #E5E3E3;
+          @include setSizePC(padding-top,16);
+          @include setSizePC(padding-bottom,16);
+          text-align: center;
+          @include sizePC(18);
+          font-weight: 500;
+          line-height: 1;
+        }
+        @include mediaQuery(sp) {
+          width: pxToVw(320);
+          border-radius: pxToVw(10);
+          padding: pxToVw(16) pxToVw(20);
+          column-gap: pxToVw(20);
+          img{
+            width: pxToVw(20);
+          }
+          span{
+            padding-top: pxToVw(10);
+            padding-bottom: pxToVw(10);
+            font-size: pxToVw(14);
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.js-modal{
+
+  &--wrapper{
+    &[data-bgColor^="bg-busProduct"]{
+      .js-modal--bg{
+        background:#222;
+      }
+    }
+  }
+
+  .l-2025-page__section{
+    padding-top:0;
+    padding-bottom:0;
+  }
+
+  .p-dynabook-2025__busProduct__gallery{
+    background:none !important;
+    &--list{
+      display:block;
+      position:fixed;
+      top:101vh;
+      opacity:0;
+      &.is-active{
+        position:static;
+        opacity:1;
+      }
+    }
+  }
+
+  .p-dynabook-2025__busProduct__gallery--search{
+    @include setSizePC(margin-top, 10);
+  }
+
+
+  .p-dynabook-2025__busProduct__galleryCarousel--wrapper{
+    @include setSizePC(width, 1000);
+    margin:0 auto;
+
+    .slick-list{
+      overflow:visible;
+    }
+
+    .slick-slide{
+      width: 100%;
+      aspect-ratio:16/9;
+      overflow: hidden;
+       background-color: #fff;
+       margin:0 5px;
+      &.slick-active{
+       
+        img{
+          opacity:1;
+        }
+      }
+      img{
+        display:block;
+        // width:666% / 1000 * 100;
+        // width:980% / 1000 * 100;
+        // width:1050% / 1000 * 100;
+        margin:0 auto;
+        opacity:0.6;
+        transition:opacity 0.2s ease-out 0s;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: 50% 50%;
+        // scale: 1.1;
+      }
+    }
+
+    .slick-dots{
+      display:flex;
+      justify-content:center;
+      @include setSizePC(margin-top, 10);
+      > li{
+        position:relative;
+        @include setSizePC(width, 96);
+        @include setSizePC(border-radius, 10);
+        aspect-ratio:96/71;
+        background:#000;
+        border:solid 2px transparent;
+        outline-offset:-2px;
+        overflow:hidden;
+        transition:border-color 0.2s ease-out 0s;
+        @include mediaQuery(sp){
+          width: pxToVw(95);
+          border-radius:pxToVw(10)
+        };
+        &:focus{
+          border: solid 2px #1a0dab;
+        }
+        &::after {
+      pointer-events:none;
+      transition: all 0.5s;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      z-index: 10;
+      opacity: 0;
+      z-index: 1;
+   
+    }
+    &:hover {
+      &::after {
+        opacity: 0.3;
+      }
+    }
+        &.slick-active{
+          border-color:#bf2123;
+          img{
+            opacity:1;
+          }
+        }
+      }
+      img{
+        width:100%;
+        opacity:0.6;
+        transition:opacity 0.2s ease-out 0s;
+      }
+    }
+  }
+
+
+
+
+}
+
+
+.p-dynabook-2025__busProductLatest__lineup--second{
+  background: #fff !important;
+  .l-2025-page__section--title{
+    margin-bottom:0 !important;
+  }
+  .l-2025-page__section{
+    @include mediaQuery(sp) {
+      padding-top:0;
+    }
+  }
+}
+
+.p-dynabook-2025__busProductLatest__link{
+
+  &--wrapper{
+    background:#f6f6f6;
+    & + .p-dynabook-2025__busProduct__bottom{
+      border-top:none;
+    }
+  }
+  &--list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 16px;
+    @include setSizePC(row-gap, 8);
+    @include mediaQuery(sp) {
+      row-gap: pxToVw(10);
+    }
+  }
+  &--item{
+    @include setSizePC(border-radius, 10);
+    background: #FFFFFF;
+    overflow:hidden;
+    border:solid 1px #efefef;
+    box-shadpw:0 0 2px rgba(#000, 0.1);
+    &:hover{
+      color:#333 !important;
+    }
+    @include mediaQuery(sp){
+      width: 100%;
+    };
+    > span{
+      display:block;
+      @include setSizePC(padding, 15);
+      @include setSizePC(padding-right, 62);
+      @include setSizePC(padding-left, 62);
+      text-align: center;
+      @include sizePC(12);
+      font-weight: 500;
+      position: relative;
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        background-image: url(#{$imagePath}common/ico_arrow.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        @include setSizePC(width, 24);
+        aspect-ratio: 1/1;
+        top: 50%;
+        transform: translateY(-50%);
+        @include setSizePC(right, 10);
+      }
+      @include mediaQuery(sp) {
+        width: 100%;
+        border-radius: pxToVw(10);
+        padding: pxToVw(16) pxToVw(20);
+        font-size: pxToVw(10);
+        &:after{
+          width: pxToVw(30);
+          right: pxToVw(10);
+        }
+      }
+    }
+    &[target^="_blank"]{
+      > span{
+        &:after{
+          background-image: url(#{$imagePath}common/icon_link_black.svg);
+        }
+      }
+    }
+  }
+}
+.p-dynabook-2025__busProduct__gallery .p-dynabook-2025__busProduct__gallery--list:nth-of-type(1) .slick-dots,
+.p-dynabook-2025__busProduct__gallery .p-dynabook-2025__busProduct__gallery--list:nth-of-type(2) .slick-dots{
+  @include mediaQuery(sp){
+    display: flex !important;
+  };
+}
+
+.p-dynabook-2025__busProduct__gallery--list .slick-dots{
+  li{
+      @include mediaQuery(sp){
+        border-radius: pxToVw(5);
+        overflow: hidden;
+        font-size: 0;
+      };
+      img{
+        border-radius:0 !important;
+      }
+    }
+    
+}
+
+.p-dynabook-2025__busProduct__product--nav{
+  width: 100%;
+  @include setSizePC(padding-top, 40);
+  @include setSizePC(padding-bottom, 40);
+  background-color: #0F1C6D;
+  color: #fff;
+  box-sizing: border-box;
+  
+  @include setSizePC(margin-bottom, 65);
+  @include mediaQuery(sp){
+    
+    padding: pxToVw(20);
+     margin-bottom: pxToVw(70/2);
+  };
+
+  .p-dynabook-2025__solOffice__head--nav{
+    margin-left: auto;
+    margin-right: auto;
+    @include setSizePC(width, 1120);
+    @include mediaQuery(sp){
+      width: 100%;
+    };
+    li{
+      &::before,&::after{
+        background-color: #405CFC !important;
+      }
+    }
+    li a:hover{
+      color: #fff;
+    }
+    li a span::after{
+      border-color:#fff
+    }
+  }
+
+}

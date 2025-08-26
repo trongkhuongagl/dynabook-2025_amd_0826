@@ -1,0 +1,230 @@
+@use 'sass:math';
+@use '00_02_setting/setting' as *;
+/* メディアクエリー */
+@mixin mediaQuery($mediaSize) {
+  @if $mediaSize == tb {
+    @media all and (max-width: $tablet + px) {
+      @content;
+    }
+  } @else if $mediaSize == sp {
+    @media all and (max-width: $sp + px) {
+      @content;
+    }
+  } @else if $mediaSize == big {
+    @media all and (min-width: $big + px) {
+      @content;
+    }
+  }
+}
+
+/* クリアフィックス */
+@mixin clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/*フォントフェイス*/
+@mixin font-face($style-name, $file, $category: '') {
+  $filepath: '/assets/fonts/' + $file;
+  @font-face {
+    font-family: '#{$style-name}';
+    src: url($filepath + '.eot');
+    src: url($filepath + '.eot?#iefix') format('embedded-opentype'), url($filepath + '.woff') format('woff'), url($filepath + '.ttf') format('truetype'), url($filepath + '.svg#' + $style-name + '') format('svg');
+  }
+  %#{$style-name} {
+    @if $category != '' {
+      font-family: '#{$style-name}', #{$category};
+    } @else {
+      font-family: '#{$style-name}';
+      font-weight: 500;
+    }
+  }
+}
+
+/*フォントサイズ(rem)*/
+@mixin font-rem($size, $base: 10) {
+  font-size: $size + px;
+  font-size: math.div($size, $base) * 1rem;
+}
+
+/*アスペクト比*/
+@mixin aspect($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: math.div($height, $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+/*要素内のテキストを非表示にする*/
+@mixin text-none {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*天地左右に中央配置*/
+@mixin el-center {
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* パーセント */
+@function percent($numerator, $denominator) {
+  @return math.percentage(math.div($numerator, $denominator));
+}
+
+/* px→vw */
+@function pxToVw($pxValue, $BreakPoint: $sp-s) {
+  @return math.div($pxValue, $BreakPoint) * 100 * 1vw;
+}
+
+/* px→vh */
+@function pxToVh($pxValue, $BreakPoint: $sp-s) {
+  @return math.div($pxValue, $BreakPoint) * 100 * 1vh;
+}
+
+/* px1/2 */
+@function pxToHalf($size) {
+  @return floor(math.div($size, 2)) + px;
+}
+
+//clamp（viewport範囲指定）
+@function clamp-vw($min, $max, $min-view-port: 320, $max-view-port: 1200) {
+  $valiable-part: calc(($max - $min) / ($max-view-port - $min-view-port));
+  $constant: calc(($max - $max-view-port * $valiable-part) / 16);
+  $min-rem: calc($min / 16 * 1rem);
+  $max-rem: calc($max / 16 * 1rem);
+  $variable-rem: calc($constant * 1rem);
+  $variable-vw: calc(100 * $valiable-part * 1vw);
+  @return clamp($min-rem, $variable-rem + $variable-vw, $max-rem);
+}
+
+@function fontSize($minFont) {
+  $minWidth: 480;
+  $maxWidth: 1020;
+  $minFontSize: $minFont * 1px;
+  $fontVw: calc(round(calc($minFont / $minWidth) * 100 * 1000) / 1000);
+  $maxFontSize: round($maxWidth * calc($fontVw / 100)) * 1px;
+  @return clamp(#{$minFontSize}, #{$fontVw}vw, #{$maxFontSize});
+}
+
+@function responsiveFontSizeClamp($minFontSize, $maxFontSize, $minViewport, $maxViewport) {
+  //最大font-sizeから最小font-sizeを減算しフォントサイズの変化する幅を求める
+  $fontSizeRate: $maxFontSize - $minFontSize;
+  //最大viewportから最小viewportを減算しウィンドウの変化する幅を求めておく
+  $viewportRate: $maxViewport - $minViewport;
+
+  //フォントが変化する量をvw単位にする計算(小数点２桁で丸める)
+  $changingSize: math.div(math.round(math.div($fontSizeRate, $viewportRate) * 10000), 100);
+
+  //フォントが変化しない部分をrem単位にする計算
+  $fixedSize: math.div(math.round(($minFontSize - math.div($fontSizeRate, $viewportRate) * $minViewport) * 62.5), 1000);
+
+  //最小フォントサイズをrem単位にする計算（小数点3桁で丸める）
+  $minRemFontSize: math.div(math.round($minFontSize * 62.5), 1000);
+
+  //最大フォントサイズをrem単位にする計算（小数点３桁で丸める）
+  $maxRemFontSize: math.div(math.round($maxFontSize * 62.5), 1000);
+
+  //出力
+  @return clamp(#{$minRemFontSize}rem, #{$fixedSize}rem + #{$changingSize}vw, #{$maxRemFontSize}rem);
+}
+
+//clamp（viewport範囲指定）
+@function clamp-base($min, $max, $min-view-port: 320, $max-view-port: 1200) {
+  $valiable-part: calc(($max - $min) / ($max-view-port - $min-view-port));
+  $constant: calc(($max - $max-view-port * $valiable-part) / 16);
+  $min-rem: calc($min / 16 * 1rem);
+  $max-rem: calc($max / 16 * 1rem);
+  $variable-rem: calc($constant * 1rem);
+  $variable-vw: calc(100 * $valiable-part * 1vw);
+  @return clamp($min-rem, $variable-rem + $variable-vw, $max-rem);
+}
+
+@function clamp-k($min, $max, $min-view-port: 780, $max-view-port: 1360) {
+  $valiable-part: calc(($max - $min) / ($max-view-port - $min-view-port));
+  $constant: calc(($max - $max-view-port * $valiable-part));
+  $min-rem: calc($min * 1px);
+  $max-rem: calc($max * 1px);
+  $variable-rem: calc($constant * 1px);
+  $variable-vw: calc(100 * $valiable-part * 1vw);
+  @return clamp($min-rem, $variable-rem + $variable-vw, $max-rem);
+}
+
+@mixin sizePC_d($size) {
+  font-size: min(#{pxToVw($size, $pc)}, #{$size}px);
+  @include mediaQuery(big) {
+    font-size: calc(#{$size}px * 1.1);
+  }
+}
+
+@mixin sizePC($size) {
+  $fontsize :$size * 1.1;
+  font-size: min(#{pxToVw($fontsize, $pc)}, #{$fontsize}px);
+  @include mediaQuery(big) {
+    font-size: calc(#{$fontsize}px * 1.1);
+  }
+}
+
+@mixin setSizePC($prop, $size) {
+  #{$prop}: min(#{pxToVw($size, $pc)}, #{$size}px);
+  @include mediaQuery(big) {
+    #{$prop}: calc(#{$size}px * 1.1);
+  }
+}
+
+@mixin setSizePC2($prop1, $prop2, $size1, $size2) {
+  #{$prop1}: min(#{pxToVw($size1, $pc)}, #{$size1}px);
+  #{$prop2}: min(#{pxToVw($size2, $pc)}, #{$size2}px);
+  @include mediaQuery(big) {
+    #{$prop1}: calc(#{$size1}px * 1.1);
+    #{$prop2}: calc(#{$size2}px * 1.1);
+  }
+}
+
+@mixin setSizePC4($prop, $size1, $size2, $size3, $size4) {
+  #{$prop}: min(#{pxToVw($size1, $pc)}, #{$size1}px) min(#{pxToVw($size2, $pc)}, #{$size2}px) min(#{pxToVw($size3, $pc)}, #{$size3}px) min(#{pxToVw($size4, $pc)}, #{$size4}px);
+  @include mediaQuery(big) {
+    #{$prop}: calc(#{$size1}px * 1.1) calc(#{$size2}px * 1.1) calc(#{$size3}px * 1.1) calc(#{$size4}px * 1.1);
+  }
+}
+
+@mixin setFlexGapPC($size, $num) {
+  $sprit : $num - 1;
+  @media screen and (min-width: 781px) and (max-width: 1359px) {
+    flex-basis: calc((100% - #{pxToVw($size, $pc)} * #{$sprit}) / $num);
+  }
+  @media screen and (min-width: 1360px) and (max-width: 1760px) {
+    flex-basis: calc((100% - #{$size}px * #{$sprit}) / $num);
+  }
+
+  @media screen and (min-width: 1761px) {
+    flex-basis: calc((100% - #{$size}px * #{$sprit} * 1.1) / $num);
+  }
+}
+
+
+@mixin setFlexGapSP($size, $num) {
+   flex-basis: calc((100% - #{pxToVw($size)}) / #{$num});
+}

@@ -1,0 +1,355 @@
+@use 'sass:math';
+@use '00_02_setting/setting' as *;
+@use '00_01_common/utility' as *;
+.dynabook-2025 {
+  .c-ico {
+    &__search {
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+        content: '';
+        @include setSizePC(width, 14);
+        aspect-ratio: 1/1;
+        background-image: url(#{$imagePath}common/ico_search_black.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+      }
+    }
+    &__search--after {
+      &::after {
+        display: inline-block;
+        vertical-align: baseline;
+        content: '';
+        @include setSizePC(width, 14);
+        aspect-ratio: 1/1;
+        background-image: url(#{$imagePath}common/ico_search_black.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+      }
+    }
+    &__search--before-white {
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+        content: '';
+        @include setSizePC(width, 14);
+        aspect-ratio: 1/1;
+        background-image: url(#{$imagePath}common/ico_search_white.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+      }
+    }
+    &__arrow {
+      &::after {
+        display: inline-block;
+        vertical-align: middle;
+        content: '';
+        @include setSizePC(width, 16);
+        aspect-ratio: 1/1;
+        background-image: url(#{$imagePath}common/arrow-black-bold.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        margin-left: 0.5em;
+        @include mediaQuery(sp) {
+          width: pxToVw(16);
+        }
+      }
+    }
+
+    &__arrow--normal {
+      &::after {
+        display: inline-block;
+        vertical-align: middle;
+        content: '';
+        @include setSizePC(width, 16);
+        aspect-ratio: 1/1;
+        background-image: url(#{$imagePath}common/arrow-black-normal.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        margin-left: 0.5em;
+        @include mediaQuery(sp) {
+          width: pxToVw(16);
+        }
+      }
+    }
+
+    &__arrow-white {
+      &::after {
+        display: inline-block;
+        vertical-align: middle;
+        content: '';
+        @include setSizePC(width, 16);
+        aspect-ratio: 1/1;
+        background-image: url(#{$imagePath}common/arrow-black-bold.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        margin-left: 0.5em;
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+        @include mediaQuery(sp) {
+          width: pxToVw(16);
+        }
+      }
+      &--btn {
+        position: relative;
+        &::after {
+          position: absolute;
+          @include setSizePC(right, 24);
+          top: 50%;
+          transform: translate(0, -50%);
+          @include mediaQuery(sp) {
+            right: pxToVw(37);
+          }
+        }
+      }
+    }
+    &__arrow-c {
+      position: relative;
+      @include setSizePC(width, 26);
+      aspect-ratio: 1/1;
+      transform: translate(0, -50%);
+      background-color: #000;
+      border-radius: 50%;
+      display: block;
+      @include mediaQuery(sp) {
+        width: pxToVw(30);
+      }
+      & > span {
+        position: relative;
+        display: block;
+        width: 100%;
+        aspect-ratio: 1/1;
+        &::after {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: inline-block;
+          vertical-align: baseline;
+          content: '';
+          @include setSizePC(width, 16);
+          aspect-ratio: 1/1;
+          background-image: url(#{$imagePath}common/arrow-black-bold.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+          @include mediaQuery(sp) {
+            width: pxToVw(20);
+          }
+        }
+      }
+    }
+
+    &__arrow--circle-transparent {
+      &::after {
+        display: inline-block;
+        vertical-align: middle;
+        content: '';
+        @include setSizePC(width, 16);
+        aspect-ratio: 1/1;
+        background-image: url(#{$imagePath}common/arrow-circle-transparent.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        margin-left: 0.5em;
+        @include mediaQuery(sp) {
+          width: pxToVw(16);
+        }
+      }
+    }
+
+    &__link {
+      &::after {
+        display: inline-block;
+        vertical-align: middle;
+        content: '';
+        @include setSizePC(width, 16);
+        aspect-ratio: 1/1;
+        background-image: url(#{$imagePath}common/icon_link_black.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        margin-left: 0.5em;
+        @include mediaQuery(sp) {
+          width: pxToVw(16);
+        }
+      }
+    }
+    &__root {
+      &::before {
+        display: inline-block;
+        vertical-align: baseline;
+        content: '';
+        @include setSizePC(width, 8);
+        aspect-ratio: 1/1;
+        background-image: url(#{$imagePath}common/ico_root.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        margin-right: 0.5em;
+
+        @include mediaQuery(sp) {
+          width: pxToVw(8);
+        }
+      }
+    }
+    &__close {
+      &::after {
+        display: inline-block;
+        vertical-align: baseline;
+        content: '';
+        @include setSizePC(width, 16);
+        aspect-ratio: 1/1;
+        background-image: url(#{$imagePath}common/ico_close.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        margin-left: 0.5em;
+
+        @include mediaQuery(sp) {
+          width: pxToVw(8);
+        }
+      }
+    }
+  }
+  .c-ico-white {
+    &::before,
+    &::after {
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    }
+  }
+
+  .c-ico-btn_mark {
+    &::before {
+      display: inline-block;
+      vertical-align: baseline;
+      content: '';
+      @include setSizePC(width, 14);
+      aspect-ratio: 1/1;
+      background-image: url(#{$imagePath}common/icon_btn_mark.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      margin-right: 0.5em;
+      @include mediaQuery(sp){
+        width: pxToVw(14);
+      };
+    }
+  }
+
+  .c-ico-btn_mark.is-active {
+    &::before {
+      display: inline-block;
+      vertical-align: baseline;
+      content: '';
+      @include setSizePC(width, 14);
+      aspect-ratio: 1/1;
+      background-image: url(#{$imagePath}common/icon_btn_mark_active.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      margin-right: 0.5em;
+      @include mediaQuery(sp){
+        width: pxToVw(14);
+      };
+    }
+  }
+
+  .c-ico-phone {
+    &::before {
+      display: inline-block;
+      vertical-align: middle;
+      content: '';
+      @include setSizePC(width, 24);
+      aspect-ratio: 1/1;
+      background-image: url(#{$imagePath}common/ico_phone.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      margin-right: 0.2em;
+      @include mediaQuery(sp){
+        width: pxToVw(24);
+      };
+    }
+  }
+
+  .c-ico-pop {
+    &::before {
+      display: inline-block;
+      vertical-align: middle;
+      content: '';
+      @include setSizePC(width, 24);
+      aspect-ratio: 1/1;
+      background-image: url(#{$imagePath}common/ico_pop.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      margin-right: 0.2em;
+      @include mediaQuery(sp){
+        width: pxToVw(24);
+      };
+    }
+  }
+
+  .c-ico-pipe {
+    box-sizing: border-box;
+    padding-left: 0.3em;
+    text-indent: -0.3em;
+    margin-left: 1.5em;
+    &::before {
+      display: inline-block;
+      vertical-align: baseline;
+      content: '-';
+      font-size: 1em;
+      margin-right: 0.2em;
+    }
+  }
+
+  .c-ico-new {
+    display: inline-block;
+    box-sizing: border-box;
+    @include setSizePC(border-radius,5);
+    // @include setSizePC(padding,5);
+    @include setSizePC4(padding,5,5,5,5);
+    background-color: #BF2123;
+    @include sizePC(10);
+    color: #fff;
+    line-height: 1;
+    @include mediaQuery(sp){
+      font-size: pxToVw(10);
+      border-radius:pxToVw(5);
+      padding: pxToVw(5);
+    };
+  }
+
+  .c-ico-new-c {
+    @include setSizePC(width,35);
+    @include sizePC(10);
+    aspect-ratio: 1/1;
+    background-color: #BF2123;
+    color: #fff;
+    line-height: 1;
+    border-radius: 50%;
+    display: block;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    right: 0;
+    transform: translate(20%,-20%);
+    z-index: 10;
+    @include mediaQuery(sp){
+      width: pxToVw(35);
+      font-size: pxToVw(10);
+      transform: translate(10%,-10%);
+    };
+  }
+}

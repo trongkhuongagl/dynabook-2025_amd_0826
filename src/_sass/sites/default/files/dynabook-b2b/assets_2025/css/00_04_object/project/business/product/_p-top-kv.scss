@@ -1,0 +1,41 @@
+@use 'sass:math';
+@use '00_02_setting/setting' as *;
+@use '00_01_common/utility' as *;
+.dynabook-2025 {
+  .product-top-kv {
+    
+    .kv-20250225__item--01 {
+      width: pxToVw(275, $pcMax);
+      margin: 0 auto pxToVw(30, $pcMax);
+      @include mediaQuery(sp) {
+        width: pxToVw(275);
+        margin: 0 auto;
+      }
+    }
+
+    .kv-20250225__copilot{
+      width: pxToVw(188, $pcMax);
+      margin: 0 auto;
+      @include mediaQuery(sp) {
+        display: none;
+      }
+    }
+
+    .kv-20250225__item--04 {
+      width: pxToVw(251, $pcMax);
+      margin: 0 auto;
+      @include mediaQuery(sp) {
+        width: pxToVw(251);
+        margin: 0 auto;
+      }
+    }
+
+
+    // .kv-20250224__text--01 {
+    //   @include mediaQuery(sp) {
+    //     text-align: left;
+    //     margin: 0 0 0 pxToVw(25);
+    //   }
+    // }
+  }
+}

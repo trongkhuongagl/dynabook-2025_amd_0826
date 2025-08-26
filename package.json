@@ -1,0 +1,44 @@
+{
+  "name": "master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "volta": {
+    "node": "18.12.1",
+    "npm": "9.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.0",
+    "browser-sync": "^2.27.10",
+    "connect-ssi": "^1.1.1",
+    "gulp": "^4.0.2",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-ejs": "^5.1.0",
+    "gulp-load-plugins": "^2.0.8",
+    "gulp-loader": "^1.1.2",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-watch": "^5.0.1",
+    "postcss-gap-properties": "^3.0.5",
+    "run-sequence": "^2.2.1",
+    "sass": "^1.56.1",
+    "webpack": "^5.75.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "gsap": "^3.11.3",
+    "jquery": "^3.6.1"
+  }
+}

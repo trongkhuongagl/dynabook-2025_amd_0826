@@ -1,0 +1,261 @@
+<%
+const pageData = {
+title: '現場DXソリューション',
+description: 'dynabook(ダイナブック)の公式法人向け現場DXソリューションページです。現場業務のデジタル化を促進する最新ソリューションを紹介し、生産性を向上させます。',
+path:'../../../',
+assetPath:'/sites/default/files/dynabook-b2b/assets_2025/',
+isTop:'true'
+}
+%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include( pageData.path+'common/_meta.ejs', { pageData: pageData } ); %>
+    <%- include( pageData.path+'common/_header_css.ejs', { pageData: pageData } ); %>
+    <%- include( pageData.path+'common/_header_js.ejs', { pageData: pageData } ); %>
+  </head>
+
+  <body>
+    <div>
+      <!--dynabook-2025-header-->
+      <%- include( pageData.path+'business/modules/_header.ejs', { pageData: pageData } ); %>
+      <!--./dynabook-2025-header-->
+      <!--dynabook-2025-main-->
+      <main>
+        <div class="dynabook-2025 l-container">
+          <%- include( pageData.path+'business/modules/_storebnr.ejs', { pageData: pageData } ); %>
+          <div class="l-2025-breadcrumb--wrapper">
+            <div class="l-2025-breadcrumb">
+              <ol class="l-2025-breadcrumb__list" itemscopeitemtype=https://schema.org/BreadcrumbList>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="l-2025-breadcrumb__list-item"> <a itemprop="item" href="/index.html"><span itemprop="name">dynabook.com</span></a>
+                  <meta itemprop="position" content="1">
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="l-2025-breadcrumb__list-item"> <a itemprop="item" href="/business/index.html"><span itemprop="name">法人のお客様（ビジネスPC・ソリューション）</span></a>
+                  <meta itemprop="position" content="2">
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="l-2025-breadcrumb__list-item"> <a itemprop="item" href="/business/solution/index.html"><span itemprop="name">サービス・ソリューション</span><meta itemprop="position" content="3"></a>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="l-2025-breadcrumb__list-item is-current"> <span itemprop="name">現場DXソリューション</span>
+                  <meta itemprop="position" content="4">
+                </li>
+              </ol>
+            </div>
+            <div class="l-2025-bnr-win11">
+              <div class="l-2025-bnr-win11--inner">
+                <span>
+                    <img src="<%= pageData.assetPath %>images/common/bnr_win11-2.png" alt="Elevate potential with Windows 11 Pro devices Windows 11">
+                <span>
+              </div>
+            </div>
+          </div>
+          <div class="p-dynabook-2025__solOffice__head l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__head--title">
+              <h1 class="p-dynabook-2025__solOffice__head--title-txt">現場DXソリューション</h1>
+              <div class="p-dynabook-2025__solOffice__head--title-ico"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/ico_ttl.svg" alt></div>
+            </div>
+            <ul class="p-dynabook-2025__solOffice__head--nav">
+              <li><a href="#section01"><span>ピッキング支援</span></a></li>
+              <li><a href="#section02"><span>現場作業支援</span></a></li>
+              <li><a href="#section03"><span>XRグラス</span></a></li>
+            </ul>
+          </div>
+
+          <section id="section01" class="p-dynabook-2025__solOffice__section l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__sechead">
+              <h2 class="p-dynabook-2025__solOffice__sechead--ttl">
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-ico"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/ico_ttl_s01.svg" alt></span>
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-txt">ピッキング支援</span>
+              </h2>
+              <ul class="p-dynabook-2025__solOffice__sechead-tags">
+                <li>ハンズフリー</li>
+                <li>取り違え防止</li>
+                <li>新人教育</li>
+                <li>低コスト導入</li>
+                <li>低コストランニング</li>
+                <li>透過型XRグラス</li>
+              </ul>
+            </div>
+            <div class="p-dynabook-2025__solOffice__services">
+              <a href="/business/mecd/solution/picking.html" class="p-dynabook-2025__solOffice__services--item">
+                <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/img_service01.png" alt></div>
+                <div class="p-dynabook-2025__solOffice__services--item-txt">
+                  <h3>ピッキング支援ソリューション</h3>
+                  <p>ピッキング棚の情報をスマートグラスやXRグラスで読み取ることで、目的の物品を素早く正確に選び出すことができます。<br>ハンズフリーの作業で安全性も高く、新人トレーニングにも効果的です</p>
+                </div>
+              </a>
+              <a href="/business/mecd/product/ar100/jan-2018/index.html" class="p-dynabook-2025__solOffice__services--item">
+                <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/img_service02.png" alt></div>
+                <div class="p-dynabook-2025__solOffice__services--item-txt">
+                  <h3>インテリジェントビューアAR100<br><span>(メガネ型ウェアラブルデバイス)</span></h3>
+                  <p>ハンズフリーで作業効率を向上させる単眼型ARグラス</p>
+                </div>
+              </a>
+              <a href="/solution/xr/index.html" class="p-dynabook-2025__solOffice__services--item">
+                <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/img_service03.png" alt></div>
+                <div class="p-dynabook-2025__solOffice__services--item-txt">
+                  <h3>透過型XRグラス<br>dynaEdge XR1</h3>
+                  <p>現場DXから始まったdynaEdgeのXR技術。両眼透過型XRグラスのレンズに情報を表示することで、ピッキング業務に必要なさまざまな支援が受けられます。</p>
+                </div>
+              </a>
+              <a href="/business/mecd/solution/office/index.html" class="p-dynabook-2025__solOffice__services--item">
+                <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/img_service04.png" alt></div>
+                <div class="p-dynabook-2025__solOffice__services--item-txt">
+                  <h3>dynaEdge DE200<br><span>(Windows mini PC)</span></h3>
+                  <p>ハイパフォーマンス×AIで高度なデータ処理を実現。業務効率化と生産性向上に</p>
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <section id="section02" class="p-dynabook-2025__solOffice__section l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__sechead">
+              <h2 class="p-dynabook-2025__solOffice__sechead--ttl">
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-ico"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/ico_ttl_s02.svg" alt></span>
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-txt">現場作業支援</span>
+              </h2>
+              <ul class="p-dynabook-2025__solOffice__sechead-tags">
+                <li>遠隔サポート</li>
+                <li>作業指示</li>
+                <li>作業記録</li>
+                <li>ハンズフリー</li>
+                <li>動画マニュアル作成</li>
+                <li>技術技能継承</li>
+              </ul>
+            </div>
+            <div class="p-dynabook-2025__solOffice__services">
+              <a href="/business/mecd/solution/vds/index.html" class="p-dynabook-2025__solOffice__services--item">
+                <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/img_service05.png" alt></div>
+                <div class="p-dynabook-2025__solOffice__services--item-txt">
+                  <h3>遠隔支援システム</h3>
+                  <p>作業マニュアルや図面を見ながらハンズフリーで操作できる「ビューア機能」、作業の記録をエビデンスとして保存できる「録画機能」、作業者の視界を見ながら別の場所からサポートできる「遠隔支援機能」を備えています</p>
+                </div>
+              </a>
+              <a href="/business/degitalexhibition-2022/solutionservice/007/index.html" class="p-dynabook-2025__solOffice__services--item">
+                <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/img_service06.png" alt></div>
+                <div class="p-dynabook-2025__solOffice__services--item-txt">
+                  <h3>人材育成・技能技術継承・<br>動画マニュアル作成支援</h3>
+                  <p>XRグラス（dynaEdge XR1）やスマートグラス（AR100）を装着し、作業内容をハンズフリーで録画することができます。熟練技能者の作業動画を作成することで「技能技術の見える化」が可能です</p>
+                </div>
+              </a>
+              <a href="/business/mecd/solution/vds/index.html#03" class="p-dynabook-2025__solOffice__services--item">
+                <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/img_service07.png" alt></div>
+                <div class="p-dynabook-2025__solOffice__services--item-txt">
+                  <h3>作業ナビゲーションシステム</h3>
+                  <p>遠隔支援システムに加え、現場の作業工程や作業手順をマネジメントできる便利な機能を備えています。<br>豊富なテンプレートをドラッグ&ドロップするだけの直感的な操作でタスクフローを作成できます。</p>
+                </div>
+              </a>
+              <a href="/detachable/index.html" class="p-dynabook-2025__solOffice__services--item">
+                <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/img_service08.png" alt></div>
+                <div class="p-dynabook-2025__solOffice__services--item-txt">
+                  <h3>2in1デタッチャブルノート</h3>
+                  <p>アメリカ国防総省制定「MIL規格」に準拠した過酷な耐久テストをクリア。堅牢性と使いやすさを兼ね備えた現場作業に最適な2 in 1 デタッチャブルPC</p>
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <section id="section03" class="p-dynabook-2025__solOffice__section l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__sechead">
+              <h2 class="p-dynabook-2025__solOffice__sechead--ttl">
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-ico"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/ico_ttl_s03.svg" alt></span>
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-txt">XRグラス</span>
+              </h2>
+              <ul class="p-dynabook-2025__solOffice__sechead-tags">
+                <li>透過型</li>
+                <li>両眼タイプ</li>
+                <li>メガネ型</li>
+                <li>字幕表示</li>
+                <li>自動翻訳</li>
+                <li>要約機能</li>
+              </ul>
+            </div>
+            <div class="p-dynabook-2025__solOffice__services">
+              <a href="/solution/xr/index.html" class="p-dynabook-2025__solOffice__services--item">
+                <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/img_service03.png" alt></div>
+                <div class="p-dynabook-2025__solOffice__services--item-txt">
+                  <h3>透過型XRグラス<br>dynaEdge XR1</h3>
+                  <p>現場DXから始まったdynaEdgeのXR技術。両眼透過型XRグラスのレンズに情報を表示することで、ピッキング業務に必要なさまざまな支援が受けられます。</p>
+                </div>
+              </a>
+              <a href="/solution/xr/index.html" class="p-dynabook-2025__solOffice__services--item">
+                <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/genba-dx/img_service09.png" alt></div>
+                <div class="p-dynabook-2025__solOffice__services--item-txt">
+                  <h3>XRコントローラー<br>dynaEdge C1</h3>
+                  <p>4方向ボタンとタッチパッドでXRグラスをかけたままでもスムースに操作できます</p>
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <section class="l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__btnav__btn">
+              <a class="c-btn__linkBase-black" href="/business/jirei/jirei_1.html#dx"><span class="c-ico__arrow-white">
+                <span>現場DXソリューションの<br class="u-display__block--sp">導入事例</span>
+              </span></a>
+            </div>
+            <div class="p-dynabook-2025__solOffice__btnav">
+              <h3 class="p-dynabook-2025__solOffice__btnav__title">
+                <span class="p-dynabook-2025__solOffice__btnav__mainTitle">ソリューションカテゴリ一覧</span>
+              </h3>
+              <div class="p-dynabook-2025__solOffice__btnav__th--list c-col__flex--5-2">
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-blu-1 c-r-5 u-hover-img-bg-cover u-hover-color--white is-blu-1" href="/business/solution/office/index.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav01.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">オフィス</span>
+                </a>
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-vio-1 c-r-5 u-hover-img-bg-cover u-hover-color--white" href="/business/solution/genba-dx/index.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav02.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">現場DX</span>
+                </a>
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-grn-1 c-r-5 u-hover-img-bg-cover u-hover-color--white" href="/business/solution/gtelematics/index.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav03.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">テレマティクス</span>
+                </a>
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-org-1 c-r-5 u-hover-img-bg-cover u-hover-color--white" href="/solution/dynaschool/index.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav04.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">教育ICT</span>
+                </a>
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-gry-1 c-r-5 u-hover-img-bg-cover u-hover-color--white" href="/solution/pcsolution.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav05.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">PC製品</span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </main>
+      <!--./dynabook-2025-main-->
+      <!--dynabook-2025-fotter-->
+      <%- include( pageData.path+'personal/modules/_fotter.ejs', { pageData: pageData } ); %>
+      <!--./dynabook-2025-fotter-->
+      <!-- <script src="./assets/js/main.js"></script> -->
+      <!-- <script src="./assets/js/header_2025.js"></script> -->
+      <!-- <script src="./assets/js/footer_2025.js"></script> -->
+      <!-- %- include( pageData.path+'common/_fotter_js.ejs', { pageData: pageData } ); % -->
+
+
+<script src="/js/assets_2025/individual/slick.min.js"></script>
+<script src="/js/assets_2025/individual/jquery.matchHeight-min.js"></script>
+<script src="/js/assets_2025/individual/jquery.csv.min.js"></script>
+<script src="/js/assets_2025/individual/header_2025.js"></script>
+<script src="/js/assets_2025/individual/main_2025.js"></script>
+<script src="/js/assets_2025/individual/footer_2025.js"></script>
+<script>
+  $(function() {
+    $('.p-biztop-2025-case--texts').matchHeight();
+    $('.p-biztop-2025-case--service').matchHeight();
+  });
+</script>
+    </div>
+  </body>
+</html>

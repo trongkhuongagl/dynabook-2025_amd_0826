@@ -1,0 +1,57 @@
+<%
+const pageData = {
+title: 'ビジネスPCラインアップ | dynabook（ダイナブック公式）',
+description: 'dynabook(ダイナブック)の公式法人向け製品ページです。ビジネスに最適なパソコンの最新モデルやカスタマイズオプションを紹介。企業の業務効率を高めるための最適な製品情報を提供します。',
+path:'../../../',
+assetPath:'/sites/default/files/dynabook-b2b/assets_2025/',
+assetPath_B2c:'/sites/default/files/dynabook-b2c/assets_2025/',
+isTop:'true'
+}
+%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include( pageData.path+'common/_meta.ejs', { pageData: pageData } ); %>
+    <%- include( pageData.path+'common/_header_css.ejs', { pageData: pageData } ); %>
+    <%- include( pageData.path+'common/_header_js.ejs', { pageData: pageData } ); %>
+  </head>
+
+  <body>
+    <div>
+      <!--dynabook-2025-header-->
+      <%- include( pageData.path+'business/modules/_header.ejs', { pageData: pageData } ); %>
+      <!--./dynabook-2025-header-->
+      <!--dynabook-2025-main-->
+      <main>
+        <div class="dynabook-2025 l-container">
+          <div class="p-product-amd js-init-target">
+            <!--↓code-->
+            
+            <!--↑code-->
+          </div>
+        </div>
+      </main>
+      <!--./dynabook-2025-main-->
+      <!--dynabook-2025-fotter-->
+      <%- include( pageData.path+'personal/modules/_fotter.ejs', { pageData: pageData } ); %>
+      <!--./dynabook-2025-fotter-->
+      <!-- <script src="./assets/js/main.js"></script> -->
+      <!-- <script src="./assets/js/header_2025.js"></script> -->
+      <!-- <script src="./assets/js/footer_2025.js"></script> -->
+      <!-- %- include( pageData.path+'common/_fotter_js.ejs', { pageData: pageData } ); % -->
+
+      <script src="/js/assets_2025/individual/slick.min.js"></script>
+      <script src="/js/assets_2025/individual/jquery.matchHeight-min.js"></script>
+<script src="/js/assets_2025/individual/jquery.csv.min.js"></script>
+      <script src="/js/assets_2025/individual/header_2025.js"></script>
+      <script src="/js/assets_2025/individual/main_2025.js"></script>
+      <script src="/js/assets_2025/individual/footer_2025.js"></script>
+      <script>
+  $(function() {
+    $('.p-biztop-2025-case--texts').matchHeight();
+    $('.p-biztop-2025-case--service').matchHeight();
+  });
+</script>
+    </div>
+  </body>
+</html>

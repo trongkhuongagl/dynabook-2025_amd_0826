@@ -1,0 +1,62 @@
+html.is-modal {
+  width: 100%;
+  overflow: hidden;
+  body {
+    width: 100%;
+    &.is-bodyBar{
+      overflow-y: scroll;
+    }
+  }
+}
+
+.btn-modal{
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+  background-color: #ff0000;
+  position: fixed;
+  top:0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+.btn-modal__open{
+  display: block;
+  .is-modal &{
+    display: none;
+  }
+}
+
+.btn-modal__close{
+  display: none;
+  .is-modal &{
+    display: block;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // height: 300px;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  overscroll-behavior-y: contain; /* スクロール可能な要素に付与する必要有り */
+  font-size: 20px;
+  .is-modal &{
+    display: block;
+  }
+}
+.modal-contents {
+  height: 1000px;
+}
+
+img {
+  width: 100%;
+  // height: 500px;
+  height: 200vh;
+}

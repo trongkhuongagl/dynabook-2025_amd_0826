@@ -1,0 +1,82 @@
+@use 'sass:math';
+@use '00_02_setting/setting' as *;
+@use '00_01_common/utility' as *;
+.dynabook-2025 {
+  .u-display__block--pc {
+    display: block;
+    @include mediaQuery(sp) {
+      display: none;
+    }
+  }
+
+  .u-display__block--sp {
+    display: none;
+    @include mediaQuery(sp) {
+      display: block;
+    }
+  }
+
+  .u-display__inlineblock--pc {
+    display: inline-block;
+    @include mediaQuery(sp) {
+      display: none;
+    }
+  }
+
+  .u-display__inlineblock--sp {
+    display: none;
+    @include mediaQuery(sp) {
+      display: inline-block;
+    }
+  }
+
+  .u-display__flex {
+    display: flex;
+  }
+
+  .u-display__flex--center-v {
+    align-items: flex-start;
+  }
+
+  .u-display__flex--pc {
+    display: flex;
+    @include mediaQuery(sp) {
+      display: none;
+    }
+  }
+
+  .u-display__flex--sp {
+    display: none;
+    @include mediaQuery(sp) {
+      display: flex;
+    }
+  }
+
+  .u-width__100 {
+    width: 100%;
+  }
+
+  .u-contents__max-w {
+    width: 100%;
+    margin: 0 auto;
+    @include setSizePC(max-width, 1440);
+  }
+
+  .u-contents__side--padding {
+    box-sizing: border-box;
+    // @include setSizePC(max-width, 1440);
+    @include setSizePC2(padding-left, padding-right, 64, 64);
+    @include mediaQuery(sp) {
+      padding-left: pxToVw(44);
+      padding-right: pxToVw(44);
+    }
+  }
+
+  .u-posiotn-relative{
+    position: relative;
+  }
+
+  .u-width__50 {
+    width: 50%;
+  }
+}

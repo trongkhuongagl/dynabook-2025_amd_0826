@@ -1,0 +1,132 @@
+@use 'sass:math';
+@use '00_02_setting/setting' as *;
+@use '00_01_common/utility' as *;
+
+html.is-modal {
+  width: 100%;
+  overflow: hidden;
+  body {
+    width: 100%;
+    &.is-bodyBar {
+      overflow-y: scroll;
+    }
+  }
+}
+
+// .btn-modal{
+//   width: 100px;
+//   height: 100px;
+//   z-index: 100;
+//   background-color: #ff0000;
+//   position: fixed;
+//   top:0;
+//   right: 0;
+//   text-align: center;
+//   font-size: 12px;
+// }
+
+.btn-modal__open {
+  position: relative;
+}
+
+.modal-movie {
+  font-size: 0;
+}
+
+.modal-youtube {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // height: 300px;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 1001;
+  overflow-y: auto;
+  overscroll-behavior-y: contain; /* スクロール可能な要素に付与する必要有り */
+  // background-color: rgba($color: #f4781f, $alpha: 0.9);
+  .is-modal & {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
+.modal-youtube-contents {
+  position: relative;
+  // width: min(#{pxToVw(1280, $pc)}, 1280px);
+  // padding: min(#{pxToVw(50, $pc)}, 50px) 0;
+  // margin-top: min(#{pxToVw(50, $pc)}, 50px);
+  @include setSizePC(width, 1000);
+  @include setSizePC(padding, 55);
+  @include setSizePC(margin-top, 100);
+  box-sizing: border-box;
+  background-color: #222;
+  @include mediaQuery(sp){
+    width: 100%;
+    padding: pxToVw(25);
+  };
+}
+
+.btn-modal__close {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  position: absolute;
+  @include setSizePC(width, 40);
+  @include setSizePC(top, 10);
+  @include setSizePC(right, 10);
+  @include mediaQuery(sp){
+    width: pxToVw(15);
+    top: pxToVw(10);
+    right: pxToVw(10);
+  };
+  img {
+    width: 100%;
+  }
+}
+
+.modal-movie {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+.modal-movie iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-youtube-wrap {
+  width: 100%;
+  max-width: 1121px;
+}
+
+.modal-youtube-col{
+  @include setSizePC(margin-top, 10);
+  @include mediaQuery(sp){
+    margin-top:pxToVw(10);
+  };
+}
+
+.modal-youtube-text {
+  color: #fff;
+  @include sizePC(12);
+  margin: 0;
+  @include mediaQuery(sp){
+    font-size: pxToVw(9);
+  };
+}
+
+
+.modal-youtube-bg{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+}

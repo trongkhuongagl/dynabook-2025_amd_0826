@@ -1,0 +1,7 @@
+@use 'sass:math';
+@use '00_02_setting/setting' as *;
+@use '00_01_common/utility' as *;
+.l-2025-footer {
+  background-color: $color-text-gray-basic;
+  
+}

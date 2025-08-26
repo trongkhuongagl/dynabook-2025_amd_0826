@@ -1,0 +1,109 @@
+@use 'sass:math';
+@use '00_02_setting/setting' as *;
+@use '00_01_common/utility' as *;
+
+.js-modal{
+  position:relative;
+  z-index:2;
+  .is-modalTarget{
+    display:block;
+  }
+
+  &--wrapper{
+    position:fixed;
+    z-index:99999;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden auto;
+    top:0;
+    opacity:0;
+    left:-101%;
+    transition:opacity 0.3s ease-out 0s, left 0s linear 0.3s;
+    &.is-on{
+      opacity:1;
+      left:0;
+      transition:opacity 0.3s ease-out 0s, left 0s linear 0s;
+      .js-modal--bg{
+        opacity:1;
+        left:0;
+        transition:opacity 0.3s ease-out 0s, left 0s linear 0s;
+      }
+    }
+
+  .c-btn__linkBase-white {
+    position: relative;
+    // box-sizing: border-box;
+    @include setSizePC(min-width,160);
+    @include setSizePC4(padding, 5, 10, 5, 10);
+    background-color: #fff;
+    color: #333;
+     display: flex;
+    justify-content: center;
+    @include sizePC(16);
+    line-height: 1;
+    font-weight: 400;
+    margin: 0 auto;
+    white-space: nowrap;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    text-align: center;
+    @include setSizePC(border-radius, 100);
+    @include setSizePC(margin-top, 10);
+    @include mediaQuery(sp) {
+      font-size: pxToVw(16);
+      border-radius: pxToVw(100);
+      padding: pxToVw(5) pxToVw(36);
+      margin-top: pxToVw(10);
+      // max-height: pxToVw(58);
+      display: flex;
+      justify-content: center;
+      min-width:pxToVw(223);
+      // padding: pxToVw(20);
+    }
+    &:hover{
+      color: #333;
+    }
+    .c-ico__close::after {
+      margin-left: 0;
+      background-image: url(/sites/default/files/dynabook-b2b/assets_2025/images/common/ico_close_black.svg);
+      position: absolute;
+      top:50%;
+      right: 0.5em;
+      transform: translate(0,-50%);
+    }
+  }
+
+
+
+
+
+  }
+
+  &--inner{
+    position:relative;
+    z-index:1;
+  }
+
+  &--bg{
+    position:fixed;
+    z-index:0;
+    width:100%;
+    height:100%;
+    top:0;
+    z-index:1;
+    background:rgba(#000, .8);
+    opacity:0;
+    left:-101%;
+    transition:opacity 0.3s ease-out 0s, left 0s linear 0.3s;
+  }
+
+
+
+}
+
+.is-modalTarget{
+  display:none;
+}

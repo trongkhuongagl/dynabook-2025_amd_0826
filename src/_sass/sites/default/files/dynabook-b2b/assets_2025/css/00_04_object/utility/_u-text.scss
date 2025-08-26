@@ -1,0 +1,156 @@
+@use 'sass:math';
+@use '00_02_setting/setting' as *;
+@use '00_01_common/utility' as *;
+.dynabook-2025 {
+  .u-font__ja {
+    font-family: 'Noto Sans JP', 'メイリオ', Meiryo, 'Hiragino Kaku Gothic ProN', 'MS PGothic', sans-serif;
+  }
+
+  .u-font__en {
+    font-family: 'Jost', 'メイリオ', Meiryo, 'Hiragino Kaku Gothic ProN', 'MS PGothic', sans-serif;
+  }
+
+  .u-text__size--pc-40 {
+    @include sizePC_d(40);
+  }
+
+  .u-text__size--pc-18 {
+    @include sizePC(18);
+  }
+
+  .u-text__size--pc-14 {
+    @include sizePC(14);
+  }
+
+  .u-text__size--pc-12 {
+    @include sizePC(12);
+  }
+
+  .u-text__size--pc-10 {
+    @include sizePC(10);
+  }
+
+  .u-text__size--sp-22 {
+    @include mediaQuery(sp) {
+      font-size: pxToVw(22);
+    }
+  }
+
+  .u-text__size--sp-18 {
+    @include mediaQuery(sp) {
+      font-size: pxToVw(18);
+    }
+  }
+
+  .u-text__size--sp-14 {
+    @include mediaQuery(sp) {
+      font-size: pxToVw(14);
+    }
+  }
+
+  .u-text__size--sp-12 {
+    @include mediaQuery(sp) {
+      font-size: pxToVw(12);
+    }
+  }
+
+  .u-text__size--sp-10 {
+    @include mediaQuery(sp) {
+      font-size: pxToVw(10);
+    }
+  }
+
+  .u-text__weight--regular {
+    font-weight: 400;
+  }
+
+  .u-text__weight--medium {
+    font-weight: 500;
+  }
+
+  .u-text__weight--bold {
+    font-weight: 700;
+  }
+
+  .u-text__align--center {
+    text-align: center;
+  }
+
+  .u-text__align--left {
+    text-align: left;
+  }
+
+  .u-text__align--right {
+    text-align: right;
+  }
+
+  .u-text__color--glay-light {
+    color: #ccc;
+  }
+
+  .u-text__whitespace--nowrao {
+    white-space: nowrap;
+  }
+
+  .u-text__whitespace--keep-all{
+    word-break: keep-all;
+  }
+
+  .u-margin-bottom{
+    margin-bottom: 2em;
+  }
+
+  .u-margin-bottom-1{
+    margin-bottom: 1em;
+  }
+
+  .u-margin-bottom-1-5{
+    margin-bottom: 1.5em;
+  }
+
+  
+
+  // .u-link__hover--underline a:hover,
+  // a.u-link__hover--underline:hover{
+  //   text-decoration: underline;
+  //   @include mediaQuery(sp){
+  //     text-decoration: none;
+  //   };
+  // }
+
+  .u-text-padding-indent-05em{
+    box-sizing: border-box;
+    padding-left: 0.5em;
+    text-indent: -0.5em;
+  }
+
+  .u-text-padding-indent-1em{
+    box-sizing: border-box;
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+
+  .u-text-padding-indent-05em-6{
+    box-sizing: border-box;
+    padding-left: 0.5em;
+  }
+
+  .u-text-padding-indent-1em-l{
+    box-sizing: border-box;
+    padding-left: 2.5em;
+  }
+
+  .u-text-sup{
+    font-size: 0.5em;
+    vertical-align: top;
+  }
+
+  .u-text-note{
+    @include sizePC(12);
+    line-height: 1.2;
+    @include mediaQuery(sp){
+      font-size: pxToVw(12);
+    };
+  }
+
+}

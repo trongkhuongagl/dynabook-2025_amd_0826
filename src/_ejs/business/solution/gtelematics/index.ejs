@@ -1,0 +1,206 @@
+<%
+const pageData = {
+title: 'テレマティクスソリューション',
+description: 'dynabook(ダイナブック)の公式法人向けテレマティクスソリューションページです。車両管理や運行効率を最適化するための最新ソリューションを提供します。',
+path:'../../../',
+assetPath:'/sites/default/files/dynabook-b2b/assets_2025/',
+isTop:'true'
+}
+%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include( pageData.path+'common/_meta.ejs', { pageData: pageData } ); %>
+    <%- include( pageData.path+'common/_header_css.ejs', { pageData: pageData } ); %>
+    <%- include( pageData.path+'common/_header_js.ejs', { pageData: pageData } ); %>
+  </head>
+
+  <body>
+    <div>
+      <!--dynabook-2025-header-->
+      <%- include( pageData.path+'business/modules/_header.ejs', { pageData: pageData } ); %>
+      <!--./dynabook-2025-header-->
+      <!--dynabook-2025-main-->
+      <main>
+        <div class="dynabook-2025 l-container">
+          <%- include( pageData.path+'business/modules/_storebnr.ejs', { pageData: pageData } ); %>
+          <div class="l-2025-breadcrumb--wrapper">
+            <div class="l-2025-breadcrumb">
+              <ol class="l-2025-breadcrumb__list" itemscopeitemtype=https://schema.org/BreadcrumbList>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="l-2025-breadcrumb__list-item"> <a itemprop="item" href="/index.html"><span itemprop="name">dynabook.com</span></a>
+                  <meta itemprop="position" content="1">
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="l-2025-breadcrumb__list-item"> <a itemprop="item" href="/business/index.html"><span itemprop="name">法人のお客様（ビジネスPC・ソリューション）</span></a>
+                  <meta itemprop="position" content="2">
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="l-2025-breadcrumb__list-item"> <a itemprop="item" href="/business/solution/index.html"><span itemprop="name">サービス・ソリューション</span><meta itemprop="position" content="3"></a>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="l-2025-breadcrumb__list-item is-current"> <span itemprop="name">テレマティクスソリューション</span>
+                  <meta itemprop="position" content="4">
+                </li>
+              </ol>
+            </div>
+            <div class="l-2025-bnr-win11">
+              <div class="l-2025-bnr-win11--inner">
+                <span>
+                    <img src="<%= pageData.assetPath %>images/common/bnr_win11-2.png" alt="Elevate potential with Windows 11 Pro devices Windows 11">
+                <span>
+              </div>
+            </div>
+          </div>
+          <div class="p-dynabook-2025__solOffice__head l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__head--title">
+              <h1 class="p-dynabook-2025__solOffice__head--title-txt">テレマティクスソリューション</h1>
+              <div class="p-dynabook-2025__solOffice__head--title-ico"><img class="u-img" src="<%= pageData.assetPath %>business/solution/gtelematics/ico_ttl.svg" alt></div>
+            </div>
+            <ul class="p-dynabook-2025__solOffice__head--nav">
+              <li><a href="#section01"><span>テレマティクスサービス</span></a></li>
+              <li><a href="#section02"><span>ドライブレコーダー</span></a></li>
+              <li><a href="#section03"><span>アルコールチェック管理</span></a></li>
+            </ul>
+          </div>
+
+          <section id="section01" class="p-dynabook-2025__solOffice__section l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__sechead">
+              <h2 class="p-dynabook-2025__solOffice__sechead--ttl">
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-ico"><img class="u-img" src="<%= pageData.assetPath %>business/solution/gtelematics/ico_ttl_s01.svg" alt></span>
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-txt">テレマティクスサービス</span>
+              </h2>
+              <ul class="p-dynabook-2025__solOffice__sechead-tags">
+                <li>業務用車両管理</li>
+                <li>運行管理</li>
+                <li>クラウド管理ポータル</li>
+                <li>安全運転サポート</li>
+                <li>事故防止</li>
+              </ul>
+            </div>
+            <div class="p-dynabook-2025__solOffice__services p-dynabook-2025__solOffice__services-l">
+              <a href="/solution/car-telematics/telematics-service/index.html" class="p-dynabook-2025__solOffice__services--item">
+                <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/gtelematics/img_service01.png" alt></div>
+                <div class="p-dynabook-2025__solOffice__services--item-txt">
+                  <h3>テレマティクスサービス</h3>
+                  <p>AIを活用した先進運転支援機能を搭載するドライブレコーダーで危険運転を瞬時に検知、
+                    運転者へ警告を行います。<br>クラウドの車両運行管理ポータルも同時提供し、<br>運転者の安全運転管理と教育を行う管理者の業務効率化を支援します。<br>提携する他社のアルコールチェック管理サービスのデータを取り込むことも可能です</p>
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <section id="section02" class="p-dynabook-2025__solOffice__section l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__sechead">
+              <h2 class="p-dynabook-2025__solOffice__sechead--ttl">
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-ico"><img class="u-img" src="<%= pageData.assetPath %>business/solution/gtelematics/ico_ttl_s02.svg" alt></span>
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-txt">ドライブレコーダー</span>
+              </h2>
+              <ul class="p-dynabook-2025__solOffice__sechead-tags">
+                <li>AI技術</li>
+                <li>危険運転アラート機能</li>
+                <li>ドライバー認証</li>
+                <li>クラウドサーバ</li>
+                <li>先進運転支援システム（ADAS）</li>
+                <li>ドライバーモニタリングシステム（DMS）</li>
+              </ul>
+            </div>
+            <div class="p-dynabook-2025__solOffice__services p-dynabook-2025__solOffice__services-l">
+              <a href="/solution/car-telematics/drive-recorder/index.html" class="p-dynabook-2025__solOffice__services--item">
+                <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/gtelematics/img_service02.png" alt></div>
+                <div class="p-dynabook-2025__solOffice__services--item-txt">
+                  <h3>通信機能付きドライブレコーダー</h3>
+                  <p>カメラ3台同時録画や多様な通信機能など最新機能を搭載し、<br>事故防止や業務効率化をサポートします。<br>データ収集サーバや端末管理サーバも提供しています</p>
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <section id="section03" class="p-dynabook-2025__solOffice__section l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__sechead">
+              <h2 class="p-dynabook-2025__solOffice__sechead--ttl">
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-ico"><img class="u-img" src="<%= pageData.assetPath %>business/solution/gtelematics/ico_ttl_s03.svg" alt></span>
+                <span class="p-dynabook-2025__solOffice__sechead--ttl-txt">アルコールチェック管理</span>
+              </h2>
+              <ul class="p-dynabook-2025__solOffice__sechead-tags">
+                <li>アルコール検知器</li>
+                <li>車両予約機能</li>
+                <li>AI顔認証</li>
+                <li>運転日誌</li>
+                <li>免許証読み取り</li>
+              </ul>
+            </div>
+            <div class="p-dynabook-2025__solOffice__services p-dynabook-2025__solOffice__services-l">
+              <a href="/solution/car-telematics/alc-service/index.html" class="p-dynabook-2025__solOffice__services--item">
+                <div class="p-dynabook-2025__solOffice__services--item-img"><img class="u-img" src="<%= pageData.assetPath %>business/solution/gtelematics/img_service03.png" alt></div>
+                <div class="p-dynabook-2025__solOffice__services--item-txt">
+                  <h3>アルコールチェック管理サービス<br><span>(スリーゼロ)</span></h3>
+                  <p>運転者はスマホ・タブレット登録するだけ。<br>検査結果はクラウドで一元管理。<br>法令遵守と業務効率化に効果的です</p>
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <section class="l-2025-page__section">
+            <div class="p-dynabook-2025__solOffice__btnav">
+              <h3 class="p-dynabook-2025__solOffice__btnav__title">
+                <span class="p-dynabook-2025__solOffice__btnav__mainTitle">ソリューションカテゴリ一覧</span>
+              </h3>
+              <div class="p-dynabook-2025__solOffice__btnav__th--list c-col__flex--5-2">
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-blu-1 c-r-5 u-hover-img-bg-cover u-hover-color--white is-blu-1" href="/business/solution/office/index.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav01.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">オフィス</span>
+                </a>
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-vio-1 c-r-5 u-hover-img-bg-cover u-hover-color--white" href="/business/solution/genba-dx/index.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav02.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">現場DX</span>
+                </a>
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-grn-1 c-r-5 u-hover-img-bg-cover u-hover-color--white" href="/business/solution/gtelematics/index.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav03.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">テレマティクス</span>
+                </a>
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-org-1 c-r-5 u-hover-img-bg-cover u-hover-color--white" href="/solution/dynaschool/index.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav04.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">教育ICT</span>
+                </a>
+                <a class="p-dynabook-2025__solOffice__btnav__th--item c-col__flex--5-2-item is-gry-1 c-r-5 u-hover-img-bg-cover u-hover-color--white" href="/solution/pcsolution.html">
+                  <div class="p-dynabook-2025__solOffice__btnav__th--ph">
+                    <img class="u-img u-img__fit--contain" src="<%= pageData.assetPath %>business/solution/office/ico_btnav05.svg" alt>
+                  </div>
+                  <span class="p-dynabook-2025__solOffice__btnav__th--text c-ico__arrow-white">PC製品</span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </main>
+      <!--./dynabook-2025-main-->
+      <!--dynabook-2025-fotter-->
+      <%- include( pageData.path+'personal/modules/_fotter.ejs', { pageData: pageData } ); %>
+      <!--./dynabook-2025-fotter-->
+      <!-- <script src="./assets/js/main.js"></script> -->
+      <!-- <script src="./assets/js/header_2025.js"></script> -->
+      <!-- <script src="./assets/js/footer_2025.js"></script> -->
+      <!-- %- include( pageData.path+'common/_fotter_js.ejs', { pageData: pageData } ); % -->
+
+
+<script src="/js/assets_2025/individual/slick.min.js"></script>
+<script src="/js/assets_2025/individual/jquery.matchHeight-min.js"></script>
+<script src="/js/assets_2025/individual/jquery.csv.min.js"></script>
+<script src="/js/assets_2025/individual/header_2025.js"></script>
+<script src="/js/assets_2025/individual/main_2025.js"></script>
+<script src="/js/assets_2025/individual/footer_2025.js"></script>
+<script>
+  $(function() {
+    $('.p-biztop-2025-case--texts').matchHeight();
+    $('.p-biztop-2025-case--service').matchHeight();
+  });
+</script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<%
+const pageData = {
+title: 'module',
+description: 'description',
+path:'../',
+assetPath:'/sites/default/files/dynabook-b2b/assets_2025/',
+isTop:'true'
+}
+%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include( pageData.path+'common/_meta.ejs', { pageData: pageData } ); %>
+    <!--css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<%= pageData.assetPath %>css/header_2025.css" />
+    <link rel="stylesheet" href="<%= pageData.assetPath %>css/footer_2025.css" />
+    <link rel="stylesheet" href="<%= pageData.assetPath %>css/style_2025.css" />
+    <!--/css-->
+    <%- include( pageData.path+'common/_header_js.ejs', { pageData: pageData } ); %>
+  </head>
+
+  <body>
+  <!--headerここから-->
+  <%- include( pageData.path+'business/modules/_header.ejs', { pageData: pageData } ); %>
+  <!--/headerここまで-->
+  <!--コンテンツここから-->
+  <div class="dynabook-2025 l-container">
+  </div>
+  <!--/コンテンツここまで-->
+  <!--fotterここから-->
+  <%- include( pageData.path+'personal/modules/_fotter.ejs', { pageData: pageData } ); %>
+  <!--/fotterここまで-->
+  <!--javascript-->
+  <script src="/js/assets_2025/individual/header_2025.js"></script>
+  <script src="/js/assets_2025/individual/footer_2025.js"></script>
+  <!--/javascript-->
+  </body>
+</html>

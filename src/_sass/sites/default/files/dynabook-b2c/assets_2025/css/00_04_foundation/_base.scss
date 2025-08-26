@@ -1,0 +1,308 @@
+@use 'sass:math';
+@use '00_02_setting/setting' as *;
+@use '00_01_common/utility' as *;
+// @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+.dynabook-2025 {
+  // フォントデフォルト設定
+  font-family: 'Noto Sans JP', 'メイリオ', Meiryo, 'Hiragino Kaku Gothic ProN', 'MS PGothic', sans-serif;
+  font-weight: 400;
+  color: #333;
+  @include sizePC(16);
+  line-height: 1.75;
+  @include mediaQuery(sp){
+    font-size: pxToVw(16);
+  };
+  .dbk-back-to-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 2000;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    a {
+      position: relative;
+      background: #8a8b94;
+      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 24px;
+      height: 20px;
+      border: none;
+      @include mediaQuery(sp) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 24px;
+        height: 20px;
+        border: none;
+      }
+    }
+  }
+
+  //マウスオーバー処理
+  @media (any-hover: hover) {
+    a {
+      transition: all 0.3;
+      &:hover {
+        text-decoration: none;
+        color: $hover-color-link;
+      }
+    }
+  }
+
+  .u-hover-decoration-unde {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .u-hover-motion {
+    transition: all 0.3s;
+  }
+
+  .u-hover-color {
+    transition: all 0.3s;
+    &:hover {
+      color: $hover-color-link;
+    }
+  }
+
+  .u-hover-color--white {
+    transition: all 0.3s;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .u-hover-color--gray {
+    transition: all 0.3s;
+    &:hover {
+      color: $color-text-gray-basic;
+    }
+  }
+
+  .u-hover-color-text-child {
+    .u-hover-color-text-child-target {
+      transition: all 0.3s;
+    }
+    &:hover {
+      .u-hover-color-text-child-target {
+        color: $hover-color-link !important;
+        border-color: $hover-color-link !important;
+      }
+    }
+  }
+
+  .u-hover-color-gray {
+    .u-hover-color-gray-target {
+      transition: all 0.3s;
+    }
+    &:hover {
+      .u-hover-color-gray-target {
+        color: $hover-color-link;
+      }
+    }
+  }
+
+  .u-hover-bg-black {
+    transition: all 0.3s;
+    &:hover {
+      background-color: $hover-color-black;
+    }
+  }
+
+  .u-hover-bg-yellow {
+    transition: all 0.3s;
+    &:hover {
+      background-color: #dbce00;
+    }
+  }
+
+  .u-hover-bg-black-child {
+    .u-hover-bg-black-target {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      .u-hover-bg-black-target {
+        background-color: $hover-color-black;
+      }
+    }
+  }
+
+  .u-hover-svg {
+    .u-hover-svg-target {
+      &::before,
+      &::after {
+        transition: all 0.3s;
+      }
+    }
+
+    &:hover {
+      .u-hover-svg-target {
+        &::before,
+        &::after {
+          // background-color: $hover-color-black;
+          filter: invert(10%) sepia(62%) saturate(7094%) hue-rotate(353deg) brightness(107%) contrast(83%);
+        }
+      }
+    }
+  }
+
+  .u-hover-bg-gray {
+    transition: all 0.3s;
+    &:hover {
+      background-color: $hover-color-gray;
+      color: $color-text-gray-basic;
+    }
+  }
+
+  .u-hover-img-opacity {
+    img {
+      transition: all 1s;
+    }
+    &:hover {
+      img {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .u-hover-img-bg {
+    background-color: #000;
+  }
+
+  .u-hover-img-bg-cover {
+    position: relative;
+    &::after {
+      transition: all 0.5s;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      z-index: 10;
+      opacity: 0;
+      z-index: 1;
+    }
+    &:hover {
+      &::after {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .u-hover-img-bg-cover-child {
+    .u-hover-img-bg-cover-child-target {
+      position: relative;
+      &::after {
+        transition: all 0.5s;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        z-index: 10;
+        opacity: 0;
+        z-index: 1;
+      }
+    }
+    &:hover {
+      .u-hover-img-bg-cover-child-target {
+        &::after {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+
+  .u-hover-dark-bg-cover {
+    position: relative;
+    &::after {
+      transition: all 0.5s;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color-text-dark;
+      z-index: 10;
+      opacity: 0;
+      z-index: 1;
+    }
+    &:hover {
+      &::after {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .u-hover-img-scale {
+    img {
+      transition: all 0.3s;
+    }
+    &:hover {
+      img {
+        scale: 1.03;
+      }
+    }
+  }
+
+  .u-hover-scale-child {
+    .u-hover-scale-child-target {
+      transition: all 0.3s;
+    }
+    &:hover {
+      .u-hover-scale-child-target {
+        scale: 1.03;
+      }
+    }
+  }
+
+  .u-z-index-10 {
+    position: relative;
+    z-index: 10;
+    display: block;
+  }
+
+  .c-ico-new {
+    display: inline-block;
+    box-sizing: border-box;
+    @include setSizePC(border-radius, 5);
+    @include setSizePC(padding, 5);
+    background-color: #bf2123;
+    @include sizePC(10);
+    color: #fff;
+    @include mediaQuery(sp) {
+      font-size: pxToVw(10);
+      border-radius: pxToVw(5);
+      padding: pxToVw(5);
+    }
+  }
+}

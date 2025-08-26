@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+@use 'sass:math';
+@use '00_01_common/reset';
+@use '00_02_setting/setting' as *;
+@use '00_01_common/utility' as *;
+@forward '00_03_module/_slick';
+@forward '00_03_module/_modalYoutube';
+@forward '00_04_foundation/_base';
+@forward '00_04_object/utility/_u-text';
+@forward '00_04_object/utility/_u-layout';
+@forward '00_04_object/utility/_u-img';
+@forward '00_04_object/utility/_u-bg';
+@forward '00_04_object/component/_c-ico';
+@forward '00_04_object/component/_c-parts';
+@forward '00_04_object/component/_c-title';
+@use '00_04_layout/l-page' as *;
+@use '00_04_object/project/individual/p-top' as *;
+@use '00_04_object/project/p-top-kv' as *;
+@use '00_04_object/project/individual/p-top-kv' as *;
+@use '00_04_object/project/business/solution/p-top' as *;
+@use '00_04_object/project/individual/news/_p-top' as *;
+// @forward "00_03_module/modal";
+// @forward "00_03_module/modal";
+// @forward "00_03_module/megadropmenu";
+// @forward "01_01_top/basic";
+

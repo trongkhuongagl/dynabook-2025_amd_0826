@@ -1,0 +1,212 @@
+@use 'sass:math';
+@use '00_02_setting/setting' as *;
+@use '00_01_common/utility' as *;
+.l-2025-page__section {
+  box-sizing: border-box;
+  margin: 0 auto;
+  @include setSizePC(width, 1120);
+  @include setSizePC4(padding, 50, 0, 50, 0);
+  // @include setSizePC4(padding,80,160,80,160);
+  // width: 100%;
+  // max-width: 1440px;
+  @include mediaQuery(sp) {
+    // padding:pxToVw(80) pxToVw(20) pxToVw(50);
+    width: pxToVw(352);
+    padding: pxToVw(50) 0 pxToVw(50);
+  }
+  &.sp-wide {
+    @include mediaQuery(sp) {
+      padding: 0;
+      width: 100%;
+    }
+  }
+  &.sp-wide-100 {
+    @include mediaQuery(sp) {
+      width: 100%;
+    }
+  }
+  &.sp-padding-bottom-0 {
+    @include mediaQuery(sp){
+      padding-bottom: 0 !important;
+    };
+  }
+  &.padding-top--0{
+    padding-top: 0;
+  
+  }
+  &.padding-bottom--0{
+    padding-bottom: 0;
+  }
+}
+
+.l-2025-page__sp--side{
+  @include mediaQuery(sp){
+    width: 100%;
+    padding: 0 pxToVw(20);
+  };
+}
+
+.l-2025-page__block--gray {
+  background-color: #f6f6f6;
+  box-sizing: border-box;
+  @include setSizePC4(padding, 45, 64, 45, 64);
+  @include setSizePC(border-radius, 5);
+  border-bottom: solid 1px #e5e3e3;
+  @include mediaQuery(sp) {
+    padding: pxToVw(33) pxToVw(20);
+    border-radius: pxToVw(5);
+  }
+  &.sp-wide {
+    padding: pxToVw(33) 0;
+  }
+}
+
+.dynabook-2025{
+
+  .l-2025-breadcrumb--wrapper{
+    position:relative;
+    box-sizing: border-box;
+    @include setSizePC4(padding, 18, 24, 18, 24);
+    @include mediaQuery(sp) {
+      padding: pxToVw(15) pxToVw(20);
+    }
+
+    .l-2025-bnr-win11--inner{
+      @include mediaQuery(sp) {
+        margin-top: pxToVw(5);
+        width:100%;
+      }
+    }
+
+    .l-2025-bnr-win11{
+      position:absolute;
+      width:100%;
+      left:0;
+      top:50%;
+      transform:translateY(-50%);
+      margin-top:0.3em;
+      @include mediaQuery(sp) {
+        position:static;
+        transform:translateY(0);
+        top:0;
+        margin-top:0;
+      }
+    }
+  }
+
+  .l-2025-breadcrumb {
+    position:relative;
+    z-index:2;
+    color: #666;
+    display: block;
+    a {
+      color: #666;
+      &:visited,
+      &:link {
+        color: #666;
+      }
+      &:hover {
+        text-decoration: none;
+        color: $hover-color-link;
+      }
+    }
+  }
+
+  .l-2025-breadcrumb__list{
+    line-height: 1;
+  }
+
+  .l-2025-breadcrumb__list-item {
+    display: inline-block;
+    a,
+    span {
+      @include sizePC(12);
+      line-height: 1;
+      @include mediaQuery(sp) {
+        font-size: pxToVw(10);
+      }
+    }
+
+    &::after {
+      display: inline-block;
+      content: '';
+      @include setSizePC(width, 16);
+      aspect-ratio: 1/1;
+      background-image: url(#{$imagePath}common/arrow_breadcrumb.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      vertical-align: -0.25em;
+      @include mediaQuery(sp) {
+        width: pxToVw(16);
+        vertical-align: -0.25em;
+      }
+    }
+    &:last-child {
+      color:#bf2123;
+      &::after {
+        content: none;
+        display: none;
+      }
+    }
+  }
+
+
+  .l-2025-bnr-win11{
+    width:100%;
+    &--inner{
+      display:flex;
+      justify-content:end;
+      box-sizing: border-box;
+      margin: 0 auto;
+      @include setSizePC(width, 1120);
+      @include setSizePC4(padding, 50, 0, 50, 0);
+      // @include setSizePC4(padding,80,160,80,160);
+      // width: 100%;
+      // max-width: 1440px;
+      @include mediaQuery(sp) {
+        // padding:pxToVw(80) pxToVw(20) pxToVw(50);
+        width: pxToVw(352);
+        padding: 0;
+      }
+      > span, > a{
+        display:block;
+        @include setSizePC(width, 318);
+        @include mediaQuery(sp) {
+          width: pxToVw(209);
+        }
+        img{
+          width:100%;
+        }
+      }
+    }
+  }
+
+  .l-2025-category {
+    background:#f6f6f6;
+    &--inner{
+      display:flex;
+      justify-content:end;
+      box-sizing: border-box;
+      margin: 0 auto;
+      @include setSizePC(width, 1120);
+      @include setSizePC4(padding, 12, 0, 12, 0);
+      // @include setSizePC4(padding,80,160,80,160);
+      // width: 100%;
+      // max-width: 1440px;
+      @include mediaQuery(sp) {
+        padding:pxToVw(8) 0;
+        width: pxToVw(352);
+      }
+      p{
+        text-align:right;
+        @include sizePC(14);
+        font-weight:700;
+        @include mediaQuery(sp) {
+          font-size: pxToVw(12);
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,106 @@
+@use 'sass:math';
+@use '00_02_setting/setting' as *;
+@use '00_01_common/utility' as *;
+.dynabook-2025 {
+  .solution-top-kv {
+    .kv-20250225__item--01 {
+      width: pxToVw(310, $pcMax);
+      margin: 0 auto;
+      @include mediaQuery(sp) {
+        width: pxToVw(245);
+        margin: 0 auto;
+      }
+    }
+
+    .kv-20250228__01 {
+      &__item--01 {
+        width: pxToVw(310, $pcMax);
+        margin: 0 auto pxToVw(32, $pcMax);
+        @include mediaQuery(sp) {
+          width: pxToVw(310);
+          margin: 0 auto pxToVw(32);
+        }
+      }
+      &__item--02 {
+        width: pxToVw(109, $pcMax);
+        // width: 50%;
+        margin: pxToVw(30, $pcMax) auto 0;
+        @include mediaQuery(sp) {
+          width: pxToVw(109);
+          margin: pxToVw(30) auto 0;
+        }
+      }
+      .p-dynabook-2025__kv--btn {
+        a {
+          margin: 0;
+          padding: 0;
+        }
+        .c-btn__linkBase-black{
+          margin-top: 0;
+        }
+      }
+      .p-dynabook-2025__kv--btn-2 {
+        margin-top: pxToVw(15, $pcMax);
+        @include mediaQuery(sp) {
+          margin-top: pxToVw(25);
+        }
+      }
+
+      .p-dynabook-2025__kv--sp {
+        position: relative;
+      }
+
+      .kv-20250228__01-sp-ui {
+        @include mediaQuery(sp) {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+          .p-dynabook-2025__kv--btn {
+            .c-btn__linkBase-black {
+              width: pxToVw(171);
+              min-width: pxToVw(171);
+              height: pxToVw(46);
+              padding: 0;
+              display: flex;
+              align-items: center;
+              margin-top: 0;
+              span {
+                font-size: pxToVw(13);
+              }
+              &::after {
+                width: pxToVw(15);
+              }
+              &:hover {
+                background-color: #000 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .kv-20250228__02 {
+      &__item--01 {
+        width: pxToVw(286, $pcMax);
+        margin: 0 auto pxToVw(24, $pcMax);
+        @include mediaQuery(sp) {
+          width: pxToVw(286);
+          margin: 0 auto pxToVw(24);
+        }
+      }
+    }
+
+    .kv-20250520__01{
+      .p-dynabook-2025__kv--item{
+        width: pxToVw(126, $pcMax);
+        margin: 0 auto;
+      }
+      &:hover{
+        .c-btn__linkBase-black{
+          background-color: #bf2123 !important;
+        }
+      }
+    }
+  }
+}

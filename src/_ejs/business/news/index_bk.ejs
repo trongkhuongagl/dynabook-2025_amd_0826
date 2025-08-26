@@ -1,0 +1,137 @@
+<%
+const pageData = {
+title: 'お知らせ | dynabook（ダイナブック公式）',
+description: 'dynabook(ダイナブック)の公式法人向け新着情報一覧ページです。最新の製品情報、企業向けソリューション、イベント情報など、ビジネスに役立つ最新ニュースをお届けします。',
+path:'../../',
+assetPath:'/sites/default/files/dynabook-b2b/assets_2025/',
+isTop:'true'
+}
+%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include( pageData.path+'common/_meta.ejs', { pageData: pageData } ); %>
+    <%- include( pageData.path+'common/_header_css.ejs', { pageData: pageData } ); %>
+    <%- include( pageData.path+'common/_header_js.ejs', { pageData: pageData } ); %>
+  </head>
+
+  <body>
+    <div>
+      <!--dynabook-2025-header-->
+      <%- include( pageData.path+'business/modules/_header.ejs', { pageData: pageData } ); %>
+      <!--./dynabook-2025-header-->
+      <!--dynabook-2025-main-->
+      <main>
+        <div class="dynabook-2025 l-container">
+          <%- include( pageData.path+'business/modules/_storebnr.ejs', { pageData: pageData } ); %>
+          <!--↓l-container-->
+          <div class="p-dynabook-2025-newsTop">
+            <div class="p-dynabook-2025__newsTop__head l-2025-page__section">
+              <div class="p-dynabook-2025__newsTop__head--title">
+                <h1 class="p-dynabook-2025__newsTop__head--title-txt c-title__levelPage-1">お知らせ</h1>
+              </div>
+            </div>
+            <section class="p-dynabook-2025__newsTop__section u-bg-gray--light">
+              <div class="l-2025-page__section">
+                <div class="p-dynabook-2025__newsTop__search">
+                  <div class="p-dynabook-2025__newsTop__search--block">
+                    <ul class="p-dynabook-2025__newsTop__search--tag">
+                      <li><a href="" class="is-active"><span>すべて</span></a></li>
+                      <li><a href="" data-tag="新製品ニュース"><span>新製品ニュース</span></a></li>
+                      <li><a href="" data-tag="コンテンツ"><span>コンテンツ公開更新のお知らせ</span></a></li>
+                      <li><a href="" data-tag="イベント"><span>イベント</span></a></li>
+                      <li><a href="" data-tag="お知らせ"><span>お知らせ</span></a></li>
+                    </ul>
+                  </div>
+                  <div class="p-dynabook-2025__newsTop__search--block">
+                    <select class="p-dynabook-2025__newsTop__search--year">
+                      <option value="2024">2024</option>
+                      <option value="2023">2023</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="p-biztop-2025-info">
+                  <div class="p-biztop-2025-info__message ">
+                    該当するお知らせはありません。
+                  </div>
+                  <ul class="p-biztop-2025-info__list">
+                    <li class="p-biztop-2025-info__item">
+                      <a href="#" class="p-biztop-2025-info__contents">
+                        <p class="p-biztop-2025-info__tag c-tag c-tag__red">
+                          <span>新製品ニュース</span>
+                        </p>
+                        <p class="p-biztop-2025-info__day">2024年9月24日</p>
+                        <p class="p-biztop-2025-info__text">高速処理性能や高いモビリティ性能を兼ね備えたプレミアムモバイルノートPCに、新たにAI専用エンジン内蔵のインテル® Core™ Ultra プロセッサーを搭載<br>
+                          －Copilotキーを搭載しPCラインアップ計22機種を刷新－</p>
+                        <span class="c-ico__arrow-c"><span></span></span>
+                      </a>
+                    </li>
+                    <li class="p-biztop-2025-info__item">
+                      <a href="#" class="p-biztop-2025-info__contents">
+                        <p class="p-biztop-2025-info__tag c-tag c-tag__right">
+                          <span>イベント</span>
+                        </p>
+                        <p class="p-biztop-2025-info__day">2024年8月6日</p>
+                        <p class="p-biztop-2025-info__text">世界初<sup>*</sup>のノートPC「dynabook」誕生から、おかげさまで35周年－AI時代も、人に寄り添う、真のパーソナルコンピュータを目指して－</p>
+                        <span class="c-ico__arrow-c"><span></span></span>
+                      </a>
+                    </li>
+                    <li class="p-biztop-2025-info__item">
+                      <a href="#" class="p-biztop-2025-info__contents">
+                        <p class="p-biztop-2025-info__tag c-tag c-tag__red">
+                          <span>新製品ニュース</span>
+                        </p>
+                        <p class="p-biztop-2025-info__day">2024年9月24日</p>
+                        <p class="p-biztop-2025-info__text">高性能インテル® Core™ プロセッサー（シリーズ1）を選択できる13.3型スタンダードモバイルノート「dynabook SJ73/LX」と14.0型オフィス内モバイルノート「dynabook MJ64/LX」を法人向けラインアップに追加</p>
+                        <span class="c-ico__arrow-c"><span></span></span>
+                      </a>
+                    </li>
+                    <li class="p-biztop-2025-info__item">
+                      <a href="#" class="p-biztop-2025-info__contents">
+                        <p class="p-biztop-2025-info__tag c-tag c-tag__dark">
+                          <span>コンテンツ</span>
+                        </p>
+                        <p class="p-biztop-2025-info__day">2024年8月6日</p>
+                        <p class="p-biztop-2025-info__text">DynabookがChromebook™市場へ本格参入<br>
+                          － GIGAスクール構想第2期に向け、2in1デタッチャブル型Chromebook™「Dynabook Chromebook C70」を商品化－</p>
+                        <span class="c-ico__arrow-c"><span></span></span>
+                      </a>
+                    </li>
+                    <li class="p-biztop-2025-info__item">
+                      <a href="#" class="p-biztop-2025-info__contents" href>
+                        <p class="p-biztop-2025-info__tag c-tag c-tag__red">
+                          <span>新製品ニュース</span>
+                        </p>
+                        <p class="p-biztop-2025-info__day">2024年9月24日</p>
+                        <p class="p-biztop-2025-info__text">高負荷なクリエイティブ作業を可能にする5 in 1プレミアムPenノートPC「dynabook V83/LX」を新発売<br>
+                          －インテル<sup>®</sup>第13世代CPU搭載で目的に合わせた多様な使い方がさらに便利に－</p>
+                        <span class="c-ico__arrow-c"><span></span></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!--↑l-container-->
+        </div>
+      </main>
+      <!--./dynabook-2025-main-->
+      <!--dynabook-2025-fotter-->
+      <%- include( pageData.path+'personal/modules/_fotter.ejs', { pageData: pageData } ); %>
+      <!--./dynabook-2025-fotter-->
+      <!-- <script src="./assets/js/main.js"></script> -->
+      <!-- <script src="./assets/js/header_2025.js"></script> -->
+      <!-- <script src="./assets/js/footer_2025.js"></script> -->
+      <!-- %- include( pageData.path+'common/_fotter_js.ejs', { pageData: pageData } ); % -->
+
+
+<script src="/js/assets_2025/individual/slick.min.js"></script>
+<script src="/js/assets_2025/individual/jquery.matchHeight-min.js"></script>
+<script src="/js/assets_2025/individual/jquery.csv.min.js"></script>
+<script src="/js/assets_2025/individual/header_2025.js"></script>
+<script src="/js/assets_2025/individual/main_2025.js"></script>
+<script src="/js/assets_2025/individual/footer_2025.js"></script>
+    </div>
+  </body>
+</html>
