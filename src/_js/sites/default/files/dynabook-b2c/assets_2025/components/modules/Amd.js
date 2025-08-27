@@ -8,11 +8,9 @@ export class Amd {
   }
 
   init() {
-    console.log('AMD')
     //↓code
+    console.log('AMD')
+    //↑code
   }
-
-  
-
 }
 export default Amd;

@@ -4,5 +4,918 @@
 .dynabook-2025 {
   .p-product-amd{
     //↓code
+    // Common
+    @mixin setSizePCCus($prop, $size) {
+      #{$prop}: min(#{pxToVw($size, $pcMax)}, #{$size}px);
+      @include mediaQuery(big) {
+        #{$prop}: calc(#{$size}px * 1.1);
+      }
+    }
+    .u-font__castoro {
+      font-family: "Castoro", serif;
+      font-weight: 400;
+    }
+    .u-font__mincho {
+      font-family: "Shippori Mincho B1", serif;
+      font-weight: 400;
+    }
+    .u-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .c-heading__01 {
+      font-family: "Castoro", serif;
+      @include sizePC_d(66);
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include setSizePC(gap, 7);
+      @include setSizePC(margin-bottom, 30);
+      &::after {
+        content: '';
+        @include setSizePC(width, 40);
+        @include setSizePC(height, 4);
+        background-color: #CF000E;
+      }
+      &.is-line-black {
+        &::after {
+          background-color: #000;
+
+        }
+      }
+      @include mediaQuery(sp) {
+        font-size: pxToVw(64);
+        gap: pxToVw(10);
+        margin-bottom: pxToVw(50);
+        &::after {
+          width: pxToVw(40);
+          height: pxToVw(4);
+        }
+      }
+    }
+
+    // Background Main
+    background-color: #CF000E;
+    // background-image: linear-gradient(to bottom, #CF000E 0%, #690007 100%);
+
+    // breadcrumb
+    .breadcrumb {
+      background-color: #fff;
+      @include setSizePC2(padding-left, padding-right, 33, 24);
+      @include setSizePC2(padding-top, padding-bottom, 15, 22);
+      &-list {
+        display: flex;
+        align-items: center;
+        @include setSizePC(gap, 8);
+        .item {
+          @include sizePC_d(12);
+          color: #666666;
+          &.is-separate {
+            &::after {
+              background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.66667 5.33333L9.33334 7.99999L6.66667 10.6667' stroke='%23666666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            }
+          }
+        }
+      }
+    }
+
+    // sec-kv
+    .sec-kv {
+      @include setSizePC(padding-top, 88);
+      @include setSizePC(padding-bottom, 202);
+      @include setSizePC(margin-bottom, -193);
+      overflow: hidden;
+      @include mediaQuery(sp) {
+        padding-top: pxToVw(10);
+        padding-bottom: pxToVw(243);
+      }
+      &__inner {
+        @include setSizePC(width, 1440);
+        margin: 0 auto;
+        position: relative;
+        @include mediaQuery(sp) {
+          width: 100%;
+        }
+      }
+      &__image {
+        @include setSizePC(width, 660);
+        position: absolute;
+        @include setSizePCCus(top, -170);
+        left: 0;
+        z-index: 1;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        @include mediaQuery(sp) {
+          position: static;
+          width: 100%;
+          padding-right: pxToVw(10);
+        }
+      }
+      &__info {
+        @include setSizePC(width, 536);
+        margin-left: auto;
+        @include setSizePC(margin-right, 160);
+        @include mediaQuery(sp) {
+          width: 100%;
+          margin: 0;
+          padding-left: pxToVw(15);
+          padding-right: pxToVw(15);
+        }
+      }
+      &__title {
+        @include setSizePC(width, 536);
+        @include setSizePC(margin-bottom, 30);
+        @include mediaQuery(sp) {
+          width: pxToVw(353);
+          margin: pxToVw(4) auto pxToVw(12);
+        }
+      }
+      &__products {
+        @include setSizePC(margin-bottom, 22);
+        @include mediaQuery(sp) {
+          margin-bottom: pxToVw(30);
+        }
+      }
+      &__logo {
+        display: inline-flex;
+        @include setSizePC(width, 121);
+        @include mediaQuery(sp) {
+          width: pxToVw(93);
+          margin-left: pxToVw(7);
+        }
+      }
+      &__list {
+        display: flex;
+        align-items: center;
+        @include setSizePC(gap, 18);
+        @include setSizePC(margin-top, -3);
+        @include mediaQuery(sp) {
+          justify-content: center;
+          gap: pxToVw(15);
+          margin-top: pxToVw(-3);
+        }
+        .item {
+          @include sizePC_d(28);
+          color: #000000;
+          font-weight: 500;
+          line-height: 1;
+          span {
+            @include sizePC_d(16);
+          }
+          @include mediaQuery(sp) {
+            font-size: pxToVw(21);
+            span {
+              font-size: pxToVw(13);
+            }
+          }
+        }
+      }
+      &__button {
+        min-width: auto;
+        padding: 0;
+        @include setSizePC(width, 346);
+        @include setSizePC(height, 90);
+        @include sizePC_d(22);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include setSizePC(border-radius, 90);
+        border: 2px solid #fff;
+        margin: 0;
+        z-index: 1;
+        overflow: hidden;
+        @include mediaQuery(sp) {
+          width: pxToVw(346);
+          height: pxToVw(90);
+          margin: 0 auto;
+          font-size: pxToVw(22);
+          border-radius: pxToVw(90);
+        }
+        &::after {
+          @include setSizePC(width, 29);
+          @include setSizePC(height, 29);
+          background-image: url("data:image/svg+xml,%3Csvg width='29' height='30' viewBox='0 0 29 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14.5' cy='15' r='14.5' fill='white'/%3E%3Cpath d='M18.6666 13.1667L15 16.8334L11.3333 13.1667' stroke='%23CE000D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+          margin: 0;
+          filter: none;
+          @include setSizePC(right, 30);
+          @include mediaQuery(sp) {
+            width: pxToVw(30);
+            height: pxToVw(30);
+            right: pxToVw(30);
+          }
+        }
+        &::before {
+          content: '';
+          @include setSizePC(width, 363);
+          @include setSizePC(height, 53);
+          @include setSizePC(border-radius, 90);
+          background-image: linear-gradient( to bottom, #000 -30%, #FF2121 100%);
+          position: absolute;
+          left: 50%;
+          @include setSizePCCus(bottom, -8);
+          transform: translateX(-50%) rotate(0.5deg);
+          z-index: -1;
+          @include mediaQuery(sp) {
+            width: pxToVw(363);
+            height: pxToVw(53);
+            border-radius: pxToVw(90);
+            bottom: pxToVw(-8);
+          }
+        }
+        span {
+          @include setSizePC2(margin-top, margin-left, 6, -14);
+          @include mediaQuery(sp) {
+            margin-top: pxToVw(6);
+            margin-left: pxToVw(-14);
+          }
+        }
+      }
+    }
+
+    // sec-about
+    .sec-about {
+      background-image: url(#{$imagePath}business/amd/about_bg.png);
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      @include setSizePC(padding-top, 173);
+      @include setSizePC(padding-bottom, 189);
+      @include mediaQuery(sp) {
+        background-image: url(#{$imagePath}business/amd/about_bg_sp.png);
+        padding-top: pxToVw(106);
+        padding-bottom: pxToVw(155);
+      }
+      &__inner {
+        @include setSizePC(width, 1120);
+        margin: 0 auto;
+        @include mediaQuery(sp) {
+          width: 100%;
+        }
+      }
+      .box-desc {
+        @include setSizePC(margin-bottom, 71);
+        &__txt {
+          @include sizePC_d(20);
+          font-weight: 400;
+          color: #FFFFFF;
+          line-height: 2;
+          text-align: center;
+          &:not(:first-of-type) {
+            @include setSizePC(margin-top, 40);
+          }
+        }
+        @include mediaQuery(sp) {
+          margin-bottom: pxToVw(45);
+          padding-left: pxToVw(6);
+          padding-right: pxToVw(6);
+          &__txt {
+            font-size: pxToVw(16);
+            &:not(:first-of-type) {
+              margin-top: pxToVw(32);
+            }
+          }
+        }
+      }
+      .box-amd {
+        &.is-pro {
+          background-color: rgb(143, 0, 9, 0.5);
+          @include setSizePC(margin-top, 20);
+          @include setSizePC(padding-bottom, 77);
+          @include mediaQuery(sp) {
+            padding-top: pxToVw(55);
+            padding-bottom: pxToVw(54);
+            margin-top: pxToVw(51);
+          }
+          .box-amd__list {
+            @include mediaQuery(sp) {
+              gap: pxToVw(29);
+            }
+          }
+          .box-amd__desc {
+            @include setSizePC(margin-bottom, 31);
+            @include mediaQuery(sp) {
+              margin-bottom: pxToVw(45);
+            }
+          }
+          .icon {
+            background-color: #AF000C;
+          }
+        }
+        background-color: rgb(46, 46, 46, 0.85);
+        @include setSizePC4(padding, 68, 80, 83, 80);
+        @include mediaQuery(sp) {
+          width: pxToVw(350);
+          margin: 0 auto;
+          padding: pxToVw(51) pxToVw(25) pxToVw(55) pxToVw(25);
+        }
+        &__heading {
+          @include sizePC_d(42);
+          font-weight: 400;
+          color: #fff;
+          line-height: 1.5;
+          text-align: center;
+          @include setSizePC(margin-bottom, 3);
+          span {
+            @include sizePC_d(28);
+          }
+          @include mediaQuery(sp) {
+            font-size: pxToVw(42);
+            line-height: 1.2;
+            margin-bottom: pxToVw(13);
+            span {
+              font-size: pxToVw(28);
+            }
+          }
+        }
+        &__head {
+          @include sizePC_d(22);
+          font-weight: 400;
+          color: #fff;
+          line-height: 1.5;
+          text-align: center;
+          @include setSizePC(margin-bottom, 15);
+          position: relative;
+          z-index: 1;
+          @include mediaQuery(sp) {
+            font-size: pxToVw(22);
+            margin-bottom: pxToVw(34);
+          }
+          &::before,
+          &::after {
+            content: '';
+            @include setSizePC(width, 325);
+            height: 1px;
+            background-color: #FFFFFF;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            @include mediaQuery(sp) {
+              display: none;
+            }
+          }
+          &::before {
+            left: 0;
+          }
+          &::after {
+            right: 0;
+          }
+        }
+        &__desc {
+          @include sizePC_d(20);
+          font-weight: 600;
+          color: #fff;
+          line-height: 1.5;
+          text-align: center;
+          @include setSizePC(margin-bottom, 37);
+          @include mediaQuery(sp) {
+            font-size: pxToVw(20);
+            margin-bottom: pxToVw(34);
+          }
+        }
+        &__list {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          @include setSizePC(gap, 30);
+          @include mediaQuery(sp) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: pxToVw(49);
+          }
+          .icon {
+            width: 100%;
+            @include setSizePC(height, 186);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            @include setSizePC(margin-bottom, 15);
+            img {
+              @include setSizePC2(width, height, 100, 100);
+            }
+            @include mediaQuery(sp) {
+              height: pxToVw(186);
+              margin-bottom: pxToVw(15);
+              img {
+                width: pxToVw(100);
+                height: pxToVw(100);
+              }
+            }
+          }
+          .title {
+            @include sizePC_d(21);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.5;
+            @include setSizePC(margin-bottom, 10);
+            @include mediaQuery(sp) {
+              font-size: pxToVw(21);
+              margin-bottom: pxToVw(10);
+            }
+          }
+          .text {
+            @include sizePC_d(16);
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.7;
+            @include mediaQuery(sp) {
+              font-size: pxToVw(16);
+            }
+          }
+          .light {
+            @include setSizePC(height, 25);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            @include setSizePC2(padding-left, padding-right, 5, 5);
+            @include sizePC_d(14);
+            font-weight: 500;
+            line-height: 1;
+            background-color: #FFFFFF;
+            color: #710001;
+            @include setSizePC(margin-top, 16);
+            @include mediaQuery(sp) {
+              height: pxToVw(25);
+              padding-left: pxToVw(5);
+              padding-right: pxToVw(5);
+              font-size: pxToVw(14);
+              margin-top: pxToVw(13);
+            }
+          }
+          .note {
+            display: flex;
+            @include sizePC_d(12);
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.7;
+            @include setSizePC(margin-top, 10);
+            @include mediaQuery(sp) {
+              font-size: pxToVw(12);
+              margin-top: pxToVw(10);
+            }
+          }
+        }
+      }
+    }
+
+    // sec-why
+    .sec-why {
+      @include setSizePC(padding-top, 36);
+      @include setSizePC(padding-bottom, 100);
+      overflow: hidden;
+      position: relative;
+      @include mediaQuery(sp) {
+        padding-top: pxToVw(36);
+        padding-bottom: pxToVw(100);
+      }
+      &__inner {
+        @include setSizePC(width, 1120);
+        margin: 0 auto;
+        @include mediaQuery(sp) {
+          width: 100%;
+        }
+      }
+      &__heading {
+        @include setSizePC(gap, 5);
+        @include setSizePC(margin-bottom, 24);
+        @include mediaQuery(sp) {
+          gap: pxToVw(7);
+          padding-left: pxToVw(18);
+          padding-right: pxToVw(18);
+          margin-bottom: pxToVw(32);
+        }
+      }
+      &__head {
+        @include sizePC_d(32);
+        font-weight: 600;
+        line-height: 1.5;
+        color: #fff;
+        text-align: center;
+        @include setSizePC(margin-bottom, 10);
+        @include mediaQuery(sp) {
+          font-size: pxToVw(32);
+          padding-left: pxToVw(6);
+          padding-right: pxToVw(6);
+          margin-bottom: pxToVw(25);
+        }
+      }
+      &__desc {
+        @include sizePC_d(20);
+        font-weight: 400;
+        line-height: 2;
+        color: #fff;
+        text-align: center;
+        @include setSizePC(margin-bottom, 72);
+        @include mediaQuery(sp) {
+          font-size: pxToVw(20);
+          padding-left: pxToVw(10);
+          padding-right: pxToVw(10);
+          margin-bottom: pxToVw(45);
+        }
+      }
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include setSizePC(gap, 40);
+        @include mediaQuery(sp) {
+          grid-template-columns: repeat(1, 1fr);
+          gap: pxToVw(45);
+          padding-left: pxToVw(16);
+          padding-right: pxToVw(16);
+        }
+        .item {
+          &-02 {
+            @include mediaQuery(sp) {
+              .image {
+                margin-bottom: pxToVw(24);
+              }
+              .title {
+                margin-bottom: pxToVw(13);
+              }
+            }
+          }
+        }
+        .image {
+          @include setSizePC(margin-bottom, 8);
+          @include mediaQuery(sp) {
+            padding-left: pxToVw(2);
+            padding-right: pxToVw(2);
+            margin-bottom: pxToVw(6);
+          }
+        }
+        .title {
+          @include sizePC_d(32);
+          font-weight: 600;
+          line-height: 1.5;
+          color: #fff;
+          @include setSizePC(margin-bottom, 13);
+          @include mediaQuery(sp) {
+            font-size: pxToVw(32);
+            margin-bottom: pxToVw(7);
+          }
+        }
+        .text {
+          @include sizePC_d(18);
+          font-weight: 400;
+          line-height: 2;
+          color: #fff;
+          @include mediaQuery(sp) {
+            font-size: pxToVw(18);
+          }
+        }
+        .note {
+          &-wrap {
+            @include setSizePC(margin-top, 14);
+            @include mediaQuery(sp) {
+              margin-top: pxToVw(14);
+            }
+          }
+          display: flex;
+          @include sizePC_d(12);
+          font-weight: 400;
+          line-height: 2;
+          color: #fff;
+          @include mediaQuery(sp) {
+            font-size: pxToVw(12);
+          }
+        }
+      }
+    }
+
+    // sec-dynabook
+    .sec-dynabook {
+      background-image: url(#{$imagePath}business/amd/dynabook_bg.png);
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      @include setSizePC(padding-top, 200);
+      @include setSizePC(padding-bottom, 200);
+      @include mediaQuery(sp) {
+        padding-top: pxToVw(100);
+        padding-bottom: pxToVw(100);
+        background-image: url(#{$imagePath}business/amd/dynabook_bg_sp.png);
+        
+      }
+      &__inner {
+        @include setSizePC(width, 1120);
+        margin: 0 auto;
+        @include mediaQuery(sp) {
+          width: 100%;
+        }
+      }
+      &__desc {
+        @include sizePC_d(32);
+        font-weight: 600;
+        line-height: 1.5;
+        color: #fff;
+        text-align: center;
+        @include setSizePC(margin-bottom, 88);
+        @include mediaQuery(sp) {
+          font-size: pxToVw(32);
+          padding-left: pxToVw(35);
+          padding-right: pxToVw(35);
+          margin-bottom: pxToVw(75);
+        }
+      }
+      &__list {
+        @include mediaQuery(sp) {
+          padding-left: pxToVw(20);
+          padding-right: pxToVw(20);
+        }
+        .item {
+          &:not(:first-child) {
+            @include setSizePC(margin-top, 80);
+            @include mediaQuery(sp) {
+              margin-top: pxToVw(55);
+            }
+          }
+          display: flex;
+          @include setSizePC(gap, 54);
+          @include mediaQuery(sp) {
+            flex-direction: column;
+            gap: pxToVw(30);
+          }
+        }
+        .image {
+          @include setSizePC(width, 540);
+          @include mediaQuery(sp) {
+            width: 100%;
+          }
+        }
+        .info {
+          flex: 1;
+        }
+        .label {
+          @include sizePC_d(22);
+          font-weight: 400;
+          line-height: 1.5;
+          color: rgb(255, 255, 255, 0.5);
+          @include mediaQuery(sp) {
+            font-size: pxToVw(22);
+          }
+        }
+        .title {
+          @include sizePC_d(32);
+          font-weight: 600;
+          line-height: 1.5;
+          color: #fff;
+          @include setSizePC(margin-bottom, 15);
+          @include mediaQuery(sp) {
+            font-size: pxToVw(32);
+            margin-bottom: pxToVw(15);
+          }
+        }
+        .text {
+          @include sizePC_d(18);
+          font-weight: 400;
+          line-height: 2;
+          color: #fff;
+          @include mediaQuery(sp) {
+            font-size: pxToVw(18);
+          }
+        }
+        .note {
+          &-wrap {
+            @include setSizePC(margin-top, 15);
+            @include mediaQuery(sp) {
+              margin-top: pxToVw(15);
+            }
+          }
+          @include sizePC_d(12);
+          font-weight: 400;
+          line-height: 2;
+          color: #fff;
+          @include mediaQuery(sp) {
+            font-size: pxToVw(12);
+          }
+        }
+      }
+    }
+
+    // sec-PCLineup
+    .sec-PCLineup {
+      &__inner {
+        @include setSizePC(width, 1120);
+        margin: 0 auto;
+      }
+      .box-product {
+        background-color: rgb(0, 0, 0, 0.2);
+        @include setSizePC(padding-top, 80);
+        @include setSizePC(padding-bottom, 80);
+        @include setSizePC(padding-left, 80);
+        @include setSizePC(padding-right, 80);
+        position: relative;
+        &__header {
+          display: flex;
+          align-items: center;
+          @include setSizePC(gap, 20);
+        }
+        &__logo {
+          @include setSizePC(width, 162);
+        }
+        &__desc {
+          @include sizePC_d(20);
+          color: #fff;
+        }
+        &__title {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          color: #fff;
+          @include setSizePC(gap, 10);
+          line-height: 1;
+          &--main {
+            @include sizePC_d(40);
+          }
+          &--sub {
+            @include sizePC_d(20);
+          }
+        }
+        &__name {
+          background-color: #6c0107;
+          color: #fff;
+          @include sizePC_d(13);
+          line-height: 1;
+          @include setSizePC(padding-top, 5);
+          @include setSizePC(padding-bottom, 5);
+          @include setSizePC(padding-left, 10);
+          @include setSizePC(padding-right, 10);
+        }
+        &__image {
+          @include setSizePC(width, 250);
+          position: absolute;
+          top: 50%;
+          @include setSizePC(right, 80);
+          transform: translateY(-50%);
+        }
+        &__button {
+          background-color: #fff;
+          color: #960009;
+          margin: 0;
+          font-weight: 700;
+          &::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M6.6665 5.33301L9.33317 7.99967L6.6665 10.6663' stroke='%23960009' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            filter: none;
+          }
+        }
+        &__cpu {
+          &--wrap {
+            display: flex;
+            align-items: flex-end;
+            @include setSizePC(gap, 12);
+            @include setSizePC(margin-bottom, 20);
+          }
+          display: flex;
+          align-items: stretch;
+          color: #fff;
+          background-color: #000;
+          @include sizePC_d(12);
+          @include setSizePC(height, 50);
+          &--label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include setSizePC(padding-left, 10);
+            @include setSizePC(padding-right, 10);
+            position: relative;
+            &::before,
+            &::after {
+              content: '';
+              display: block;
+              @include setSizePC(width, 4);
+              @include setSizePC(height, 30);
+              background-color: #720008;
+              position: absolute;
+            }
+            &::before {
+              @include setSizePC(top, -3);
+              right: 0;
+              transform: rotate(-20deg);
+            }
+            &::after {
+              @include setSizePC(bottom, -3);
+              right: 0;
+              transform: rotate(20deg);
+            }
+          }
+          &--value {
+            @include setSizePC(padding-left, 15);
+            @include setSizePC(padding-right, 10);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        &__logos {
+          flex: 1;
+          display: flex;
+          align-items: flex-end;
+          @include setSizePC(gap, 8);
+          &--item {
+            @include setSizePC(width, 73);
+            &.is-text {
+              @include setSizePC(width, 50);
+              @include setSizePC(height, 50);
+              border-radius: 50%;
+              background-color: #595758;
+              color: #fff;
+              @include sizePC_d(12);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              line-height: 1.3;
+            }
+          }
+        }
+        &__detail {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          @include setSizePC(gap, 20);
+          &--item {
+            @include sizePC_d(13);
+            line-height: 1.5;
+            display: flex;
+            align-items: stretch;
+            overflow: hidden;
+            &.is-no-label {
+              .box-product__detail--value {
+                border-width: 1px;
+                &::before,
+                &::after {
+                  display: none;
+                }
+              }
+            }
+          }
+          &--label {
+            background-color: #fff;
+            color: #720008;
+            @include setSizePC(padding-top, 3);
+            @include setSizePC(padding-bottom, 3);
+            @include setSizePC(padding-left, 5);
+            @include setSizePC(padding-right, 5);
+            @include setSizePC(margin-right, 5);
+            position: relative;
+            &::after {
+              content: '';
+              width: 0;
+              height: 100%;
+              border-style: solid;
+              @include setSizePC(border-top-width, 19);
+              @include setSizePC(border-right-width, 0);
+              @include setSizePC(border-bottom-width, 19);
+              @include setSizePC(border-left-width, 11);
+              border-color: transparent transparent transparent #fff;
+              position: absolute;
+              top: 50%;
+              @include setSizePC(right, -8);
+              transform: translateY(-50%);
+            }
+          }
+          &--value {
+            background-color: transparent;
+            color: #fff;
+            border-width: 1px 1px 1px 0;
+            border-style: solid;
+            border-color: #fff;
+            @include setSizePC(padding-top, 3);
+            @include setSizePC(padding-bottom, 3);
+            @include setSizePC(padding-left, 15);
+            @include setSizePC(padding-right, 5);
+            position: relative;
+            &::before,
+            &::after {
+              content: '';
+              width: 1px;
+              @include setSizePC(height, 17);
+              background-color: #fff;
+              position: absolute;
+            }
+            &::before {
+              @include setSizePC(top, -3);
+              @include setSizePC(left, 4);
+              transform: rotate(-33deg);
+            }
+            &::after {
+              @include setSizePC(bottom, -3);
+              @include setSizePC(left, 4);
+              transform: rotate(33deg);
+            }
+          }
+        }
+      }
+    }
+    //↑code
   }
 }
