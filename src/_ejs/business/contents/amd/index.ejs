@@ -132,7 +132,7 @@ isTop:'true'
                 </div>
                 <div class="box-amd is-pro">
                   <h3 class="u-font__castoro box-amd__heading">AMD Ryzen™ <br class="u-display__block--sp">PRO 200 <span>series</span></h3>
-                  <p class="u-font__mincho box-amd__desc">AMD PRO テクノロジーによるエンタープライズグレードのセキュリティと管理性</p>
+                  <p class="u-font__mincho box-amd__desc">AMD PRO テクノロジーによるエンタープライズグレード<br class="u-display__block--sp">のセキュリティと管理性</p>
                   <p class="u-font__castoro box-amd__head">AMD PRO TECHNOLOGY</p>
                   <ul class="box-amd__list">
                     <li class="item">
@@ -168,7 +168,7 @@ isTop:'true'
                 <h3 class="u-font__mincho sec-why__head">革新的価値をその手に、<br class="u-display__block--sp">AMDを選ぶ理由</h3>
                 <p class="sec-why__desc">
                   AMDは設立以来、<br>
-                  半世紀以上にわたり高性能なコンピューティング、<br class="u-display__block--sp">グラフィックス、視覚化技術の分野で、<br>
+                  半世紀以上にわ<br class="u-display__block--sp">たり高性能なコンピューティング、<br class="u-display__block--sp">グラフィックス、視覚化技術の分野で、<br>
                   革新的なテクノロジーを<br class="u-display__block--sp">世界に発信してきました。<br>
                   そして現在では、多くの企業が<br class="u-display__block--sp">AMDの製品・サービスを活用し、<br>
                   日常生活や仕事、<br class="u-display__block--sp">エンターテインメントの<br class="u-display__block--sp">価値を高め続けています。
@@ -198,12 +198,15 @@ isTop:'true'
 
             <section class="sec-dynabook">
               <div class="sec-dynabook__inner">
-                <h2 class="c-heading__01 sec-dynabook__heading">dynabook × <br class="u-display__block--sp">AMD</h2>
+                <h2 class="c-heading__01 sec-dynabook__heading">dynabook <br class="u-display__block--sp">× AMD</h2>
                 <p class="u-font__mincho sec-dynabook__desc">いつも人のそばに、<br class="u-display__block--sp">先進技術で歩み続ける<br class="u-display__block--sp">「dynabook」</p>
                 <ul class="sec-dynabook__list">
-                  <li class="item">
+                  <li class="item item-01">
                     <div class="image">
-                      <img loading="lazy" class="u-cover" src="<%= pageData.assetPath %>images/business/amd/dynabook_img_01.jpg" width="1080" height="668" alt="CPUのパフォーマンスを安定化するテクノロジー">
+                      <picture>
+                        <source srcset="<%= pageData.assetPath %>images/business/amd/dynabook_img_01_sp.jpg" media="(max-width: 780px)" width="700" height="450">
+                        <img loading="lazy" class="u-cover" src="<%= pageData.assetPath %>images/business/amd/dynabook_img_01.jpg" width="1080" height="668" alt="CPUのパフォーマンスを安定化するテクノロジー">
+                      </picture>
                     </div>
                     <div class="info">
                       <p class="u-font__castoro label">Performance</p>
@@ -211,13 +214,16 @@ isTop:'true'
                       <p class="text">dynabookが長年にわたり蓄積してきた、ノートPCの放熱技術や筐体設計技術などを駆使した「エンパワーテクノロジー」を適用。CPUのパフォーマンスを安定的かつ効率的に引き出します。</p>
                     </div>
                   </li>
-                  <li class="item">
+                  <li class="item item-02">
                     <div class="image">
-                      <img loading="lazy" class="u-cover" src="<%= pageData.assetPath %>images/business/amd/dynabook_img_02.jpg" width="1080" height="668" alt="安心と信頼は、独自技術と厳しい品質基準から">
+                      <picture>
+                        <source srcset="<%= pageData.assetPath %>images/business/amd/dynabook_img_02_sp.jpg" media="(max-width: 780px)" width="700" height="432">
+                        <img loading="lazy" class="u-cover" src="<%= pageData.assetPath %>images/business/amd/dynabook_img_02.jpg" width="1080" height="668" alt="安心と信頼は、独自技術と厳しい品質基準から">
+                      </picture>
                     </div>
                     <div class="info">
                       <p class="u-font__castoro label">Quality & Trust</p>
-                      <h3 class="u-font__mincho title">安心と信頼は、<br>独自技術と厳しい品質基準から</h3>
+                      <h3 class="u-font__mincho title">安心と信頼は、<br>独自技術と厳しい<br class="u-display__block--sp">品質基準から</h3>
                       <p class="text">厳しい評価基準の自社品質試験に加え、高度な耐久性が求められるモバイル製品（RA73・XA74）では、アメリカ国防総省制定の「MIL規格」に準拠した耐久テストの実施を予定しています。</p>
                       <div class="note-wrap">
                         <p class="note">※MIL規格に基づいて、一部当社が設定した試験条件に従い試験を実施予定です。</p>
@@ -225,24 +231,30 @@ isTop:'true'
                       </div>
                     </div>
                   </li>
-                  <li class="item">
+                  <li class="item item-03">
                     <div class="image">
-                      <img loading="lazy" class="u-cover" src="<%= pageData.assetPath %>images/business/amd/dynabook_img_03.jpg" width="1080" height="668" alt="日々の業務における使い勝手を追求">
+                      <picture>
+                        <source srcset="<%= pageData.assetPath %>images/business/amd/dynabook_img_03_sp.jpg" media="(max-width: 780px)" width="700" height="450">
+                        <img loading="lazy" class="u-cover" src="<%= pageData.assetPath %>images/business/amd/dynabook_img_03.jpg" width="1080" height="668" alt="日々の業務における使い勝手を追求">
+                      </picture>
                     </div>
                     <div class="info">
                       <p class="u-font__castoro label">Usability</p>
-                      <h3 class="u-font__mincho title">日々の業務における使い勝手を追求</h3>
+                      <h3 class="u-font__mincho title">日々の業務における<br class="u-display__block--sp">使い勝手を追求</h3>
                       <p class="text">豊富なインターフェース、オンライン会議での映像や音声の最適化、入力しやすいキーボード、180度開いて対面時に見やすい画面など、細部にもこだわって日常での使いやすさを追求しています。</p>
                     </div>
                   </li>
-                  <li class="item">
+                  <li class="item item-04">
                     <div class="image">
-                      <img loading="lazy" class="u-cover" src="<%= pageData.assetPath %>images/business/amd/dynabook_img_04.jpg" width="1080" height="668" alt="厳重なサイバーセキュリティ体制を構築">
+                      <picture>
+                        <source srcset="<%= pageData.assetPath %>images/business/amd/dynabook_img_04_sp.jpg" media="(max-width: 780px)" width="700" height="432">
+                        <img loading="lazy" class="u-cover" src="<%= pageData.assetPath %>images/business/amd/dynabook_img_04.jpg" width="1080" height="668" alt="厳重なサイバーセキュリティ体制を構築">
+                      </picture>
                     </div>
                     <div class="info">
                       <p class="u-font__castoro label">Security</p>
-                      <h3 class="u-font__mincho title">厳重な<br>サイバーセキュリティ体制を構築</h3>
-                      <p class="text">サイバーセキュリティに関する世界基準のガイドライン「NIST SP 800-147/155/193」に準拠。OS起動前やファームウェアを標的にしたサイバー攻撃から、機密データを保護します。</p>
+                      <h3 class="u-font__mincho title">厳重な<br>サイバーセキュリティ<br class="u-display__block--sp">体制を構築</h3>
+                      <p class="text">サイバーセキュリティに関する世界基準のガイドライン「NIST SP <br class="u-display__block--sp">800-147/155/193」に準拠。OS起動前やファームウェアを標的にしたサイバー攻撃から、機密データを保護します。</p>
                     </div>
                   </li>
                 </ul>

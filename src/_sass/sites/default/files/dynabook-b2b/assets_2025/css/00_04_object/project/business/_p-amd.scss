@@ -36,12 +36,12 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      @include setSizePC(gap, 7);
-      @include setSizePC(margin-bottom, 30);
+      @include setSizePCCus(gap, 7);
+      @include setSizePCCus(margin-bottom, 30);
       &::after {
         content: '';
-        @include setSizePC(width, 40);
-        @include setSizePC(height, 4);
+        @include setSizePCCus(width, 40);
+        @include setSizePCCus(height, 4);
         background-color: #CF000E;
       }
       &.is-line-black {
@@ -73,7 +73,7 @@
       &-list {
         display: flex;
         align-items: center;
-        @include setSizePC(gap, 8);
+        @include setSizePCCus(gap, 8);
         .item {
           @include sizePC_d(12);
           color: #666666;
@@ -88,16 +88,16 @@
 
     // sec-kv
     .sec-kv {
-      @include setSizePC(padding-top, 88);
-      @include setSizePC(padding-bottom, 202);
-      @include setSizePC(margin-bottom, -193);
+      @include setSizePCCus(padding-top, 88);
+      @include setSizePCCus(padding-bottom, 202);
+      @include setSizePCCus(margin-bottom, -193);
       overflow: hidden;
       @include mediaQuery(sp) {
         padding-top: pxToVw(10);
         padding-bottom: pxToVw(243);
       }
       &__inner {
-        @include setSizePC(width, 1440);
+        @include setSizePCCus(width, 1440);
         margin: 0 auto;
         position: relative;
         @include mediaQuery(sp) {
@@ -105,7 +105,7 @@
         }
       }
       &__image {
-        @include setSizePC(width, 660);
+        @include setSizePCCus(width, 660);
         position: absolute;
         @include setSizePCCus(top, -170);
         left: 0;
@@ -121,9 +121,9 @@
         }
       }
       &__info {
-        @include setSizePC(width, 536);
+        @include setSizePCCus(width, 536);
         margin-left: auto;
-        @include setSizePC(margin-right, 160);
+        @include setSizePCCus(margin-right, 160);
         @include mediaQuery(sp) {
           width: 100%;
           margin: 0;
@@ -132,22 +132,22 @@
         }
       }
       &__title {
-        @include setSizePC(width, 536);
-        @include setSizePC(margin-bottom, 30);
+        @include setSizePCCus(width, 536);
+        @include setSizePCCus(margin-bottom, 30);
         @include mediaQuery(sp) {
           width: pxToVw(353);
           margin: pxToVw(4) auto pxToVw(12);
         }
       }
       &__products {
-        @include setSizePC(margin-bottom, 22);
+        @include setSizePCCus(margin-bottom, 22);
         @include mediaQuery(sp) {
           margin-bottom: pxToVw(30);
         }
       }
       &__logo {
         display: inline-flex;
-        @include setSizePC(width, 121);
+        @include setSizePCCus(width, 121);
         @include mediaQuery(sp) {
           width: pxToVw(93);
           margin-left: pxToVw(7);
@@ -156,8 +156,8 @@
       &__list {
         display: flex;
         align-items: center;
-        @include setSizePC(gap, 18);
-        @include setSizePC(margin-top, -3);
+        @include setSizePCCus(gap, 18);
+        @include setSizePCCus(margin-top, -3);
         @include mediaQuery(sp) {
           justify-content: center;
           gap: pxToVw(15);
@@ -182,13 +182,13 @@
       &__button {
         min-width: auto;
         padding: 0;
-        @include setSizePC(width, 346);
-        @include setSizePC(height, 90);
+        @include setSizePCCus(width, 346);
+        @include setSizePCCus(height, 90);
         @include sizePC_d(22);
         display: flex;
         justify-content: center;
         align-items: center;
-        @include setSizePC(border-radius, 90);
+        @include setSizePCCus(border-radius, 90);
         border: 2px solid #fff;
         margin: 0;
         z-index: 1;
@@ -201,12 +201,12 @@
           border-radius: pxToVw(90);
         }
         &::after {
-          @include setSizePC(width, 29);
-          @include setSizePC(height, 29);
+          @include setSizePCCus(width, 29);
+          @include setSizePCCus(height, 29);
           background-image: url("data:image/svg+xml,%3Csvg width='29' height='30' viewBox='0 0 29 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14.5' cy='15' r='14.5' fill='white'/%3E%3Cpath d='M18.6666 13.1667L15 16.8334L11.3333 13.1667' stroke='%23CE000D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
           margin: 0;
           filter: none;
-          @include setSizePC(right, 30);
+          @include setSizePCCus(right, 30);
           @include mediaQuery(sp) {
             width: pxToVw(30);
             height: pxToVw(30);
@@ -215,9 +215,9 @@
         }
         &::before {
           content: '';
-          @include setSizePC(width, 363);
-          @include setSizePC(height, 53);
-          @include setSizePC(border-radius, 90);
+          @include setSizePCCus(width, 363);
+          @include setSizePCCus(height, 53);
+          @include setSizePCCus(border-radius, 90);
           background-image: linear-gradient( to bottom, #000 -30%, #FF2121 100%);
           position: absolute;
           left: 50%;
@@ -247,22 +247,22 @@
       background-size: cover;
       background-position: center top;
       background-repeat: no-repeat;
-      @include setSizePC(padding-top, 173);
-      @include setSizePC(padding-bottom, 189);
+      @include setSizePCCus(padding-top, 173);
+      @include setSizePCCus(padding-bottom, 168);
       @include mediaQuery(sp) {
         background-image: url(#{$imagePath}business/amd/about_bg_sp.png);
         padding-top: pxToVw(106);
-        padding-bottom: pxToVw(155);
+        padding-bottom: pxToVw(118);
       }
       &__inner {
-        @include setSizePC(width, 1120);
+        @include setSizePCCus(width, 1120);
         margin: 0 auto;
         @include mediaQuery(sp) {
           width: 100%;
         }
       }
       .box-desc {
-        @include setSizePC(margin-bottom, 71);
+        @include setSizePCCus(margin-bottom, 71);
         &__txt {
           @include sizePC_d(20);
           font-weight: 400;
@@ -270,7 +270,7 @@
           line-height: 2;
           text-align: center;
           &:not(:first-of-type) {
-            @include setSizePC(margin-top, 40);
+            @include setSizePCCus(margin-top, 40);
           }
         }
         @include mediaQuery(sp) {
@@ -288,8 +288,8 @@
       .box-amd {
         &.is-pro {
           background-color: rgb(143, 0, 9, 0.5);
-          @include setSizePC(margin-top, 20);
-          @include setSizePC(padding-bottom, 77);
+          @include setSizePCCus(margin-top, 20);
+          @include setSizePCCus(padding-bottom, 77);
           @include mediaQuery(sp) {
             padding-top: pxToVw(55);
             padding-bottom: pxToVw(54);
@@ -297,11 +297,18 @@
           }
           .box-amd__list {
             @include mediaQuery(sp) {
-              gap: pxToVw(29);
+              gap: pxToVw(25);
+            }
+            .item {
+              &:last-child {
+                @include mediaQuery(sp) {
+                  margin-top: pxToVw(8);
+                }
+              }
             }
           }
           .box-amd__desc {
-            @include setSizePC(margin-bottom, 31);
+            @include setSizePCCus(margin-bottom, 31);
             @include mediaQuery(sp) {
               margin-bottom: pxToVw(45);
             }
@@ -323,7 +330,7 @@
           color: #fff;
           line-height: 1.5;
           text-align: center;
-          @include setSizePC(margin-bottom, 3);
+          @include setSizePCCus(margin-bottom, 3);
           span {
             @include sizePC_d(28);
           }
@@ -342,7 +349,7 @@
           color: #fff;
           line-height: 1.5;
           text-align: center;
-          @include setSizePC(margin-bottom, 15);
+          @include setSizePCCus(margin-bottom, 15);
           position: relative;
           z-index: 1;
           @include mediaQuery(sp) {
@@ -352,7 +359,7 @@
           &::before,
           &::after {
             content: '';
-            @include setSizePC(width, 325);
+            @include setSizePCCus(width, 325);
             height: 1px;
             background-color: #FFFFFF;
             position: absolute;
@@ -376,7 +383,7 @@
           color: #fff;
           line-height: 1.5;
           text-align: center;
-          @include setSizePC(margin-bottom, 37);
+          @include setSizePCCus(margin-bottom, 37);
           @include mediaQuery(sp) {
             font-size: pxToVw(20);
             margin-bottom: pxToVw(34);
@@ -385,19 +392,19 @@
         &__list {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          @include setSizePC(gap, 30);
+          @include setSizePCCus(gap, 30);
           @include mediaQuery(sp) {
             grid-template-columns: repeat(1, 1fr);
             gap: pxToVw(49);
           }
           .icon {
             width: 100%;
-            @include setSizePC(height, 186);
+            @include setSizePCCus(height, 186);
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #000000;
-            @include setSizePC(margin-bottom, 15);
+            @include setSizePCCus(margin-bottom, 15);
             img {
               @include setSizePC2(width, height, 100, 100);
             }
@@ -415,7 +422,7 @@
             font-weight: 700;
             color: #fff;
             line-height: 1.5;
-            @include setSizePC(margin-bottom, 10);
+            @include setSizePCCus(margin-bottom, 10);
             @include mediaQuery(sp) {
               font-size: pxToVw(21);
               margin-bottom: pxToVw(10);
@@ -431,23 +438,25 @@
             }
           }
           .light {
-            @include setSizePC(height, 25);
+            @include setSizePCCus(height, 25);
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            @include setSizePC2(padding-left, padding-right, 5, 5);
+            @include setSizePC2(padding-left, padding-right, 6, 6);
             @include sizePC_d(14);
             font-weight: 500;
             line-height: 1;
             background-color: #FFFFFF;
             color: #710001;
-            @include setSizePC(margin-top, 16);
+            @include setSizePCCus(margin-top, 13);
+            @include setSizePCCus(margin-left, 2);
             @include mediaQuery(sp) {
               height: pxToVw(25);
-              padding-left: pxToVw(5);
-              padding-right: pxToVw(5);
+              padding-left: pxToVw(7);
+              padding-right: pxToVw(7);
               font-size: pxToVw(14);
               margin-top: pxToVw(13);
+              margin-left: pxToVw(6);
             }
           }
           .note {
@@ -456,7 +465,7 @@
             font-weight: 400;
             color: #fff;
             line-height: 1.7;
-            @include setSizePC(margin-top, 10);
+            @include setSizePCCus(margin-top, 10);
             @include mediaQuery(sp) {
               font-size: pxToVw(12);
               margin-top: pxToVw(10);
@@ -468,24 +477,22 @@
 
     // sec-why
     .sec-why {
-      @include setSizePC(padding-top, 36);
-      @include setSizePC(padding-bottom, 100);
-      overflow: hidden;
-      position: relative;
+      @include setSizePCCus(padding-top, 57);
+      @include setSizePCCus(padding-bottom, 52);
       @include mediaQuery(sp) {
-        padding-top: pxToVw(36);
-        padding-bottom: pxToVw(100);
+        padding-top: pxToVw(72);
+        padding-bottom: pxToVw(36);
       }
       &__inner {
-        @include setSizePC(width, 1120);
+        @include setSizePCCus(width, 1120);
         margin: 0 auto;
         @include mediaQuery(sp) {
           width: 100%;
         }
       }
       &__heading {
-        @include setSizePC(gap, 5);
-        @include setSizePC(margin-bottom, 24);
+        @include setSizePCCus(gap, 5);
+        @include setSizePCCus(margin-bottom, 24);
         @include mediaQuery(sp) {
           gap: pxToVw(7);
           padding-left: pxToVw(18);
@@ -499,7 +506,7 @@
         line-height: 1.5;
         color: #fff;
         text-align: center;
-        @include setSizePC(margin-bottom, 10);
+        @include setSizePCCus(margin-bottom, 10);
         @include mediaQuery(sp) {
           font-size: pxToVw(32);
           padding-left: pxToVw(6);
@@ -513,7 +520,7 @@
         line-height: 2;
         color: #fff;
         text-align: center;
-        @include setSizePC(margin-bottom, 72);
+        @include setSizePCCus(margin-bottom, 72);
         @include mediaQuery(sp) {
           font-size: pxToVw(20);
           padding-left: pxToVw(10);
@@ -524,7 +531,7 @@
       &__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        @include setSizePC(gap, 40);
+        @include setSizePCCus(gap, 40);
         @include mediaQuery(sp) {
           grid-template-columns: repeat(1, 1fr);
           gap: pxToVw(45);
@@ -544,7 +551,7 @@
           }
         }
         .image {
-          @include setSizePC(margin-bottom, 8);
+          @include setSizePCCus(margin-bottom, 8);
           @include mediaQuery(sp) {
             padding-left: pxToVw(2);
             padding-right: pxToVw(2);
@@ -556,7 +563,7 @@
           font-weight: 600;
           line-height: 1.5;
           color: #fff;
-          @include setSizePC(margin-bottom, 13);
+          @include setSizePCCus(margin-bottom, 13);
           @include mediaQuery(sp) {
             font-size: pxToVw(32);
             margin-bottom: pxToVw(7);
@@ -573,7 +580,7 @@
         }
         .note {
           &-wrap {
-            @include setSizePC(margin-top, 14);
+            @include setSizePCCus(margin-top, 14);
             @include mediaQuery(sp) {
               margin-top: pxToVw(14);
             }
@@ -592,23 +599,36 @@
 
     // sec-dynabook
     .sec-dynabook {
-      background-image: url(#{$imagePath}business/amd/dynabook_bg.png);
-      background-size: cover;
-      background-position: center top;
-      background-repeat: no-repeat;
-      @include setSizePC(padding-top, 200);
-      @include setSizePC(padding-bottom, 200);
+      background-image: linear-gradient(135deg, #6D0007, #000000);
+      clip-path: polygon(
+        100% 0, /* top-right */
+        0 calc((111 / 1440) * 100vw), /* go down */
+        0 calc(100% - (111 / 1440) * 100vw), /* go up */
+        100% 100% /* bottom-right */
+      );
+      @include setSizePCCus(padding-top, 182);
+      @include setSizePCCus(padding-bottom, 180);
       @include mediaQuery(sp) {
-        padding-top: pxToVw(100);
+        padding-top: pxToVw(87);
         padding-bottom: pxToVw(100);
-        background-image: url(#{$imagePath}business/amd/dynabook_bg_sp.png);
-        
+        clip-path: polygon(
+          100% 0, /* top-right */
+          0 pxToVw(30), /* go down */
+          0 calc(100% - pxToVw(30)), /* go up */
+          100% 100% /* bottom-right */
+        );
       }
       &__inner {
-        @include setSizePC(width, 1120);
+        @include setSizePCCus(width, 1120);
         margin: 0 auto;
         @include mediaQuery(sp) {
           width: 100%;
+        }
+      }
+      &__heading {
+        @include mediaQuery(sp) {
+          line-height: 1.2;
+          margin-bottom: pxToVw(44);
         }
       }
       &__desc {
@@ -617,12 +637,12 @@
         line-height: 1.5;
         color: #fff;
         text-align: center;
-        @include setSizePC(margin-bottom, 88);
+        @include setSizePCCus(margin-bottom, 88);
         @include mediaQuery(sp) {
           font-size: pxToVw(32);
           padding-left: pxToVw(35);
           padding-right: pxToVw(35);
-          margin-bottom: pxToVw(75);
+          margin-bottom: pxToVw(65);
         }
       }
       &__list {
@@ -632,26 +652,43 @@
         }
         .item {
           &:not(:first-child) {
-            @include setSizePC(margin-top, 80);
+            @include setSizePCCus(margin-top, 73);
             @include mediaQuery(sp) {
               margin-top: pxToVw(55);
             }
           }
+          &.item-03 {
+            @include mediaQuery(sp) {
+              margin-top: pxToVw(82);
+              .text {
+                font-size: pxToVw(18);
+              }
+            }
+          }
+          &.item-04 {
+            @include mediaQuery(sp) {
+              .text {
+                font-size: pxToVw(18);
+              }
+            }
+          }
           display: flex;
-          @include setSizePC(gap, 54);
+          align-items: flex-start;
+          @include setSizePCCus(gap, 54);
           @include mediaQuery(sp) {
             flex-direction: column;
             gap: pxToVw(30);
           }
         }
         .image {
-          @include setSizePC(width, 540);
+          @include setSizePCCus(width, 540);
           @include mediaQuery(sp) {
             width: 100%;
           }
         }
         .info {
           flex: 1;
+          @include setSizePCCus(margin-top, -7);
         }
         .label {
           @include sizePC_d(22);
@@ -667,24 +704,27 @@
           font-weight: 600;
           line-height: 1.5;
           color: #fff;
-          @include setSizePC(margin-bottom, 15);
+          @include setSizePCCus(margin-bottom, 15);
           @include mediaQuery(sp) {
             font-size: pxToVw(32);
+            margin-left: pxToVw(-5);
+            margin-right: pxToVw(-5);
             margin-bottom: pxToVw(15);
           }
         }
         .text {
           @include sizePC_d(18);
-          font-weight: 400;
+          font-weight: 500;
           line-height: 2;
           color: #fff;
           @include mediaQuery(sp) {
-            font-size: pxToVw(18);
+            font-size: pxToVw(16);
+            word-break: break-all;
           }
         }
         .note {
           &-wrap {
-            @include setSizePC(margin-top, 15);
+            @include setSizePCCus(margin-top, 15);
             @include mediaQuery(sp) {
               margin-top: pxToVw(15);
             }
@@ -702,24 +742,25 @@
 
     // sec-PCLineup
     .sec-PCLineup {
+      @include setSizePCCus(padding-top, 30);
       &__inner {
-        @include setSizePC(width, 1120);
+        @include setSizePCCus(width, 1120);
         margin: 0 auto;
       }
       .box-product {
         background-color: rgb(0, 0, 0, 0.2);
-        @include setSizePC(padding-top, 80);
-        @include setSizePC(padding-bottom, 80);
-        @include setSizePC(padding-left, 80);
-        @include setSizePC(padding-right, 80);
+        @include setSizePCCus(padding-top, 80);
+        @include setSizePCCus(padding-bottom, 80);
+        @include setSizePCCus(padding-left, 80);
+        @include setSizePCCus(padding-right, 80);
         position: relative;
         &__header {
           display: flex;
           align-items: center;
-          @include setSizePC(gap, 20);
+          @include setSizePCCus(gap, 20);
         }
         &__logo {
-          @include setSizePC(width, 162);
+          @include setSizePCCus(width, 162);
         }
         &__desc {
           @include sizePC_d(20);
@@ -730,7 +771,7 @@
           justify-content: space-between;
           align-items: flex-end;
           color: #fff;
-          @include setSizePC(gap, 10);
+          @include setSizePCCus(gap, 10);
           line-height: 1;
           &--main {
             @include sizePC_d(40);
@@ -744,16 +785,16 @@
           color: #fff;
           @include sizePC_d(13);
           line-height: 1;
-          @include setSizePC(padding-top, 5);
-          @include setSizePC(padding-bottom, 5);
-          @include setSizePC(padding-left, 10);
-          @include setSizePC(padding-right, 10);
+          @include setSizePCCus(padding-top, 5);
+          @include setSizePCCus(padding-bottom, 5);
+          @include setSizePCCus(padding-left, 10);
+          @include setSizePCCus(padding-right, 10);
         }
         &__image {
-          @include setSizePC(width, 250);
+          @include setSizePCCus(width, 250);
           position: absolute;
           top: 50%;
-          @include setSizePC(right, 80);
+          @include setSizePCCus(right, 80);
           transform: translateY(-50%);
         }
         &__button {
@@ -770,45 +811,46 @@
           &--wrap {
             display: flex;
             align-items: flex-end;
-            @include setSizePC(gap, 12);
-            @include setSizePC(margin-bottom, 20);
+            @include setSizePCCus(gap, 12);
+            @include setSizePCCus(margin-bottom, 20);
           }
           display: flex;
           align-items: stretch;
           color: #fff;
           background-color: #000;
           @include sizePC_d(12);
-          @include setSizePC(height, 50);
+          @include setSizePCCus(height, 50);
+          overflow: hidden;
           &--label {
             display: flex;
             justify-content: center;
             align-items: center;
-            @include setSizePC(padding-left, 10);
-            @include setSizePC(padding-right, 10);
+            @include setSizePCCus(padding-left, 10);
+            @include setSizePCCus(padding-right, 10);
             position: relative;
             &::before,
             &::after {
               content: '';
               display: block;
-              @include setSizePC(width, 4);
-              @include setSizePC(height, 30);
+              @include setSizePCCus(width, 4);
+              @include setSizePCCus(height, 30);
               background-color: #720008;
               position: absolute;
             }
             &::before {
-              @include setSizePC(top, -3);
+              @include setSizePCCus(top, -3);
               right: 0;
               transform: rotate(-20deg);
             }
             &::after {
-              @include setSizePC(bottom, -3);
+              @include setSizePCCus(bottom, -3);
               right: 0;
               transform: rotate(20deg);
             }
           }
           &--value {
-            @include setSizePC(padding-left, 15);
-            @include setSizePC(padding-right, 10);
+            @include setSizePCCus(padding-left, 15);
+            @include setSizePCCus(padding-right, 10);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -819,12 +861,12 @@
           flex: 1;
           display: flex;
           align-items: flex-end;
-          @include setSizePC(gap, 8);
+          @include setSizePCCus(gap, 8);
           &--item {
-            @include setSizePC(width, 73);
+            @include setSizePCCus(width, 73);
             &.is-text {
-              @include setSizePC(width, 50);
-              @include setSizePC(height, 50);
+              @include setSizePCCus(width, 50);
+              @include setSizePCCus(height, 50);
               border-radius: 50%;
               background-color: #595758;
               color: #fff;
@@ -841,7 +883,7 @@
           display: flex;
           flex-wrap: wrap;
           align-items: center;
-          @include setSizePC(gap, 20);
+          @include setSizePCCus(gap, 20);
           &--item {
             @include sizePC_d(13);
             line-height: 1.5;
@@ -861,25 +903,25 @@
           &--label {
             background-color: #fff;
             color: #720008;
-            @include setSizePC(padding-top, 3);
-            @include setSizePC(padding-bottom, 3);
-            @include setSizePC(padding-left, 5);
-            @include setSizePC(padding-right, 5);
-            @include setSizePC(margin-right, 5);
+            @include setSizePCCus(padding-top, 3);
+            @include setSizePCCus(padding-bottom, 3);
+            @include setSizePCCus(padding-left, 5);
+            @include setSizePCCus(padding-right, 5);
+            @include setSizePCCus(margin-right, 5);
             position: relative;
             &::after {
               content: '';
               width: 0;
               height: 100%;
               border-style: solid;
-              @include setSizePC(border-top-width, 19);
-              @include setSizePC(border-right-width, 0);
-              @include setSizePC(border-bottom-width, 19);
-              @include setSizePC(border-left-width, 11);
+              @include setSizePCCus(border-top-width, 19);
+              @include setSizePCCus(border-right-width, 0);
+              @include setSizePCCus(border-bottom-width, 19);
+              @include setSizePCCus(border-left-width, 11);
               border-color: transparent transparent transparent #fff;
               position: absolute;
               top: 50%;
-              @include setSizePC(right, -8);
+              @include setSizePCCus(right, -8);
               transform: translateY(-50%);
             }
           }
@@ -889,27 +931,27 @@
             border-width: 1px 1px 1px 0;
             border-style: solid;
             border-color: #fff;
-            @include setSizePC(padding-top, 3);
-            @include setSizePC(padding-bottom, 3);
-            @include setSizePC(padding-left, 15);
-            @include setSizePC(padding-right, 5);
+            @include setSizePCCus(padding-top, 3);
+            @include setSizePCCus(padding-bottom, 3);
+            @include setSizePCCus(padding-left, 15);
+            @include setSizePCCus(padding-right, 5);
             position: relative;
             &::before,
             &::after {
               content: '';
               width: 1px;
-              @include setSizePC(height, 17);
+              @include setSizePCCus(height, 17);
               background-color: #fff;
               position: absolute;
             }
             &::before {
-              @include setSizePC(top, -3);
-              @include setSizePC(left, 4);
+              @include setSizePCCus(top, -3);
+              @include setSizePCCus(left, 4);
               transform: rotate(-33deg);
             }
             &::after {
-              @include setSizePC(bottom, -3);
-              @include setSizePC(left, 4);
+              @include setSizePCCus(bottom, -3);
+              @include setSizePCCus(left, 4);
               transform: rotate(33deg);
             }
           }
