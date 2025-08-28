@@ -7,9 +7,6 @@
     // Common
     @mixin setSizePCCus($prop, $size) {
       #{$prop}: min(#{pxToVw($size, $pcMax)}, #{$size}px);
-      @include mediaQuery(big) {
-        #{$prop}: calc(#{$size}px * 1.1);
-      }
     }
     .u-font__castoro {
       font-family: "Castoro", serif;
@@ -82,6 +79,9 @@
               background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.66667 5.33333L9.33334 7.99999L6.66667 10.6667' stroke='%23666666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
             }
           }
+          &.is-current {
+            color: #bf2123;
+          }
         }
       }
     }
@@ -105,10 +105,10 @@
         }
       }
       &__image {
-        @include setSizePCCus(width, 660);
+        @include setSizePCCus(width, 738);
         position: absolute;
-        @include setSizePCCus(top, -170);
-        left: 0;
+        @include setSizePCCus(top, -169);
+        @include setSizePCCus(left, -78);
         z-index: 1;
         img {
           width: 100%;
@@ -193,6 +193,13 @@
         margin: 0;
         z-index: 1;
         overflow: hidden;
+        transition: all 0.3s;
+        &:hover {
+          background-image: linear-gradient( to bottom, #520B09, #E61D1D);
+          &::before {
+            display: none;
+          }
+        }
         @include mediaQuery(sp) {
           width: pxToVw(346);
           height: pxToVw(90);
@@ -742,10 +749,31 @@
 
     // sec-PCLineup
     .sec-PCLineup {
-      @include setSizePCCus(padding-top, 30);
+      background-image: linear-gradient(155deg, #6D0007, #CF000E);
+      @include setSizePCCus(margin-top, -120);
+      @include setSizePCCus(padding-top, 120);
+      @include mediaQuery(sp) {
+        margin-top: pxToVw(-40);
+        padding-top: pxToVw(40);
+      }
       &__inner {
         @include setSizePCCus(width, 1120);
         margin: 0 auto;
+        @include setSizePCCus(padding-top, 40);
+        @include setSizePCCus(padding-bottom, 120);
+        @include mediaQuery(sp) {
+          width: 100%;
+          padding-top: pxToVw(50);
+          padding-left: pxToVw(20);
+          padding-right: pxToVw(20);
+          padding-bottom: pxToVw(72);
+        }
+      }
+      &__heading {
+        @include setSizePCCus(margin-bottom, 37);
+        @include mediaQuery(sp) {
+          display: none;
+        }
       }
       .box-product {
         background-color: rgb(0, 0, 0, 0.2);
@@ -753,58 +781,155 @@
         @include setSizePCCus(padding-bottom, 80);
         @include setSizePCCus(padding-left, 80);
         @include setSizePCCus(padding-right, 80);
+        @include setSizePCCus(margin-bottom, 18);
         position: relative;
+        @include mediaQuery(sp) {
+          padding: pxToVw(83) 0 pxToVw(47) 0;
+          margin-bottom: pxToVw(22);
+        }
+        &__lblnew {
+          @include setSizePCCus(height, 50);
+          @include setSizePC2(padding-left, padding-right, 30, 30);
+          @include setSizePCCus(padding-top, 5);
+          background-color: #BAAB22;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include sizePC_d(24);
+          font-weight: 400;
+          color: #000;
+          line-height: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          @include mediaQuery(sp) {
+            height: pxToVw(50);
+            padding-left: pxToVw(30);
+            padding-right: pxToVw(30);
+            font-size: pxToVw(24);
+          }
+        }
         &__header {
           display: flex;
           align-items: center;
           @include setSizePCCus(gap, 20);
+          @include setSizePCCus(margin-bottom, 15);
+          @include mediaQuery(sp) {
+            flex-direction: column;
+            gap: pxToVw(23);
+            align-items: flex-start;
+            padding-left: pxToVw(20);
+            padding-right: pxToVw(20);
+            margin-bottom: pxToVw(15);
+          }
         }
         &__logo {
           @include setSizePCCus(width, 162);
+          @include mediaQuery(sp) {
+            width: pxToVw(162);
+          }
         }
         &__desc {
-          @include sizePC_d(20);
+          @include setSizePCCus(width, 458);
+          @include sizePC_d(24);
+          font-weight: 600;
+          line-height: 1.5;
+          letter-spacing: -0.05em;
           color: #fff;
+          position: relative;
+          z-index: 1;
+          @include mediaQuery(sp) {
+            width: 100%;
+            font-size: pxToVw(24);
+          }
         }
         &__title {
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
-          color: #fff;
           @include setSizePCCus(gap, 10);
+          font-weight: 500;
+          color: #fff;
           line-height: 1;
           &--main {
-            @include sizePC_d(40);
+            @include sizePC_d(60);
+            @include setSizePCCus(margin-bottom, -10);
           }
           &--sub {
-            @include sizePC_d(20);
+            @include sizePC_d(29);
+          }
+          @include mediaQuery(sp) {
+            gap: pxToVw(10);
+            &--main {
+              font-size: pxToVw(60);
+              margin-bottom: pxToVw(-10);
+            }
+            &--sub {
+              font-size: pxToVw(29);
+            }
           }
         }
         &__name {
-          background-color: #6c0107;
-          color: #fff;
-          @include sizePC_d(13);
+          background-color: #fff;
+          color: #8E0009;
+          @include sizePC_d(16);
+          font-weight: 500;
           line-height: 1;
-          @include setSizePCCus(padding-top, 5);
-          @include setSizePCCus(padding-bottom, 5);
-          @include setSizePCCus(padding-left, 10);
-          @include setSizePCCus(padding-right, 10);
+          @include setSizePCCus(height, 24);
+          @include setSizePC2(padding-left, padding-right, 6, 6);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include mediaQuery(sp) {
+            font-size: pxToVw(16);
+            height: pxToVw(24);
+            padding-left: pxToVw(6);
+            padding-right: pxToVw(6);
+          }
         }
         &__image {
-          @include setSizePCCus(width, 250);
+          width: fit-content;
           position: absolute;
           top: 50%;
           @include setSizePCCus(right, 80);
           transform: translateY(-50%);
+          &--img {
+            @include setSizePCCus(width, 255);
+          }
+          @include mediaQuery(sp) {
+            position: static;
+            transform: none;
+            margin: 0 auto pxToVw(37);
+            &--img {
+              width: pxToVw(257);
+            }
+          }
         }
         &__button {
+          min-width: unset;
+          @include setSizePCCus(width, 216);
+          @include setSizePCCus(padding-top, 16);
+          @include setSizePCCus(padding-bottom, 16);
+          @include setSizePCCus(margin-top, 10);
+          margin-right: 0;
           background-color: #fff;
           color: #960009;
-          margin: 0;
           font-weight: 700;
           &::after {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M6.6665 5.33301L9.33317 7.99967L6.6665 10.6663' stroke='%23960009' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
             filter: none;
+            @include setSizePCCus(right, 30);
+          }
+          @include mediaQuery(sp) {
+            width: pxToVw(216);
+            padding-top: pxToVw(16);
+            padding-bottom: pxToVw(16);
+            margin-top: pxToVw(30);
+            margin-left: auto;
+            margin-right: auto;
+            &::after {
+              right: pxToVw(30);
+            }
           }
         }
         &__cpu {
@@ -813,48 +938,67 @@
             align-items: flex-end;
             @include setSizePCCus(gap, 12);
             @include setSizePCCus(margin-bottom, 20);
+            @include mediaQuery(sp) {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: pxToVw(22);
+              margin-bottom: pxToVw(25);
+            }
           }
           display: flex;
           align-items: stretch;
           color: #fff;
-          background-color: #000;
-          @include sizePC_d(12);
+          @include sizePC_d(13);
+          font-weight: 500;
           @include setSizePCCus(height, 50);
           overflow: hidden;
+          @include mediaQuery(sp) {
+            width: 100%;
+            font-size: pxToVw(13);
+            height: pxToVw(50);
+          }
           &--label {
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: #000;
             @include setSizePCCus(padding-left, 10);
             @include setSizePCCus(padding-right, 10);
-            position: relative;
-            &::before,
-            &::after {
-              content: '';
-              display: block;
-              @include setSizePCCus(width, 4);
-              @include setSizePCCus(height, 30);
-              background-color: #720008;
-              position: absolute;
+            @include mediaQuery(sp) {
+              padding-left: pxToVw(10);
+              padding-right: pxToVw(10);
             }
-            &::before {
-              @include setSizePCCus(top, -3);
-              right: 0;
-              transform: rotate(-20deg);
-            }
-            &::after {
-              @include setSizePCCus(bottom, -3);
-              right: 0;
-              transform: rotate(20deg);
+          }
+          &--arrow {
+            content: '';
+            @include setSizePCCus(width, 13);
+            @include setSizePCCus(height, 50);
+            background-image: url(#{$imagePath}business/amd/pclineup_arrow_01.png);
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @include setSizePCCus(margin-left, -1);
+            @include setSizePCCus(margin-right, -1);
+            @include mediaQuery(sp) {
+              width: pxToVw(13);
+              height: pxToVw(50);
+              margin-left: pxToVw(-1);
+              margin-right: pxToVw(-1);
             }
           }
           &--value {
-            @include setSizePCCus(padding-left, 15);
+            @include setSizePCCus(padding-left, 10);
             @include setSizePCCus(padding-right, 10);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            background-color: #000;
+            @include mediaQuery(sp) {
+              flex: 1;
+              padding-left: pxToVw(5);
+              padding-right: pxToVw(5);
+            }
           }
         }
         &__logos {
@@ -862,8 +1006,16 @@
           display: flex;
           align-items: flex-end;
           @include setSizePCCus(gap, 8);
+          @include mediaQuery(sp) {
+            width: 100%;
+            gap: pxToVw(7);
+            align-items: center;
+            padding-left: pxToVw(20);
+            padding-right: pxToVw(20);
+          }
           &--item {
             @include setSizePCCus(width, 73);
+            display: inline-flex;
             &.is-text {
               @include setSizePCCus(width, 50);
               @include setSizePCCus(height, 50);
@@ -871,90 +1023,427 @@
               background-color: #595758;
               color: #fff;
               @include sizePC_d(12);
+              font-weight: 500;
               display: flex;
               justify-content: center;
               align-items: center;
               text-align: center;
               line-height: 1.3;
             }
+            @include mediaQuery(sp) {
+              width: pxToVw(73);
+              &.is-text {
+                width: pxToVw(50);
+                height: pxToVw(50);
+                font-size: pxToVw(14);
+                margin-left: pxToVw(15);
+              }
+            }
           }
         }
         &__detail {
+          @include setSizePCCus(width, 710);
           display: flex;
           flex-wrap: wrap;
           align-items: center;
-          @include setSizePCCus(gap, 20);
+          @include setSizePCCus(gap, 10);
+          @include mediaQuery(sp) {
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: pxToVw(10);
+            padding-left: pxToVw(20);
+            padding-right: pxToVw(20);
+          }
           &--item {
-            @include sizePC_d(13);
-            line-height: 1.5;
+            @include sizePC_d(14);
+            font-weight: 500;
+            @include setSizePCCus(min-height, 25);
+            line-height: 1;
             display: flex;
             align-items: stretch;
             overflow: hidden;
             &.is-no-label {
               .box-product__detail--value {
                 border-width: 1px;
-                &::before,
-                &::after {
-                  display: none;
-                }
               }
+            }
+            &.is-powered {
+              @include mediaQuery(sp) {
+                min-height: pxToVw(46);
+              }
+            }
+            @include mediaQuery(sp) {
+              font-size: pxToVw(14);
+              line-height: 1.2;
+              min-height: pxToVw(25);
             }
           }
           &--label {
-            background-color: #fff;
+            display: inline-flex;
+            align-items: center;
             color: #720008;
-            @include setSizePCCus(padding-top, 3);
-            @include setSizePCCus(padding-bottom, 3);
-            @include setSizePCCus(padding-left, 5);
-            @include setSizePCCus(padding-right, 5);
-            @include setSizePCCus(margin-right, 5);
+            @include setSizePCCus(margin-right, -8);
+            flex-shrink: 0;
             position: relative;
+            z-index: 2;
+            @include mediaQuery(sp) {
+              margin-right: pxToVw(-8);
+            }
+            &::before {
+              content: '';
+              display: block;
+              clip-path: polygon(0% 0%, calc(100% - (10/1440)*100vw) 0%, 100% 50%, calc(100% - (10/1440)*100vw) 100%, 0 100%);
+              background-color: #fff;
+              position: absolute;
+              top: 0;
+              @include setSizePCCus(right, -6);
+              width: 100%;
+              height: 100%;
+              z-index: 0;
+              @include mediaQuery(sp) {
+                clip-path: polygon(0% 0%, calc(100% - pxToVw(10)) 0%, 100% 50%, calc(100% - pxToVw(10)) 100%, 0 100%);
+                right: pxToVw(-6);
+              }
+            }
             &::after {
               content: '';
-              width: 0;
-              height: 100%;
-              border-style: solid;
-              @include setSizePCCus(border-top-width, 19);
-              @include setSizePCCus(border-right-width, 0);
-              @include setSizePCCus(border-bottom-width, 19);
-              @include setSizePCCus(border-left-width, 11);
-              border-color: transparent transparent transparent #fff;
               position: absolute;
-              top: 50%;
-              @include setSizePCCus(right, -8);
-              transform: translateY(-50%);
+              top: 0;
+              right: -4px;
+              width: 100%;
+              height: 100%;
+              display: block;
+              clip-path: polygon(0% 0%, calc(100% - (10/1440)*100vw) 0%, 100% 50%, calc(100% - (10/1440)*100vw) 100%, 0 100%);
+              background-color: #750008;
+              z-index: 1;
+              @include setSizePCCus(right, -4);
+              @include mediaQuery(sp) {
+                right: pxToVw(-4);
+                clip-path: polygon(0% 0%, calc(100% - pxToVw(10)) 0%, 100% 50%, calc(100% - pxToVw(10)) 100%, 0 100%);
+              }
+            }
+            .text {
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: #fff;
+              clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+              z-index: 2;
+              @include setSizePC4(padding, 2, 12, 2, 8);
+              @include mediaQuery(sp) {
+                padding: pxToVw(2) pxToVw(12) pxToVw(2) pxToVw(8);
+              }
             }
           }
           &--value {
+            display: inline-flex;
+            align-items: center;
             background-color: transparent;
             color: #fff;
             border-width: 1px 1px 1px 0;
             border-style: solid;
             border-color: #fff;
-            @include setSizePCCus(padding-top, 3);
-            @include setSizePCCus(padding-bottom, 3);
-            @include setSizePCCus(padding-left, 15);
-            @include setSizePCCus(padding-right, 5);
+            @include setSizePC4(padding, 2, 5, 2, 20);
             position: relative;
-            &::before,
-            &::after {
-              content: '';
-              width: 1px;
-              @include setSizePCCus(height, 17);
-              background-color: #fff;
-              position: absolute;
+            z-index: 1;
+            @include mediaQuery(sp) {
+              flex: 1;
+              padding: pxToVw(2) pxToVw(5) pxToVw(2) pxToVw(20);
             }
-            &::before {
-              @include setSizePCCus(top, -3);
-              @include setSizePCCus(left, 4);
-              transform: rotate(-33deg);
+            .small {
+              @include sizePC_d(12);
+              @include mediaQuery(sp) {
+                font-size: pxToVw(12);
+              }
             }
-            &::after {
-              @include setSizePCCus(bottom, -3);
-              @include setSizePCCus(left, 4);
-              transform: rotate(33deg);
+            .option {
+              display: inline-flex;
+              align-items: center;
+              line-height: 1;
+              background-color: #595757;
+              @include sizePC_d(12);
+              @include setSizePC4(padding, 4, 4, 4, 4);
+              @include setSizePCCus(margin-left, 4);
+              @include mediaQuery(sp) {
+                font-size: pxToVw(12);
+                padding: pxToVw(3) pxToVw(4);
+                margin-left: pxToVw(4);
+              }
+            }
+            .num {
+              @include sizePC_d(9);
+              line-height: 1;
+              position: relative;
+              @include setSizePCCus(top, -2);
+              &.is-03 {
+                @include setSizePCCus(top, -5);
+              }
+              @include mediaQuery(sp) {
+                font-size: pxToVw(9);
+                top: pxToVw(-2);
+                &.is-03 {
+                  top: pxToVw(-5);
+                }
+              }
             }
           }
+        }
+      }
+      .box-product-02 {
+        .box-product__header {
+          margin-bottom: 0;
+        }
+        .box-product__desc {
+          @include setSizePCCus(width, 366);
+          @include mediaQuery(sp) {
+            width: 100%;
+          }
+        }
+        .box-product__image {
+          top: calc(50% - (20/1440) * 100vw);
+          &--img {
+            @include setSizePCCus(width, 241);
+            @include mediaQuery(sp) {
+              width: pxToVw(241);
+            }
+          }
+        }
+        .box-product__title {
+          flex-direction: column;
+          align-items: flex-start;
+          @include setSizePCCus(gap, 5);
+          &--main {
+            display: flex;
+            align-items: center;
+            @include mediaQuery(sp) {
+              position: relative;
+              margin-bottom: 0;
+            }
+          }
+          &--sub {
+            @include setSizePCCus(margin-top, 15);
+            @include mediaQuery(sp) {
+              margin: 0;
+              position: absolute;
+              bottom: pxToVw(-18);
+              right: 0;
+            }
+          }
+          &--logo {
+            display: inline-block;
+            @include setSizePCCus(width, 157);
+          }
+        }
+      }
+      .box-product-03 {
+        .box-product__desc {
+          @include setSizePCCus(width, 439);
+          @include mediaQuery(sp) {
+            width: 100%;
+          }
+        }
+        .box-product__image {
+          &--img {
+            @include setSizePCCus(width, 240);
+            @include mediaQuery(sp) {
+              width: pxToVw(250);
+            }
+          }
+        }
+      }
+      .box-product-04 {
+        margin-bottom: 0;
+        .box-product__desc {
+          @include setSizePCCus(width, 350);
+          @include mediaQuery(sp) {
+            width: 100%;
+          }
+        }
+        .box-product__image {
+          &--img {
+            @include setSizePCCus(width, 205);
+            @include mediaQuery(sp) {
+              width: pxToVw(205);
+            }
+          }
+        }
+        .box-product__logos {
+          @include mediaQuery(sp) {
+            gap: 0;
+          }
+          &--item {
+            @include setSizePCCus(width, 144);
+            @include mediaQuery(sp) {
+              width: pxToVw(144);
+            }
+            &.is-text {
+              @include setSizePCCus(width, 50);
+              @include setSizePCCus(height, 50);
+              @include mediaQuery(sp) {
+                width: pxToVw(50);
+                height: pxToVw(50);
+                margin-left: pxToVw(10);
+              } 
+            }
+          }
+        }
+      }
+      .box-notes {
+        @include setSizePCCus(margin-top, 12);
+        @include mediaQuery(sp) {
+          margin-top: pxToVw(49);
+        }
+        &__txt {
+          display: flex;
+          @include sizePC_d(12);
+          font-weight: 400;
+          line-height: 2;
+          color: #FFFFFF;
+          span {
+            flex-shrink: 0;
+          }
+          @include mediaQuery(sp) {
+            display: block;
+            font-size: pxToVw(12);
+          }
+        }
+      }
+    }
+
+    // sec-contact
+    .sec-contact {
+      background-color: #FFFFFF;
+      @include mediaQuery(sp) {
+        display: none
+      }
+      &__inner {
+        @include setSizePCCus(width, 1120);
+        margin: 0 auto;
+        @include setSizePCCus(padding-top, 120);
+        @include setSizePCCus(padding-bottom, 120);
+      }
+      &__list {
+        background-color: #222222;
+        @include setSizePCCus(padding-top, 40);
+        @include setSizePCCus(padding-right, 64);
+        @include setSizePCCus(padding-bottom, 40);
+        @include setSizePCCus(padding-left, 64);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include setSizePCCus(gap, 32);
+        @include setSizePCCus(margin-bottom, 80);
+        .item {
+          @include setSizePCCus(height, 104);
+          background-color: #fff;
+          border: 1px solid #fff;
+          @include setSizePCCus(border-radius, 10);
+          overflow: hidden;
+          &-01 {
+            .icon {
+              img {
+                @include setSizePCCus(width, 65);
+              }
+            }
+          }
+          &-02 {
+            .icon {
+              img {
+                @include setSizePCCus(width, 31);
+              }
+            }
+          }
+        }
+        .link {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          @include setSizePC4(padding, 10, 10, 10, 10);
+        }
+        .icon {
+          @include setSizePCCus(width, 128);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          flex-shrink: 0;
+          &::after {
+            content: '';
+            width: 1px;
+            @include setSizePCCus(height, 64);
+            background-color: #E5E3E3;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+          }
+        }
+        .text {
+          flex: 1;
+          @include sizePC_d(18);
+          font-weight: 500;
+          color: #000000;
+          line-height: 1.5;
+          text-align: center;
+        }
+      }
+      &__heading {
+        @include sizePC_d(32);
+        font-weight: 700;
+        color: #333333;
+        position: relative;
+        display: flex;
+        align-items: center;
+        @include setSizePCCus(gap, 10);
+        @include setSizePCCus(margin-bottom, 38);
+        &::before {
+          content: '';
+          @include setSizePCCus(width, 10);
+          @include setSizePCCus(height, 10);
+          background-color: #999999;
+          border-radius: 50%;
+          flex-shrink: 0;
+        }
+      }
+      &__desc {
+        @include sizePC_d(16);
+        font-weight: 500;
+        line-height: 1.75;
+        color: #333333;
+        @include setSizePCCus(margin-bottom, 25);
+      }
+      &__button {
+        &--wrap {
+          background-color: #F6F6F6;
+          @include setSizePC4(padding, 40, 40, 40, 40);
+        }
+        @include setSizePCCus(width, 544);
+        @include setSizePCCus(height, 104);
+        @include setSizePCCus(border-radius, 100);
+        margin: 0 auto;
+        @include setSizePC4(padding, 20, 20, 20, 20);
+        background-color: #CC4B30;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include sizePC_d(20);
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        position: relative;
+        @include setSizePCCus(gap, 28);
+        &::before {
+          content: '';
+          @include setSizePCCus(width, 36);
+          @include setSizePCCus(height, 36);
+          background-image: url(#{$imagePath}business/amd/contact_icon_03.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          flex-shrink: 0;
         }
       }
     }
