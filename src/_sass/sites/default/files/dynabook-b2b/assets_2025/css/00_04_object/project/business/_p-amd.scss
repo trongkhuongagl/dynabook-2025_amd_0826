@@ -67,30 +67,13 @@
       background-color: #fff;
       @include setSizePC2(padding-left, padding-right, 33, 24);
       @include setSizePC2(padding-top, padding-bottom, 15, 22);
-      &-list {
-        display: flex;
-        align-items: center;
-        @include setSizePCCus(gap, 8);
-        .item {
-          @include sizePC_d(12);
-          color: #666666;
-          &.is-separate {
-            &::after {
-              background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.66667 5.33333L9.33334 7.99999L6.66667 10.6667' stroke='%23666666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-            }
-          }
-          &.is-current {
-            color: #bf2123;
-          }
-        }
-      }
     }
 
     // sec-kv
     .sec-kv {
-      @include setSizePCCus(padding-top, 88);
-      @include setSizePCCus(padding-bottom, 202);
-      @include setSizePCCus(margin-bottom, -193);
+      padding-top: calc(88/1440 * 100vw);
+      padding-bottom: calc(202/1440 * 100vw);
+      margin-bottom: calc(-193/1440 * 100vw);
       overflow: hidden;
       position: relative;
       z-index: 2;
@@ -98,12 +81,8 @@
         padding-top: pxToVw(10);
         padding-bottom: pxToVw(243);
       }
-      @media screen and (min-width: 1441px) {
-        padding-top: 7vw;
-        padding-bottom: 12vw;
-      }
       &__inner {
-        @include setSizePCCus(width, 1440);
+        width: calc(1440/1440 * 100vw);
         margin: 0 auto;
         position: relative;
         @include mediaQuery(sp) {
@@ -111,11 +90,14 @@
         }
       }
       &__image {
-        @include setSizePCCus(width, 738);
+        width: calc(738/1440 * 100vw);
         position: absolute;
-        @include setSizePCCus(top, -169);
-        @include setSizePCCus(left, -78);
+        top: calc(-169/1440 * 100vw);
+        left: calc(-78/1440 * 100vw);
         z-index: 1;
+        @media screen and (min-width: 1441px) {
+          width: calc(850/1920 * 100vw);
+        }
         img {
           width: 100%;
           height: auto;
@@ -127,9 +109,9 @@
         }
       }
       &__info {
-        @include setSizePCCus(width, 536);
+        width: calc(536/1440 * 100vw);
         margin-left: auto;
-        @include setSizePCCus(margin-right, 160);
+        margin-right: calc(160/1440 * 100vw);
         @include mediaQuery(sp) {
           width: 100%;
           margin: 0;
@@ -266,8 +248,8 @@
         0 calc(100% - (111 / 1440) * 100vw), /* go up */
         100% 100% /* bottom-right */
       );
-      @include setSizePCCus(padding-top, 173);
-      @include setSizePCCus(padding-bottom, 168);
+      padding-top: calc(173/1440 * 100vw);
+      padding-bottom: calc(168/1440 * 100vw);
       &::before {
         content: '';
         width: 100%;
