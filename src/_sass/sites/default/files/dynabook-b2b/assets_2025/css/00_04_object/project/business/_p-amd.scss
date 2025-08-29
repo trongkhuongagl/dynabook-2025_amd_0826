@@ -976,12 +976,15 @@
             width: pxToVw(216);
             padding-top: pxToVw(16);
             padding-bottom: pxToVw(16);
-            padding-left: pxToVw(10);
+            padding-left: pxToVw(32);
             margin-top: pxToVw(30);
             margin-left: auto;
             margin-right: auto;
             font-size: pxToVw(18);
+            text-align: left;
             &::after {
+              width: pxToVw(16);
+              height: pxToVw(16);
               right: pxToVw(30);
             }
           }
