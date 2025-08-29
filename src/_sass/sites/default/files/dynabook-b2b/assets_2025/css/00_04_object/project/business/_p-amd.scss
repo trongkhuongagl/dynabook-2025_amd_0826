@@ -5,8 +5,31 @@
   .p-product-amd{
     //↓code
     // Common
+    @mixin sizePCCus_d($size) {
+      font-size: min(#{pxToVw($size, $pcMax)}, #{$size}px);
+      @include mediaQuery(big) {
+        font-size: calc(#{$size}px * 1.1);
+      }
+    }
     @mixin setSizePCCus($prop, $size) {
       #{$prop}: min(#{pxToVw($size, $pcMax)}, #{$size}px);
+      @include mediaQuery(big) {
+        #{$prop}: calc(#{$size}px * 1.1);
+      }
+    }
+    @mixin setSizePCCus2($prop1, $prop2, $size1, $size2) {
+      #{$prop1}: min(#{pxToVw($size1, $pcMax)}, #{$size1}px);
+      #{$prop2}: min(#{pxToVw($size2, $pcMax)}, #{$size2}px);
+      @include mediaQuery(big) {
+        #{$prop1}: calc(#{$size1}px * 1.1);
+        #{$prop2}: calc(#{$size2}px * 1.1);
+      }
+    }
+    @mixin setSizePCCus4($prop, $size1, $size2, $size3, $size4) {
+      #{$prop}: min(#{pxToVw($size1, $pcMax)}, #{$size1}px) min(#{pxToVw($size2, $pcMax)}, #{$size2}px) min(#{pxToVw($size3, $pcMax)}, #{$size3}px) min(#{pxToVw($size4, $pcMax)}, #{$size4}px);
+      @include mediaQuery(big) {
+        #{$prop}: calc(#{$size1}px * 1.1) calc(#{$size2}px * 1.1) calc(#{$size3}px * 1.1) calc(#{$size4}px * 1.1);
+      }
     }
     .u-font__castoro {
       font-family: "Castoro", serif;
@@ -776,10 +799,9 @@
         padding-top: pxToVw(40);
       }
       &__inner {
-        width: (1120/1440 * 100vw);
+        @include setSizePCCus(width, 1120);
         margin: 0 auto;
-        padding-top: (40/1440 * 100vw);
-        padding-bottom: (120/1440 * 100vw);
+        @include setSizePCCus2(padding-top, padding-bottom, 20, 120);
         @include mediaQuery(sp) {
           width: 100%;
           padding-top: pxToVw(50);
@@ -789,29 +811,28 @@
         }
       }
       &__heading {
-        margin-bottom: (37/1440 * 100vw);
+        @include setSizePCCus(margin-bottom, 37);
         @include mediaQuery(sp) {
           display: none;
         }
       }
       .box-product {
         background-color: rgb(0, 0, 0, 0.2);
-        padding: (80/1440 * 100vw);
-        margin-bottom: (18/1440 * 100vw);
+        @include setSizePCCus4(padding, 80, 80, 80, 80);
+        @include setSizePCCus(margin-bottom, 18);
         position: relative;
         @include mediaQuery(sp) {
           padding: pxToVw(83) 0 pxToVw(47) 0;
           margin-bottom: pxToVw(22);
         }
         &__lblnew {
-          height: (50/1440 * 100vw);
-          padding-left: (30/1440 * 100vw);
-          padding-right: (30/1440 * 100vw);
+          @include setSizePCCus(height, 50);
+          @include setSizePCCus2(padding-left, padding-right, 30, 30);
           background-color: #BAAB22;
           display: flex;
           justify-content: center;
           align-items: center;
-          font-size: (24/1440 * 100vw);
+          @include sizePCCus_d(24);
           font-weight: 400;
           color: #000;
           line-height: 1;
@@ -828,8 +849,8 @@
         &__header {
           display: flex;
           align-items: center;
-          gap: (20/1440 * 100vw);
-          margin-bottom: (15/1440 * 100vw);
+          @include setSizePCCus(gap, 20);
+          @include setSizePCCus(margin-bottom, 15);
           @include mediaQuery(sp) {
             flex-direction: column;
             gap: pxToVw(23);
@@ -840,13 +861,13 @@
           }
         }
         &__logo {
-          width: (162/1440 * 100vw);
+          @include setSizePCCus(width, 162);
           @include mediaQuery(sp) {
             width: pxToVw(162);
           }
         }
         &__desc {
-          font-size: (24/1440 * 100vw);
+          @include sizePCCus_d(24);
           font-weight: 600;
           line-height: 1.5;
           letter-spacing: -0.05em;
@@ -861,16 +882,15 @@
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
-          gap: (10/1440 * 100vw);
+          @include setSizePCCus(gap, 10);
           font-weight: 500;
           color: #fff;
           line-height: 1;
           &--main {
-            font-size: calc(58/1440 * 100vw);
-            @include setSizePCCus(margin-bottom, -10);
+            @include sizePCCus_d(58);
           }
           &--sub {
-            font-size: calc(29/1440 * 100vw);
+            @include sizePCCus_d(29);
           }
           @include mediaQuery(sp) {
             gap: pxToVw(10);
@@ -886,12 +906,11 @@
         &__name {
           background-color: #fff;
           color: #8E0009;
-          font-size: calc(16/1440 * 100vw);
+          @include sizePCCus_d(16);
           font-weight: 500;
           line-height: 1;
-          height: (24/1440 * 100vw);
-          padding-left: (6/1440 * 100vw);
-          padding-right: (6/1440 * 100vw);
+          @include setSizePCCus(height, 24);
+          @include setSizePCCus2(padding-left, padding-right, 6, 6);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -906,10 +925,10 @@
           width: fit-content;
           position: absolute;
           top: 50%;
-          right: (80/1440 * 100vw);
+          @include setSizePCCus(right, 80);
           transform: translateY(-50%);
           &--img {
-            width: (255/1440 * 100vw);
+            @include setSizePCCus(width, 255);
           }
           @include mediaQuery(sp) {
             position: static;
@@ -922,22 +941,21 @@
         }
         &__button {
           min-width: unset;
-          width: calc(216/1440 * 100vw);
-          padding: (16/1440 * 100vw) 0 (16/1440 * 100vw) (10/1440 * 100vw);
-          margin-top: (10/1440 * 100vw);
+          @include setSizePCCus(width, 216);
+          @include setSizePCCus4(padding, 16, 0, 16, 10);
+          @include setSizePCCus(margin-top, 10);
           margin-right: 0;
-          font-size: calc(18/1440 * 100vw);
+          @include sizePCCus_d(18);
           font-weight: 700;
           background-color: #fff;
           color: #960009;
           overflow: hidden;
           position: relative;
           &::after {
-            width: (16/1440 * 100vw);
-            height: (16/1440 * 100vw);
+            @include setSizePCCus2(width, height, 16, 16);
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M6.6665 5.33301L9.33317 7.99967L6.6665 10.6663' stroke='%23960009' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
             filter: none;
-            right: (20/1440 * 100vw);
+            @include setSizePCCus(right, 20);
           }
           &::before {
             content: '';
@@ -972,8 +990,8 @@
           &--wrap {
             display: flex;
             align-items: flex-end;
-            gap: (12/1440 * 100vw);
-            margin-bottom: (20/1440 * 100vw);
+            @include setSizePCCus(gap, 12);
+            @include setSizePCCus(margin-bottom, 20);
             @include mediaQuery(sp) {
               flex-direction: column;
               align-items: flex-start;
@@ -984,8 +1002,8 @@
           display: flex;
           align-items: stretch;
           color: #fff;
-          font-size: (13/1440 * 100vw);
-          height: (50/1440 * 100vw);
+          @include sizePCCus_d(13);
+          @include setSizePCCus(height, 50);
           font-weight: 500;
           overflow: hidden;
           @include mediaQuery(sp) {
@@ -998,8 +1016,7 @@
             justify-content: center;
             align-items: center;
             background-color: #000;
-            padding-left: (10/1440 * 100vw);
-            padding-right: (10/1440 * 100vw);
+            @include setSizePCCus2(padding-left, padding-right, 10, 10);
             @include mediaQuery(sp) {
               padding-left: pxToVw(10);
               padding-right: pxToVw(10);
@@ -1007,14 +1024,12 @@
           }
           &--arrow {
             content: '';
-            width: (13/1440 * 100vw);
-            height: (50/1440 * 100vw);
+            @include setSizePCCus2(width, height, 13, 50);
             background-image: url(#{$imagePath}business/amd/pclineup_arrow_01.png);
             background-position: center top;
             background-repeat: no-repeat;
             background-size: cover;
-            margin-left: (-1/1440 * 100vw);
-            margin-right: (-1/1440 * 100vw);
+            @include setSizePCCus2(margin-left, margin-right, -1, -1);
             @include mediaQuery(sp) {
               width: pxToVw(13);
               height: pxToVw(50);
@@ -1023,8 +1038,7 @@
             }
           }
           &--value {
-            padding-left: (10/1440 * 100vw);
-            padding-right: (10/1440 * 100vw);
+            @include setSizePCCus2(padding-left, padding-right, 10, 10);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1041,7 +1055,7 @@
           flex: 1;
           display: flex;
           align-items: flex-end;
-          gap: (8/1440 * 100vw);
+          @include setSizePCCus(gap, 8);
           @include mediaQuery(sp) {
             width: 100%;
             gap: pxToVw(7);
@@ -1050,15 +1064,14 @@
             padding-right: pxToVw(20);
           }
           &--item {
-            width: (73/1440 * 100vw);
+            @include setSizePCCus(width, 73);
             display: inline-flex;
             &.is-text {
-              width: (50/1440 * 100vw);
-              height: (50/1440 * 100vw);
+              @include setSizePCCus2(width, height, 50, 50);
               border-radius: 50%;
               background-color: #595758;
               color: #fff;
-              font-size: calc(14/1440 * 100vw);
+              @include sizePCCus_d(14);
               font-weight: 500;
               display: flex;
               justify-content: center;
@@ -1078,11 +1091,11 @@
           }
         }
         &__detail {
-          width: (710/1440 * 100vw);
+          @include setSizePCCus(width, 710);
           display: flex;
           flex-wrap: wrap;
           align-items: center;
-          gap: (10/1440 * 100vw);
+          @include setSizePCCus(gap, 10);
           @include mediaQuery(sp) {
             width: 100%;
             flex-direction: column;
@@ -1092,9 +1105,9 @@
             padding-right: pxToVw(20);
           }
           &--item {
-            font-size: (14/1440 * 100vw);
+            @include sizePCCus_d(14);
             font-weight: 500;
-            min-height: (25/1440 * 100vw);
+            @include setSizePCCus(min-height, 25);
             line-height: 1;
             display: flex;
             align-items: stretch;
@@ -1119,7 +1132,7 @@
             display: inline-flex;
             align-items: center;
             color: #720008;
-            margin-right: (-8/1440 * 100vw);
+            @include setSizePCCus(margin-right, -8);
             flex-shrink: 0;
             position: relative;
             z-index: 2;
@@ -1133,7 +1146,7 @@
               background-color: #fff;
               position: absolute;
               top: 0;
-              right: (-6/1440 * 100vw);
+              @include setSizePCCus(right, -6);
               width: 100%;
               height: 100%;
               z-index: 0;
@@ -1146,7 +1159,7 @@
               content: '';
               position: absolute;
               top: 0;
-              right: (-4/1440 * 100vw);
+              @include setSizePCCus(right, -4);
               width: 100%;
               height: 100%;
               display: block;
@@ -1166,7 +1179,7 @@
               background-color: #fff;
               clip-path: polygon(0% 0%, calc(100% - (10/1440)*100vw) 0%, 100% 50%, calc(100% - (10/1440)*100vw) 100%, 0 100%);
               z-index: 2;
-              padding: (2/1440 * 100vw) (12/1440 * 100vw) (2/1440 * 100vw) (8/1440 * 100vw);
+              @include setSizePCCus4(padding, 2, 12, 2, 8);
               @include mediaQuery(sp) {
                 padding: pxToVw(2) pxToVw(12) pxToVw(2) pxToVw(8);
                 clip-path: polygon(0% 0%, calc(100% - pxToVw(10)) 0%, 100% 50%, calc(100% - pxToVw(10)) 100%, 0 100%);
@@ -1181,7 +1194,7 @@
             border-width: 1px 1px 1px 0;
             border-style: solid;
             border-color: #fff;
-            padding: (2/1440 * 100vw) (5/1440 * 100vw) (2/1440 * 100vw) (20/1440 * 100vw);
+            @include setSizePCCus4(padding, 2, 5, 2, 20);
             position: relative;
             z-index: 1;
             @include mediaQuery(sp) {
@@ -1189,7 +1202,7 @@
               padding: pxToVw(2) pxToVw(5) pxToVw(2) pxToVw(20);
             }
             .small {
-              font-size: (12/1440 * 100vw);
+              @include sizePCCus_d(12);
               @include mediaQuery(sp) {
                 font-size: pxToVw(12);
               }
@@ -1199,9 +1212,9 @@
               align-items: center;
               line-height: 1;
               background-color: #595757;
-              font-size: (12/1440 * 100vw);
-              padding: (4/1440 * 100vw);
-              margin-left: (4/1440 * 100vw);
+              @include sizePCCus_d(12);
+              @include setSizePCCus4(padding, 4, 4, 4, 4);
+              @include setSizePCCus(margin-left, 4);
               @include mediaQuery(sp) {
                 font-size: pxToVw(12);
                 padding: pxToVw(3) pxToVw(4);
@@ -1209,13 +1222,12 @@
               }
             }
             .num {
-              font-size: (9/1440 * 100vw);
+              @include sizePCCus_d(9);
               line-height: 1;
               position: relative;
-              top: (-2/1440 * 100vw);
+              @include setSizePCCus(top, -2);
               &.is-03 {
                 @include setSizePCCus(top, -5);
-                top: (-5/1440 * 100vw);
               }
               @include mediaQuery(sp) {
                 font-size: pxToVw(9);
@@ -1235,7 +1247,7 @@
         .box-product__image {
           top: calc(50% - (20/1440) * 100vw);
           &--img {
-            width: (241/1440 * 100vw);
+            @include setSizePCCus(width, 241);
             @include mediaQuery(sp) {
               width: pxToVw(241);
             }
@@ -1244,7 +1256,7 @@
         .box-product__title {
           flex-direction: column;
           align-items: flex-start;
-          gap: (5/1440 * 100vw);
+          @include setSizePCCus(gap, 5);
           &--main {
             display: flex;
             align-items: center;
@@ -1254,7 +1266,7 @@
             }
           }
           &--sub {
-            margin-top: (15/1440 * 100vw);
+            @include setSizePCCus(margin-top, 15);
             @include mediaQuery(sp) {
               margin: 0;
               position: absolute;
@@ -1264,7 +1276,7 @@
           }
           &--logo {
             display: inline-block;
-            width: (157/1440 * 100vw);
+            @include setSizePCCus(width, 157);
             @include mediaQuery(sp) {
               width: pxToVw(157);
             }
@@ -1274,7 +1286,7 @@
       .box-product-03 {
         .box-product__image {
           &--img {
-            width: (240/1440 * 100vw);
+            @include setSizePCCus(width, 240);
             @include mediaQuery(sp) {
               width: pxToVw(250);
             }
@@ -1285,7 +1297,7 @@
         margin-bottom: 0;
         .box-product__image {
           &--img {
-            width: (205/1440 * 100vw);
+            @include setSizePCCus(width, 205);
             @include mediaQuery(sp) {
               width: pxToVw(205);
             }
@@ -1296,13 +1308,12 @@
             gap: 0;
           }
           &--item {
-            width: (144/1440 * 100vw);
+            @include setSizePCCus(width, 144);
             @include mediaQuery(sp) {
               width: pxToVw(144);
             }
             &.is-text {
-              width: (50/1440 * 100vw);
-              height: (50/1440 * 100vw);
+              @include setSizePCCus2(width, height, 50, 50);
               @include mediaQuery(sp) {
                 width: pxToVw(50);
                 height: pxToVw(50);
@@ -1313,13 +1324,13 @@
         }
       }
       .box-notes {
-        margin-top: calc(12/1440 * 100vw);
+        @include setSizePCCus(margin-top, 12);
         @include mediaQuery(sp) {
           margin-top: pxToVw(49);
         }
         &__txt {
           display: flex;
-          font-size: calc(12/1440 * 100vw);
+          @include sizePCCus_d(12);
           font-weight: 400;
           line-height: 2;
           color: #FFFFFF;
