@@ -1352,23 +1352,22 @@
         display: none
       }
       &__inner {
-        width: calc(1120/1440 * 100vw);
+        @include setSizePCCus(width, 1120);
         margin: 0 auto;
-        padding-top: calc(120/1440 * 100vw);
-        padding-bottom: calc(120/1440 * 100vw);
+        @include setSizePCCus2(padding-top, padding-bottom, 120, 120)
       }
       &__list {
         background-color: #222222;
-        padding: calc(40/1440 * 100vw) calc(64/1440 * 100vw);
+        @include setSizePCCus4(padding, 40, 64, 40, 64);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: calc(32/1440 * 100vw);
-        margin-bottom: calc(63/1440 * 100vw);
+        @include setSizePCCus(margin-bottom, 63);
         .item {
-          height: calc(104/1440 * 100vw);
+          @include setSizePCCus(height, 104);
           background-color: #fff;
           border: 1px solid #fff;
-          border-radius: calc(10/1440 * 100vw);
+          @include setSizePCCus(border-radius, 10);
           overflow: hidden;
           cursor: pointer;
           position: relative;
@@ -1390,14 +1389,14 @@
           &-01 {
             .icon {
               img {
-                width: calc(65/1440 * 100vw);
+                @include setSizePCCus(width, 65);
               }
             }
           }
           &-02 {
             .icon {
               img {
-                width: calc(31/1440 * 100vw);
+                @include setSizePCCus(width, 31);
               }
             }
           }
@@ -1407,10 +1406,10 @@
           height: 100%;
           display: flex;
           align-items: center;
-          padding: calc(10/1440 * 100vw);
+          @include setSizePCCus4(padding, 10, 10, 10, 10);
         }
         .icon {
-          width: calc(128/1440 * 100vw);
+          @include setSizePCCus(width, 128);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1419,7 +1418,7 @@
           &::after {
             content: '';
             width: 1px;
-            height: calc(64/1440 * 100vw);
+            @include setSizePCCus(height, 64);
             background-color: #E5E3E3;
             position: absolute;
             top: 50%;
@@ -1429,7 +1428,7 @@
         }
         .text {
           flex: 1;
-          font-size: calc(18/1440 * 100vw);
+          @include sizePCCus_d(18);
           font-weight: 500;
           color: #000000;
           line-height: 1.5;
@@ -1437,59 +1436,56 @@
         }
       }
       &__heading {
-        font-size: calc(32/1440 * 100vw);
+        @include sizePCCus_d(32);
         font-weight: 700;
         color: #333333;
         position: relative;
         display: flex;
         align-items: center;
-        gap: calc(10/1440 * 100vw);
-        margin-bottom: calc(16/1440 * 100vw);
+        @include setSizePCCus(gap, 10);
+        @include setSizePCCus(margin-bottom, 16);
         &::before {
           content: '';
-          width: calc(10/1440 * 100vw);
-          height: calc(10/1440 * 100vw);
+          @include setSizePCCus2(width, height, 10, 10);
           background-color: #999999;
           border-radius: 50%;
           flex-shrink: 0;
         }
       }
       &__desc {
-        font-size: calc(16/1440 * 100vw);
+        @include sizePCCus_d(16);
         font-weight: 500;
         line-height: 1.75;
         color: #333333;
-        margin-bottom: calc(25/1440 * 100vw);
+        @include setSizePCCus(margin-bottom, 25);
       }
       &__button {
         &--wrap {
           background-color: #F6F6F6;
-          padding: calc(40/1440 * 100vw)
+          @include setSizePCCus4(padding, 40, 40, 40, 40);
         }
-        width: calc(544/1440 * 100vw);
-        height: calc(104/1440 * 100vw);
-        border-radius: calc(100/1440 * 100vw);
+        @include setSizePCCus2(width, height, 544, 104);
+        @include setSizePCCus(border-radius, 100);
         margin: 0 auto;
-        padding: calc(20/1440 * 100vw);
+        @include setSizePCCus4(padding, 20, 20, 20, 20);
         background-color: #CC4B30;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: calc(20/1440 * 100vw);
+        @include sizePCCus_d(20);
         font-weight: 500;
         line-height: 1.5;
         letter-spacing: 0.05em;
         color: #FFFFFF;
         position: relative;
-        gap: calc(28/1440 * 100vw);
+        @include setSizePCCus(gap, 28);
         transition: all 0.3s;
         &:hover {
           filter: contrast(300%) grayscale(100%) saturate(0%);
         }
         &::before {
           content: '';
-          width: calc(36/1440 * 100vw);
-          height: calc(36/1440 * 100vw);
+          @include setSizePCCus2(width, height, 36, 36);
           background-image: url(#{$imagePath}business/amd/contact_icon_03.svg);
           background-position: center;
           background-repeat: no-repeat;
