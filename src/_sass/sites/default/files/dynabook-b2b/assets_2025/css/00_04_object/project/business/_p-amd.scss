@@ -769,17 +769,17 @@
     // sec-PCLineup
     .sec-PCLineup {
       background-image: linear-gradient(155deg, #6D0007, #CF000E);
-      @include setSizePCCus(margin-top, -120);
-      @include setSizePCCus(padding-top, 120);
+      margin-top: (-120/1440 * 100vw);
+      padding-top: (120/1440 * 100vw);
       @include mediaQuery(sp) {
         margin-top: pxToVw(-40);
         padding-top: pxToVw(40);
       }
       &__inner {
-        @include setSizePCCus(width, 1120);
+        width: (1120/1440 * 100vw);
         margin: 0 auto;
-        @include setSizePCCus(padding-top, 40);
-        @include setSizePCCus(padding-bottom, 120);
+        padding-top: (40/1440 * 100vw);
+        padding-bottom: (120/1440 * 100vw);
         @include mediaQuery(sp) {
           width: 100%;
           padding-top: pxToVw(50);
@@ -789,32 +789,29 @@
         }
       }
       &__heading {
-        @include setSizePCCus(margin-bottom, 37);
+        margin-bottom: (37/1440 * 100vw);
         @include mediaQuery(sp) {
           display: none;
         }
       }
       .box-product {
         background-color: rgb(0, 0, 0, 0.2);
-        @include setSizePCCus(padding-top, 80);
-        @include setSizePCCus(padding-bottom, 80);
-        @include setSizePCCus(padding-left, 80);
-        @include setSizePCCus(padding-right, 80);
-        @include setSizePCCus(margin-bottom, 18);
+        padding: (80/1440 * 100vw);
+        margin-bottom: (18/1440 * 100vw);
         position: relative;
         @include mediaQuery(sp) {
           padding: pxToVw(83) 0 pxToVw(47) 0;
           margin-bottom: pxToVw(22);
         }
         &__lblnew {
-          @include setSizePCCus(height, 50);
-          @include setSizePC2(padding-left, padding-right, 30, 30);
-          @include setSizePCCus(padding-top, 5);
+          height: (50/1440 * 100vw);
+          padding-left: (30/1440 * 100vw);
+          padding-right: (30/1440 * 100vw);
           background-color: #BAAB22;
           display: flex;
           justify-content: center;
           align-items: center;
-          @include sizePC_d(24);
+          font-size: (24/1440 * 100vw);
           font-weight: 400;
           color: #000;
           line-height: 1;
@@ -831,8 +828,8 @@
         &__header {
           display: flex;
           align-items: center;
-          @include setSizePCCus(gap, 20);
-          @include setSizePCCus(margin-bottom, 15);
+          gap: (20/1440 * 100vw);
+          margin-bottom: (15/1440 * 100vw);
           @include mediaQuery(sp) {
             flex-direction: column;
             gap: pxToVw(23);
@@ -843,13 +840,13 @@
           }
         }
         &__logo {
-          @include setSizePCCus(width, 162);
+          width: (162/1440 * 100vw);
           @include mediaQuery(sp) {
             width: pxToVw(162);
           }
         }
         &__desc {
-          @include sizePC_d(24);
+          font-size: (24/1440 * 100vw);
           font-weight: 600;
           line-height: 1.5;
           letter-spacing: -0.05em;
@@ -864,16 +861,16 @@
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
-          @include setSizePCCus(gap, 10);
+          gap: (10/1440 * 100vw);
           font-weight: 500;
           color: #fff;
           line-height: 1;
           &--main {
-            @include sizePC_d(58);
+            font-size: calc(58/1440 * 100vw);
             @include setSizePCCus(margin-bottom, -10);
           }
           &--sub {
-            @include sizePC_d(29);
+            font-size: calc(29/1440 * 100vw);
           }
           @include mediaQuery(sp) {
             gap: pxToVw(10);
@@ -889,11 +886,12 @@
         &__name {
           background-color: #fff;
           color: #8E0009;
-          @include sizePC_d(16);
+          font-size: calc(16/1440 * 100vw);
           font-weight: 500;
           line-height: 1;
-          @include setSizePCCus(height, 24);
-          @include setSizePC2(padding-left, padding-right, 6, 6);
+          height: (24/1440 * 100vw);
+          padding-left: (6/1440 * 100vw);
+          padding-right: (6/1440 * 100vw);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -908,10 +906,10 @@
           width: fit-content;
           position: absolute;
           top: 50%;
-          @include setSizePCCus(right, 80);
+          right: (80/1440 * 100vw);
           transform: translateY(-50%);
           &--img {
-            @include setSizePCCus(width, 255);
+            width: (255/1440 * 100vw);
           }
           @include mediaQuery(sp) {
             position: static;
@@ -924,22 +922,22 @@
         }
         &__button {
           min-width: unset;
-          @include setSizePCCus(width, 216);
-          @include setSizePCCus(padding-top, 16);
-          @include setSizePCCus(padding-bottom, 16);
-          @include setSizePCCus(padding-left, 10);
-          @include setSizePCCus(margin-top, 10);
-          @include sizePC_d(18);
+          width: calc(216/1440 * 100vw);
+          padding: (16/1440 * 100vw) 0 (16/1440 * 100vw) (10/1440 * 100vw);
+          margin-top: (10/1440 * 100vw);
           margin-right: 0;
+          font-size: calc(18/1440 * 100vw);
+          font-weight: 700;
           background-color: #fff;
           color: #960009;
-          font-weight: 700;
           overflow: hidden;
           position: relative;
           &::after {
+            width: (16/1440 * 100vw);
+            height: (16/1440 * 100vw);
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M6.6665 5.33301L9.33317 7.99967L6.6665 10.6663' stroke='%23960009' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
             filter: none;
-            @include setSizePCCus(right, 30);
+            right: (20/1440 * 100vw);
           }
           &::before {
             content: '';
@@ -974,8 +972,8 @@
           &--wrap {
             display: flex;
             align-items: flex-end;
-            @include setSizePCCus(gap, 12);
-            @include setSizePCCus(margin-bottom, 20);
+            gap: (12/1440 * 100vw);
+            margin-bottom: (20/1440 * 100vw);
             @include mediaQuery(sp) {
               flex-direction: column;
               align-items: flex-start;
@@ -986,9 +984,9 @@
           display: flex;
           align-items: stretch;
           color: #fff;
-          @include sizePC_d(13);
+          font-size: (13/1440 * 100vw);
+          height: (50/1440 * 100vw);
           font-weight: 500;
-          @include setSizePCCus(height, 50);
           overflow: hidden;
           @include mediaQuery(sp) {
             width: 100%;
@@ -1000,8 +998,8 @@
             justify-content: center;
             align-items: center;
             background-color: #000;
-            @include setSizePCCus(padding-left, 10);
-            @include setSizePCCus(padding-right, 10);
+            padding-left: (10/1440 * 100vw);
+            padding-right: (10/1440 * 100vw);
             @include mediaQuery(sp) {
               padding-left: pxToVw(10);
               padding-right: pxToVw(10);
@@ -1009,14 +1007,14 @@
           }
           &--arrow {
             content: '';
-            @include setSizePCCus(width, 13);
-            @include setSizePCCus(height, 50);
+            width: (13/1440 * 100vw);
+            height: (50/1440 * 100vw);
             background-image: url(#{$imagePath}business/amd/pclineup_arrow_01.png);
             background-position: center top;
             background-repeat: no-repeat;
             background-size: cover;
-            @include setSizePCCus(margin-left, -1);
-            @include setSizePCCus(margin-right, -1);
+            margin-left: (-1/1440 * 100vw);
+            margin-right: (-1/1440 * 100vw);
             @include mediaQuery(sp) {
               width: pxToVw(13);
               height: pxToVw(50);
@@ -1025,8 +1023,8 @@
             }
           }
           &--value {
-            @include setSizePCCus(padding-left, 10);
-            @include setSizePCCus(padding-right, 10);
+            padding-left: (10/1440 * 100vw);
+            padding-right: (10/1440 * 100vw);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1043,7 +1041,7 @@
           flex: 1;
           display: flex;
           align-items: flex-end;
-          @include setSizePCCus(gap, 8);
+          gap: (8/1440 * 100vw);
           @include mediaQuery(sp) {
             width: 100%;
             gap: pxToVw(7);
@@ -1052,15 +1050,15 @@
             padding-right: pxToVw(20);
           }
           &--item {
-            @include setSizePCCus(width, 73);
+            width: (73/1440 * 100vw);
             display: inline-flex;
             &.is-text {
-              @include setSizePCCus(width, 50);
-              @include setSizePCCus(height, 50);
+              width: (50/1440 * 100vw);
+              height: (50/1440 * 100vw);
               border-radius: 50%;
               background-color: #595758;
               color: #fff;
-              @include sizePC_d(14);
+              font-size: calc(14/1440 * 100vw);
               font-weight: 500;
               display: flex;
               justify-content: center;
@@ -1080,11 +1078,11 @@
           }
         }
         &__detail {
-          @include setSizePCCus(width, 710);
+          width: (710/1440 * 100vw);
           display: flex;
           flex-wrap: wrap;
           align-items: center;
-          @include setSizePCCus(gap, 10);
+          gap: (10/1440 * 100vw);
           @include mediaQuery(sp) {
             width: 100%;
             flex-direction: column;
@@ -1094,9 +1092,9 @@
             padding-right: pxToVw(20);
           }
           &--item {
-            @include sizePC_d(14);
+            font-size: (14/1440 * 100vw);
             font-weight: 500;
-            @include setSizePCCus(min-height, 25);
+            min-height: (25/1440 * 100vw);
             line-height: 1;
             display: flex;
             align-items: stretch;
@@ -1121,7 +1119,7 @@
             display: inline-flex;
             align-items: center;
             color: #720008;
-            @include setSizePCCus(margin-right, -8);
+            margin-right: (-8/1440 * 100vw);
             flex-shrink: 0;
             position: relative;
             z-index: 2;
@@ -1135,7 +1133,7 @@
               background-color: #fff;
               position: absolute;
               top: 0;
-              @include setSizePCCus(right, -6);
+              right: (-6/1440 * 100vw);
               width: 100%;
               height: 100%;
               z-index: 0;
@@ -1148,14 +1146,13 @@
               content: '';
               position: absolute;
               top: 0;
-              right: -4px;
+              right: (-4/1440 * 100vw);
               width: 100%;
               height: 100%;
               display: block;
               clip-path: polygon(0% 0%, calc(100% - (10/1440)*100vw) 0%, 100% 50%, calc(100% - (10/1440)*100vw) 100%, 0 100%);
               background-color: #750008;
               z-index: 1;
-              @include setSizePCCus(right, -4);
               @include mediaQuery(sp) {
                 right: pxToVw(-4);
                 clip-path: polygon(0% 0%, calc(100% - pxToVw(10)) 0%, 100% 50%, calc(100% - pxToVw(10)) 100%, 0 100%);
@@ -1169,7 +1166,7 @@
               background-color: #fff;
               clip-path: polygon(0% 0%, calc(100% - (10/1440)*100vw) 0%, 100% 50%, calc(100% - (10/1440)*100vw) 100%, 0 100%);
               z-index: 2;
-              @include setSizePC4(padding, 2, 12, 2, 8);
+              padding: (2/1440 * 100vw) (12/1440 * 100vw) (2/1440 * 100vw) (8/1440 * 100vw);
               @include mediaQuery(sp) {
                 padding: pxToVw(2) pxToVw(12) pxToVw(2) pxToVw(8);
                 clip-path: polygon(0% 0%, calc(100% - pxToVw(10)) 0%, 100% 50%, calc(100% - pxToVw(10)) 100%, 0 100%);
@@ -1184,7 +1181,7 @@
             border-width: 1px 1px 1px 0;
             border-style: solid;
             border-color: #fff;
-            @include setSizePC4(padding, 2, 5, 2, 20);
+            padding: (2/1440 * 100vw) (5/1440 * 100vw) (2/1440 * 100vw) (20/1440 * 100vw);
             position: relative;
             z-index: 1;
             @include mediaQuery(sp) {
@@ -1192,7 +1189,7 @@
               padding: pxToVw(2) pxToVw(5) pxToVw(2) pxToVw(20);
             }
             .small {
-              @include sizePC_d(12);
+              font-size: (12/1440 * 100vw);
               @include mediaQuery(sp) {
                 font-size: pxToVw(12);
               }
@@ -1202,9 +1199,9 @@
               align-items: center;
               line-height: 1;
               background-color: #595757;
-              @include sizePC_d(12);
-              @include setSizePC4(padding, 4, 4, 4, 4);
-              @include setSizePCCus(margin-left, 4);
+              font-size: (12/1440 * 100vw);
+              padding: (4/1440 * 100vw);
+              margin-left: (4/1440 * 100vw);
               @include mediaQuery(sp) {
                 font-size: pxToVw(12);
                 padding: pxToVw(3) pxToVw(4);
@@ -1212,12 +1209,13 @@
               }
             }
             .num {
-              @include sizePC_d(9);
+              font-size: (9/1440 * 100vw);
               line-height: 1;
               position: relative;
-              @include setSizePCCus(top, -2);
+              top: (-2/1440 * 100vw);
               &.is-03 {
                 @include setSizePCCus(top, -5);
+                top: (-5/1440 * 100vw);
               }
               @include mediaQuery(sp) {
                 font-size: pxToVw(9);
@@ -1237,7 +1235,7 @@
         .box-product__image {
           top: calc(50% - (20/1440) * 100vw);
           &--img {
-            @include setSizePCCus(width, 241);
+            width: (241/1440 * 100vw);
             @include mediaQuery(sp) {
               width: pxToVw(241);
             }
@@ -1246,7 +1244,7 @@
         .box-product__title {
           flex-direction: column;
           align-items: flex-start;
-          @include setSizePCCus(gap, 5);
+          gap: (5/1440 * 100vw);
           &--main {
             display: flex;
             align-items: center;
@@ -1256,7 +1254,7 @@
             }
           }
           &--sub {
-            @include setSizePCCus(margin-top, 15);
+            margin-top: (15/1440 * 100vw);
             @include mediaQuery(sp) {
               margin: 0;
               position: absolute;
@@ -1266,7 +1264,7 @@
           }
           &--logo {
             display: inline-block;
-            @include setSizePCCus(width, 157);
+            width: (157/1440 * 100vw);
             @include mediaQuery(sp) {
               width: pxToVw(157);
             }
@@ -1276,7 +1274,7 @@
       .box-product-03 {
         .box-product__image {
           &--img {
-            @include setSizePCCus(width, 240);
+            width: (240/1440 * 100vw);
             @include mediaQuery(sp) {
               width: pxToVw(250);
             }
@@ -1287,7 +1285,7 @@
         margin-bottom: 0;
         .box-product__image {
           &--img {
-            @include setSizePCCus(width, 205);
+            width: (205/1440 * 100vw);
             @include mediaQuery(sp) {
               width: pxToVw(205);
             }
@@ -1298,13 +1296,13 @@
             gap: 0;
           }
           &--item {
-            @include setSizePCCus(width, 144);
+            width: (144/1440 * 100vw);
             @include mediaQuery(sp) {
               width: pxToVw(144);
             }
             &.is-text {
-              @include setSizePCCus(width, 50);
-              @include setSizePCCus(height, 50);
+              width: (50/1440 * 100vw);
+              height: (50/1440 * 100vw);
               @include mediaQuery(sp) {
                 width: pxToVw(50);
                 height: pxToVw(50);
@@ -1315,13 +1313,13 @@
         }
       }
       .box-notes {
-        @include setSizePCCus(margin-top, 12);
+        margin-top: calc(12/1440 * 100vw);
         @include mediaQuery(sp) {
           margin-top: pxToVw(49);
         }
         &__txt {
           display: flex;
-          @include sizePC_d(12);
+          font-size: calc(12/1440 * 100vw);
           font-weight: 400;
           line-height: 2;
           color: #FFFFFF;
@@ -1343,26 +1341,23 @@
         display: none
       }
       &__inner {
-        @include setSizePCCus(width, 1120);
+        width: calc(1120/1440 * 100vw);
         margin: 0 auto;
-        @include setSizePCCus(padding-top, 120);
-        @include setSizePCCus(padding-bottom, 120);
+        padding-top: calc(120/1440 * 100vw);
+        padding-bottom: calc(120/1440 * 100vw);
       }
       &__list {
         background-color: #222222;
-        @include setSizePCCus(padding-top, 40);
-        @include setSizePCCus(padding-right, 64);
-        @include setSizePCCus(padding-bottom, 40);
-        @include setSizePCCus(padding-left, 64);
+        padding: calc(40/1440 * 100vw) calc(64/1440 * 100vw);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        @include setSizePCCus(gap, 32);
-        @include setSizePCCus(margin-bottom, 80);
+        gap: calc(32/1440 * 100vw);
+        margin-bottom: calc(63/1440 * 100vw);
         .item {
-          @include setSizePCCus(height, 104);
+          height: calc(104/1440 * 100vw);
           background-color: #fff;
           border: 1px solid #fff;
-          @include setSizePCCus(border-radius, 10);
+          border-radius: calc(10/1440 * 100vw);
           overflow: hidden;
           cursor: pointer;
           position: relative;
@@ -1384,14 +1379,14 @@
           &-01 {
             .icon {
               img {
-                @include setSizePCCus(width, 65);
+                width: calc(65/1440 * 100vw);
               }
             }
           }
           &-02 {
             .icon {
               img {
-                @include setSizePCCus(width, 31);
+                width: calc(31/1440 * 100vw);
               }
             }
           }
@@ -1401,10 +1396,10 @@
           height: 100%;
           display: flex;
           align-items: center;
-          @include setSizePC4(padding, 10, 10, 10, 10);
+          padding: calc(10/1440 * 100vw);
         }
         .icon {
-          @include setSizePCCus(width, 128);
+          width: calc(128/1440 * 100vw);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1413,7 +1408,7 @@
           &::after {
             content: '';
             width: 1px;
-            @include setSizePCCus(height, 64);
+            height: calc(64/1440 * 100vw);
             background-color: #E5E3E3;
             position: absolute;
             top: 50%;
@@ -1423,7 +1418,7 @@
         }
         .text {
           flex: 1;
-          @include sizePC_d(18);
+          font-size: calc(18/1440 * 100vw);
           font-weight: 500;
           color: #000000;
           line-height: 1.5;
@@ -1431,59 +1426,59 @@
         }
       }
       &__heading {
-        @include sizePC_d(32);
+        font-size: calc(32/1440 * 100vw);
         font-weight: 700;
         color: #333333;
         position: relative;
         display: flex;
         align-items: center;
-        @include setSizePCCus(gap, 10);
-        @include setSizePCCus(margin-bottom, 38);
+        gap: calc(10/1440 * 100vw);
+        margin-bottom: calc(16/1440 * 100vw);
         &::before {
           content: '';
-          @include setSizePCCus(width, 10);
-          @include setSizePCCus(height, 10);
+          width: calc(10/1440 * 100vw);
+          height: calc(10/1440 * 100vw);
           background-color: #999999;
           border-radius: 50%;
           flex-shrink: 0;
         }
       }
       &__desc {
-        @include sizePC_d(16);
+        font-size: calc(16/1440 * 100vw);
         font-weight: 500;
         line-height: 1.75;
         color: #333333;
-        @include setSizePCCus(margin-bottom, 25);
+        margin-bottom: calc(25/1440 * 100vw);
       }
       &__button {
         &--wrap {
           background-color: #F6F6F6;
-          @include setSizePC4(padding, 40, 40, 40, 40);
+          padding: calc(40/1440 * 100vw)
         }
-        @include setSizePCCus(width, 544);
-        @include setSizePCCus(height, 104);
-        @include setSizePCCus(border-radius, 100);
+        width: calc(544/1440 * 100vw);
+        height: calc(104/1440 * 100vw);
+        border-radius: calc(100/1440 * 100vw);
         margin: 0 auto;
-        @include setSizePC4(padding, 20, 20, 20, 20);
+        padding: calc(20/1440 * 100vw);
         background-color: #CC4B30;
         display: flex;
         justify-content: center;
         align-items: center;
-        @include sizePC_d(20);
+        font-size: calc(20/1440 * 100vw);
         font-weight: 500;
         line-height: 1.5;
         letter-spacing: 0.05em;
         color: #FFFFFF;
         position: relative;
-        @include setSizePCCus(gap, 28);
+        gap: calc(28/1440 * 100vw);
         transition: all 0.3s;
         &:hover {
           filter: contrast(300%) grayscale(100%) saturate(0%);
         }
         &::before {
           content: '';
-          @include setSizePCCus(width, 36);
-          @include setSizePCCus(height, 36);
+          width: calc(36/1440 * 100vw);
+          height: calc(36/1440 * 100vw);
           background-image: url(#{$imagePath}business/amd/contact_icon_03.svg);
           background-position: center;
           background-repeat: no-repeat;
