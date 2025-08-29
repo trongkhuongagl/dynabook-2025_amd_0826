@@ -79,7 +79,7 @@
       z-index: 2;
       @include mediaQuery(sp) {
         padding-top: pxToVw(10);
-        padding-bottom: pxToVw(243);
+        padding-bottom: pxToVw(103);
       }
       &__inner {
         width: calc(1440/1440 * 100vw);
