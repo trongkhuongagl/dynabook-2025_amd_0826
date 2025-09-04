@@ -94,18 +94,23 @@
 
     // sec-kv
     .sec-kv {
-      padding-top: calc(88/1440 * 100vw);
-      padding-bottom: calc(202/1440 * 100vw);
-      margin-bottom: calc(-193/1440 * 100vw);
+      @include setSizePCCus(padding-top, 88);
+      @include setSizePCCus(padding-bottom, 202);
+      @include setSizePCCus(margin-bottom, -193);
       overflow: hidden;
       position: relative;
       z-index: 2;
+      @media screen and (min-width: 781px) and (max-width: 1200px) {
+        padding-top: calc(88/1440 * 100vw);
+        padding-bottom: calc(202/1440 * 100vw);
+        margin-bottom: calc(-193/1440 * 100vw);
+      }
       @include mediaQuery(sp) {
         padding-top: pxToVw(10);
-        padding-bottom: pxToVw(103);
+        padding-bottom: pxToVw(247);
       }
       &__inner {
-        width: calc(1440/1440 * 100vw);
+        @include setSizePCCus(width, 1120);
         margin: 0 auto;
         position: relative;
         @include mediaQuery(sp) {
@@ -113,13 +118,14 @@
         }
       }
       &__image {
-        width: calc(738/1440 * 100vw);
+        @include setSizePCCus(width, 738);
         position: absolute;
-        top: calc(-169/1440 * 100vw);
-        left: calc(-78/1440 * 100vw);
+        @include setSizePCCus(top, -169);
+        @include setSizePCCus(left, -238);
         z-index: 1;
-        @media screen and (min-width: 1441px) {
-          width: calc(850/1920 * 100vw);
+        @media screen and (min-width: 781px) and (max-width: 1200px) {
+          top: calc(-169/1440 * 100vw);
+          left: calc(-238/1440 * 100vw);
         }
         img {
           width: 100%;
@@ -132,14 +138,11 @@
         }
       }
       &__info {
-        width: calc(536/1440 * 100vw);
+        @include setSizePCCus(width, 536);
         margin-left: auto;
-        margin-right: calc(160/1440 * 100vw);
         @include mediaQuery(sp) {
           width: 100%;
           margin: 0;
-          padding-left: pxToVw(15);
-          padding-right: pxToVw(15);
         }
       }
       &__title {
@@ -161,7 +164,7 @@
         @include setSizePCCus(width, 121);
         @include mediaQuery(sp) {
           width: pxToVw(93);
-          margin-left: pxToVw(7);
+          margin-left: pxToVw(22);
         }
       }
       &__list {
@@ -287,7 +290,7 @@
         z-index: -1;
       }
       @include mediaQuery(sp) {
-        padding-top: pxToVw(106);
+        padding-top: pxToVw(102);
         padding-bottom: pxToVw(118);
         background-image: linear-gradient( 150deg, #000000 0%, #3E3E3E 35%, #3E3E3E 100%);
         clip-path: polygon(
