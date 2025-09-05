@@ -998,7 +998,7 @@
             display: flex;
             align-items: flex-end;
             @include setSizePCCus(gap, 12);
-            @include setSizePCCus(margin-bottom, 20);
+            @include setSizePCCus(margin-bottom, 15);
             @include mediaQuery(sp) {
               flex-direction: column;
               align-items: flex-start;
@@ -1033,9 +1033,9 @@
               background-color: #000;
               clip-path: polygon(0% 0%, calc(100% - (10/1440)*100vw) 0%, 100% 50%, calc(100% - (10/1440)*100vw) 100%, 0 100%);
               z-index: 2;
-              @include setSizePCCus4(padding, 2, 20, 2, 10);
+              @include setSizePCCus4(padding, 2, 11, 2, 10);
               @include mediaQuery(sp) {
-                padding: pxToVw(2) pxToVw(20) pxToVw(2) pxToVw(10);
+                padding: pxToVw(2) pxToVw(11) pxToVw(2) pxToVw(10);
                 clip-path: polygon(0% 0%, calc(100% - pxToVw(10)) 0%, 100% 50%, calc(100% - pxToVw(10)) 100%, 0 100%);
               }
             }
@@ -1104,7 +1104,7 @@
                 width: pxToVw(50);
                 height: pxToVw(50);
                 font-size: pxToVw(14);
-                margin-left: pxToVw(15);
+                margin-left: pxToVw(10);
               }
             }
           }
