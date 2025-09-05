@@ -781,6 +781,7 @@
               margin-top: pxToVw(15);
             }
           }
+          display: flex;
           @include sizePC_d(12);
           font-weight: 400;
           line-height: 2;
@@ -958,7 +959,7 @@
             @include setSizePCCus2(width, height, 16, 16);
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M6.6665 5.33301L9.33317 7.99967L6.6665 10.6663' stroke='%23960009' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
             filter: none;
-            @include setSizePCCus(right, 20);
+            @include setSizePCCus(right, 10);
           }
           &::before {
             content: '';
@@ -1121,6 +1122,12 @@
             &.is-no-label {
               .box-product__detail--value {
                 border-width: 1px;
+                @include setSizePCCus(padding-left, 7);
+                @include setSizePCCus(padding-right, 7);
+                @include mediaQuery(sp) {
+                  padding-left: pxToVw(7);
+                  padding-right: pxToVw(7);
+                }
               }
             }
             &.is-powered {
@@ -1377,6 +1384,7 @@
           overflow: hidden;
           cursor: pointer;
           position: relative;
+          z-index: 1;
           &::after {
             content: '';
             width: 100%;
@@ -1386,6 +1394,7 @@
             top: 0;
             left: 0;
             transition: all 0.3s;
+            z-index: -1;
           }
           &:hover {
             &::after {
@@ -1421,6 +1430,7 @@
           align-items: center;
           position: relative;
           flex-shrink: 0;
+          z-index: -1;
           &::after {
             content: '';
             width: 1px;
